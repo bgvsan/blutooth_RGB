@@ -1,0 +1,23 @@
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\ApplicationIcon.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\FlipCycleTileLarge.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\FlipCycleTileSmall.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\IconicTileMediumLarge.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\IconicTileSmall.png
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\RGB Mood.dll
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\RGB Mood.pdb
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\AppManifest.xaml
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Properties\WMAppManifest.xml
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\RGB_Mood_Debug_AnyCPU.xap
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\App.g.cs
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\MainPage.g.cs
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.g.resources
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB_Mood.Resources.AppResources.resources
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.csproj.GenerateResource.Cache
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.dll
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.pdb
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\XapCacheFile.xml
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\BluetoothManager.dll
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Coding4Fun.Toolkit.Controls.dll
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\BluetoothManager.pdb
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\Option.g.cs
