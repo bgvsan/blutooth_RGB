@@ -16,7 +16,7 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/save.png" Text="Save"/>
+            <shell:ApplicationBarIconButton x:Name="App_bar_save" IconUri="/Images/save.png" Text="Save" Click="App_bar_save_Click"/>
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
     
@@ -38,7 +38,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel>
                 <TextBlock Text="MacAddress" VerticalAlignment="Top"></TextBlock>
-                <TextBox Height="100" VerticalAlignment="Top"></TextBox>
+                <TextBox x:Name="txtMacAddress" Height="80" VerticalAlignment="Top"  ></TextBox>
             </StackPanel>
            
         </Grid>

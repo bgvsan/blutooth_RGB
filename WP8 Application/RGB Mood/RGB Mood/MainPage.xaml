@@ -16,8 +16,8 @@
 
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/settings.png" Text="Connect"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/sync.png" Text="Options"/>
+            <shell:ApplicationBarIconButton x:Name="App_bar_setting" IconUri="/Images/settings.png" Text="Connect" Click="App_bar_setting_Click"/>
+            <shell:ApplicationBarIconButton x:Name="App_bar_connect" IconUri="/Images/sync.png" Text="Options" Click="App_bar_connect_Click"  />
             <!--<shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
                 <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
@@ -65,7 +65,7 @@
 
         </Grid>
         
-        <coding:ColorPicker VerticalAlignment="Top" Grid.Row="2" Height="400">
+        <coding:ColorPicker x:Name="colorPicker" VerticalAlignment="Top" Grid.Row="2" Height="400">
             
         </coding:ColorPicker>
         <!--Rimuovere il commento per vedere la griglia di allineamento che consenta di verificare che i controlli siano

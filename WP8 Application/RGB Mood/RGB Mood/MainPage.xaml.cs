@@ -8,18 +8,62 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using RGB_Mood.Resources;
+using System.Windows.Media;
+using Bluetooth;
+using System.Diagnostics;
 
 namespace RGB_Mood
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private bool connected = false;
+
         // Costruttore
         public MainPage()
         {
             InitializeComponent();
+            //connect event change to send data to bluetooth
+            this.colorPicker.ColorChanged += colorPicker_ColorChanged;
+        }
 
-            // Codice di esempio per localizzare la ApplicationBar
-            //BuildLocalizedApplicationBar();
+        void colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
+        {
+
+            if (connected)
+            {
+                var result = Code.BT_Protocol.getCMDColor(color);
+                Bluetooth.BTConnection btpd = new BTConnection();
+                //Send data to BT module 
+                btpd.Send_Data(result, 1, Code.Stuff._MACADDRESS);
+            }
+        }
+
+      
+
+        private async void Connection()
+        {
+            try
+            {
+                Bluetooth.BTConnection btpd = new BTConnection();
+                await btpd.ConnectToDevice(Code.Stuff._MACADDRESS);
+            }
+            catch (Bluetooth.BluetoothDeviceException ex)
+            {
+                Debug.WriteLine(ex.ToString());
+                connected = false;
+            }
+            connected = true;
+        }
+
+
+        private void App_bar_setting_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Option.xaml", UriKind.Relative));
+        }
+
+        private void App_bar_connect_Click(object sender, EventArgs e)
+        {
+            Connection();
         }
 
         // Codice di esempio per la realizzazione di una ApplicationBar localizzata

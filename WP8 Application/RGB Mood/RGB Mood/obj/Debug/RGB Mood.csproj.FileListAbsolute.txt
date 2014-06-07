@@ -21,3 +21,4 @@
 \\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Coding4Fun.Toolkit.Controls.dll
 \\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\BluetoothManager.pdb
 \\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\Option.g.cs
+\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.csprojResolveAssemblyReference.cache
