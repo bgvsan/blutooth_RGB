@@ -1,0 +1,158 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1572 ]
+[d frameptr 6 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/abdiv.c
+[v ___abdiv __abdiv `(c  1 e 1 0 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/abmod.c
+[v ___abmod __abmod `(c  1 e 1 0 ]
+"33 /Applications/microchip/xc8/v1.30/sources/common/abtoft.c
+[v ___abtoft __abtoft `(f  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+"5 /Applications/microchip/xc8/v1.30/sources/common/almod.c
+[v ___almod __almod `(l  1 e 4 0 ]
+"42 /Applications/microchip/xc8/v1.30/sources/common/altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/atdiv.c
+[v ___atdiv __atdiv `(m  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/atmod.c
+[v ___atmod __atmod `(m  1 e 3 0 ]
+"37 /Applications/microchip/xc8/v1.30/sources/common/attoft.c
+[v ___attoft __attoft `(f  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 /Applications/microchip/xc8/v1.30/sources/common/awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"2 /Applications/microchip/xc8/v1.30/sources/common/bmul.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"62 /Applications/microchip/xc8/v1.30/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /Applications/microchip/xc8/v1.30/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"51 /Applications/microchip/xc8/v1.30/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 /Applications/microchip/xc8/v1.30/sources/common/ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"18 /Applications/microchip/xc8/v1.30/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 /Applications/microchip/xc8/v1.30/sources/common/fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/lbdiv.c
+[v ___lbdiv __lbdiv `(uc  1 e 1 0 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 /Applications/microchip/xc8/v1.30/sources/common/lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"35 /Applications/microchip/xc8/v1.30/sources/common/lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"2 /Applications/microchip/xc8/v1.30/sources/common/lmul.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/ltdiv.c
+[v ___ltdiv __ltdiv `(um  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/ltmod.c
+[v ___ltmod __ltmod `(um  1 e 3 0 ]
+"30 /Applications/microchip/xc8/v1.30/sources/common/lttoft.c
+[v ___lttoft __lttoft `(f  1 e 3 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 /Applications/microchip/xc8/v1.30/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 /Applications/microchip/xc8/v1.30/sources/common/lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"2 /Applications/microchip/xc8/v1.30/sources/common/tmul.c
+[v ___tmul __tmul `(um  1 e 3 0 ]
+"4 /Applications/microchip/xc8/v1.30/sources/common/wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"49 /Applications/microchip/xc8/v1.30/sources/pic/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"51 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+[v _main main `(v  1 e 0 0 ]
+"62
+[v _init init `(v  1 e 0 0 ]
+"84
+[v _isr isr `II(v  1 e 0 0 ]
+"6 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _enableUSART_RX enableUSART_RX `(v  1 e 0 0 ]
+"14
+[v _configUSART configUSART `(v  1 e 0 0 ]
+"25
+[v _readUSART readUSART `(uc  1 e 1 0 ]
+[s S55 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"355 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
+[s S64 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S69 . 1 `S55 1 . 1 0 `S64 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES69  1 e 1 @11 ]
+"409
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"881
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+[s S36 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"954
+[u S44 . 1 `S36 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES44  1 e 1 @145 ]
+"1293
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2425
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"2469
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"2488
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"9652
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"9654
+[v _BRGH BRGH `VEb  1 e 0 @3314 ]
+"9716
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"9940
+[v _OERR OERR `VEb  1 e 0 @3305 ]
+"10642
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"10672
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"10684
+[v _SYNC SYNC `VEb  1 e 0 @3316 ]
+"51 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"59
+} 0
+"84
+[v _isr isr `II(v  1 e 0 0 ]
+{
+"97
+} 0
+"25 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _readUSART readUSART `(uc  1 e 1 0 ]
+{
+"28
+} 0

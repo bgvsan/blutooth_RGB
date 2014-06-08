@@ -1,0 +1,5 @@
+_readUSART: CODE, 35 0 3
+_main: CODE, 22 0 13
+__initialization: CODE, 20 0 0
+_isr: CODE, 4 0 15
+Total: 31
