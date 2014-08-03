@@ -75,19 +75,39 @@
 [v ___wmul __wmul `(ui  1 e 2 0 ]
 "49 /Applications/microchip/xc8/v1.30/sources/pic/ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"51 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+"62 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
 [v _main main `(v  1 e 0 0 ]
-"62
+"156
 [v _init init `(v  1 e 0 0 ]
-"84
-[v _isr isr `II(v  1 e 0 0 ]
-"6 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
-[v _enableUSART_RX enableUSART_RX `(v  1 e 0 0 ]
-"14
-[v _configUSART configUSART `(v  1 e 0 0 ]
-"25
-[v _readUSART readUSART `(uc  1 e 1 0 ]
-[s S55 . 1 `uc 1 IOCIF 1 0 :1:0 
+"165
+[v _InterruptHandlerLow InterruptHandlerLow `II(v  1 e 0 0 ]
+"5 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/pwm.c
+[v _init_pwm init_pwm `(v  1 e 0 0 ]
+"60
+[v _close_PWM close_PWM `(v  1 e 0 0 ]
+"67
+[v _open_PWM open_PWM `(v  1 e 0 0 ]
+"73
+[v _set_pwmRED set_pwmRED `(v  1 e 0 0 ]
+[v i1_set_pwmRED set_pwmRED `(v  1 e 0 0 ]
+[v i1_set_pwmRED set_pwmRED `(v  1 e 0 0 ]
+"81
+[v _set_pwmGREEN set_pwmGREEN `(v  1 e 0 0 ]
+[v i1_set_pwmGREEN set_pwmGREEN `(v  1 e 0 0 ]
+[v i1_set_pwmGREEN set_pwmGREEN `(v  1 e 0 0 ]
+"90
+[v _set_pwmBLUE set_pwmBLUE `(v  1 e 0 0 ]
+[v i1_set_pwmBLUE set_pwmBLUE `(v  1 e 0 0 ]
+[v i1_set_pwmBLUE set_pwmBLUE `(v  1 e 0 0 ]
+"99
+[v _set_color set_color `(v  1 e 0 0 ]
+"8 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _init_uart init_uart `(v  1 e 0 0 ]
+"29
+[v _putch putch `(v  1 e 0 0 ]
+"39
+[v _get_message get_message `(v  1 e 0 0 ]
+[s S228 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -97,62 +117,277 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "355 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
-[s S64 . 1 `uc 1 . 1 0 :2:0 
+[s S237 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S69 . 1 `S55 1 . 1 0 `S64 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES69  1 e 1 @11 ]
-"409
-[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+[u S242 . 1 `S228 1 . 1 0 `S237 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES242  1 e 1 @11 ]
+[s S58 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"482
+[u S66 . 1 `S58 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES66  1 e 1 @17 ]
 "881
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S36 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 . 1 0 :2:2 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-`uc 1 TMR1GIE 1 0 :1:7 
+[s S131 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
 ]
+"899
+[s S138 . 1 `uc 1 TRISA 1 0 :6:0 
+]
+[u S140 . 1 `S131 1 . 1 0 `S138 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES140  1 e 1 @140 ]
 "954
-[u S44 . 1 `S36 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES44  1 e 1 @145 ]
+[v _PIE1bits PIE1bits `VES66  1 e 1 @145 ]
 "1293
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-"2425
-[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"1663
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S77 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"2095
+[u S86 . 1 `S77 1 . 1 0 ]
+[v _APFCONbits APFCONbits `VES86  1 e 1 @285 ]
+"2184
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+[s S98 . 1 `uc 1 RCREG 1 0 :8:0 
+]
+"2435
+[u S100 . 1 `S98 1 . 1 0 ]
+[v _RCREGbits RCREGbits `VES100  1 e 1 @409 ]
+"2444
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
 "2469
 [v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
 "2488
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
-"9652
-[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
-"9654
-[v _BRGH BRGH `VEb  1 e 0 @3314 ]
-"9716
-[v _CREN CREN `VEb  1 e 0 @3308 ]
-"9940
-[v _OERR OERR `VEb  1 e 0 @3305 ]
-"10642
-[v _RCIF RCIF `VEb  1 e 0 @141 ]
-"10672
-[v _SPEN SPEN `VEb  1 e 0 @3311 ]
-"10684
-[v _SYNC SYNC `VEb  1 e 0 @3316 ]
-"51 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+"2524
+[v _RCSTAbits RCSTAbits `VES86  1 e 1 @413 ]
+"2585
+[v _TXSTAbits TXSTAbits `VES86  1 e 1 @414 ]
+"2646
+[v _BAUDCONbits BAUDCONbits `VES86  1 e 1 @415 ]
+"3515
+[v _PWM1PHL PWM1PHL `VEuc  1 e 1 @3473 ]
+"3642
+[v _PWM1PHH PWM1PHH `VEuc  1 e 1 @3474 ]
+"3775
+[v _PWM1DCL PWM1DCL `VEuc  1 e 1 @3475 ]
+"3902
+[v _PWM1DCH PWM1DCH `VEuc  1 e 1 @3476 ]
+"4035
+[v _PWM1PRL PWM1PRL `VEuc  1 e 1 @3477 ]
+"4162
+[v _PWM1PRH PWM1PRH `VEuc  1 e 1 @3478 ]
+[s S337 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE 1 0 :2:2 
+`uc 1 POL 1 0 :1:4 
+`uc 1 OUT 1 0 :1:5 
+`uc 1 OE 1 0 :1:6 
+`uc 1 EN 1 0 :1:7 
+]
+"4842
+[s S344 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MOD0 1 0 :1:2 
+`uc 1 PWM1MOD1 1 0 :1:3 
+]
+[s S348 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PWM1MOD 1 0 :2:2 
+`uc 1 PWM1POL 1 0 :1:4 
+`uc 1 PWM1OUT 1 0 :1:5 
+`uc 1 PWM1OE 1 0 :1:6 
+`uc 1 PWM1EN 1 0 :1:7 
+]
+[s S355 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 MODE0 1 0 :1:2 
+`uc 1 MODE1 1 0 :1:3 
+]
+[u S359 . 1 `S337 1 . 1 0 `S344 1 . 1 0 `S348 1 . 1 0 `S355 1 . 1 0 ]
+[v _PWM1CONbits PWM1CONbits `VES359  1 e 1 @3483 ]
+[s S487 . 1 `uc 1 CS 1 0 :2:0 
+`uc 1 . 1 0 :2:2 
+`uc 1 PS 1 0 :3:4 
+]
+"5199
+[s S491 . 1 `uc 1 PWM1CS0 1 0 :1:0 
+`uc 1 PWM1CS1 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 PWM1PS0 1 0 :1:4 
+`uc 1 PWM1PS1 1 0 :1:5 
+`uc 1 PWM1PS2 1 0 :1:6 
+]
+[s S498 . 1 `uc 1 PWM1CS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 PWM1PS 1 0 :3:4 
+]
+[s S502 . 1 `uc 1 CS0 1 0 :1:0 
+`uc 1 CS1 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 PS0 1 0 :1:4 
+`uc 1 PS1 1 0 :1:5 
+`uc 1 PS2 1 0 :1:6 
+]
+[u S509 . 1 `S487 1 . 1 0 `S491 1 . 1 0 `S498 1 . 1 0 `S502 1 . 1 0 ]
+[v _PWM1CLKCONbits PWM1CLKCONbits `VES509  1 e 1 @3486 ]
+"5467
+[v _PWM2PHL PWM2PHL `VEuc  1 e 1 @3489 ]
+"5594
+[v _PWM2PHH PWM2PHH `VEuc  1 e 1 @3490 ]
+"5727
+[v _PWM2DCL PWM2DCL `VEuc  1 e 1 @3491 ]
+"5854
+[v _PWM2DCH PWM2DCH `VEuc  1 e 1 @3492 ]
+"5987
+[v _PWM2PRL PWM2PRL `VEuc  1 e 1 @3493 ]
+"6114
+[v _PWM2PRH PWM2PRH `VEuc  1 e 1 @3494 ]
+"6794
+[v _PWM2CONbits PWM2CONbits `VES359  1 e 1 @3499 ]
+"7151
+[v _PWM2CLKCONbits PWM2CLKCONbits `VES509  1 e 1 @3502 ]
+"7419
+[v _PWM3PHL PWM3PHL `VEuc  1 e 1 @3505 ]
+"7546
+[v _PWM3PHH PWM3PHH `VEuc  1 e 1 @3506 ]
+"7679
+[v _PWM3DCL PWM3DCL `VEuc  1 e 1 @3507 ]
+"7806
+[v _PWM3DCH PWM3DCH `VEuc  1 e 1 @3508 ]
+"7939
+[v _PWM3PRL PWM3PRL `VEuc  1 e 1 @3509 ]
+"8066
+[v _PWM3PRH PWM3PRH `VEuc  1 e 1 @3510 ]
+"8746
+[v _PWM3CONbits PWM3CONbits `VES359  1 e 1 @3515 ]
+"9103
+[v _PWM3CLKCONbits PWM3CLKCONbits `VES509  1 e 1 @3518 ]
+"10000
+[v _PWM1LD PWM1LD `VEb  1 e 0 @27903 ]
+"10224
+[v _PWM2LD PWM2LD `VEb  1 e 0 @28031 ]
+"10448
+[v _PWM3LD PWM3LD `VEb  1 e 0 @28159 ]
+"10806
+[v _TXIF TXIF `VEb  1 e 0 @140 ]
+"54 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+[v _cUART_data_flg cUART_data_flg `uc  1 e 1 0 ]
+"4 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _cUART_char cUART_char `uc  1 e 1 0 ]
+"5
+[v _cUART_data_count cUART_data_count `uc  1 e 1 0 ]
+"6
+[v _cUART_data_message cUART_data_message `[5]ui  1 e 10 0 ]
+"62 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"59
+"152
 } 0
-"84
-[v _isr isr `II(v  1 e 0 0 ]
+"73 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/pwm.c
+[v _set_pwmRED set_pwmRED `(v  1 e 0 0 ]
 {
+[v set_pwmRED@value value `ui  1 p 2 0 ]
+"79
+} 0
+"81
+[v _set_pwmGREEN set_pwmGREEN `(v  1 e 0 0 ]
+{
+[v set_pwmGREEN@value value `ui  1 p 2 0 ]
+"88
+} 0
+"90
+[v _set_pwmBLUE set_pwmBLUE `(v  1 e 0 0 ]
+{
+[v set_pwmBLUE@value value `ui  1 p 2 0 ]
 "97
 } 0
-"25 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
-[v _readUSART readUSART `(uc  1 e 1 0 ]
+"67
+[v _open_PWM open_PWM `(v  1 e 0 0 ]
+{
+"72
+} 0
+"8 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _init_uart init_uart `(v  1 e 0 0 ]
 {
 "28
+} 0
+"5 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/pwm.c
+[v _init_pwm init_pwm `(v  1 e 0 0 ]
+{
+"58
+} 0
+"156 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+[v _init init `(v  1 e 0 0 ]
+{
+"163
+} 0
+"60 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/pwm.c
+[v _close_PWM close_PWM `(v  1 e 0 0 ]
+{
+"65
+} 0
+"165 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/main.c
+[v _InterruptHandlerLow InterruptHandlerLow `II(v  1 e 0 0 ]
+{
+"183
+} 0
+"39 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/usart.c
+[v _get_message get_message `(v  1 e 0 0 ]
+{
+"56
+} 0
+"99 /Users/diego/Dropbox/GitHub/blutooth_RGB/wp8_rgb.X/pwm.c
+[v _set_color set_color `(v  1 e 0 0 ]
+{
+[v set_color@color color `*.4ui  1 a 1 wreg ]
+[v set_color@color color `*.4ui  1 a 1 wreg ]
+"102
+[v set_color@color color `*.4ui  1 a 1 2 ]
+"111
+} 0
+"73
+[v i1_set_pwmRED set_pwmRED `(v  1 e 0 0 ]
+{
+[v i1set_pwmRED@value value `ui  1 p 2 0 ]
+"79
+} 0
+"81
+[v i1_set_pwmGREEN set_pwmGREEN `(v  1 e 0 0 ]
+{
+[v i1set_pwmGREEN@value value `ui  1 p 2 0 ]
+"88
+} 0
+"90
+[v i1_set_pwmBLUE set_pwmBLUE `(v  1 e 0 0 ]
+{
+[v i1set_pwmBLUE@value value `ui  1 p 2 0 ]
+"97
+} 0
+"4 /Applications/microchip/xc8/v1.30/sources/common/wmul.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"6
+[v ___wmul@product product `ui  1 a 2 4 ]
+"4
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"31
 } 0

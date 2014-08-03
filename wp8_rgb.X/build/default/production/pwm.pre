@@ -1,5 +1,5 @@
 
-# 1 "main.c"
+# 1 "pwm.c"
 
 
 # 21 "/Applications/microchip/xc8/v1.30/include/htc.h"
@@ -4774,108 +4774,111 @@ extern unsigned int flash_read(unsigned short addr);
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 1 "usart.h"
-void init_uart(void);
-
-void get_message(void);
-
-void putch(unsigned char byte);
-
-# 2 "pwm.h"
-void init_pwm(void);
-
-void set_pwmRED(unsigned int);
-
-void set_pwmGREEN(unsigned int value);
-
-void set_pwmBLUE(unsigned int value);
-
-void set_color( unsigned int value[]);
-
-void close_PWM(void);
-void open_PWM(void);
-
-
-# 31 "main.c"
-#pragma config FOSC = INTOSC
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config BOREN = OFF
-#pragma config CLKOUTEN = OFF
-
-
-#pragma config WRT = OFF
-#pragma config PLLEN = OFF
-#pragma config STVREN = ON
-#pragma config BORV = LO
-#pragma config LPBOREN = OFF
-#pragma config LVP = ON
-
-# 53
-unsigned char cUART_char;
-unsigned char cUART_data_flg;
-
-void init_uart(void);
-void init(void);
-void interrupt InterruptHandlerLow(void);
-
-
-
-void main() {
-
-
-
-init();
-init_uart();
-LATA = 0xff;
-
-
-init_pwm();
-close_PWM();
-open_PWM();
-
-LATA = 0xff;
-
-set_pwmBLUE(0);
-set_pwmGREEN(0);
-set_pwmRED(0);
-while (1)
+# 5 "pwm.c"
+void init_pwm()
 {
 
-# 151
+
+APFCONbits.P1SEL = 1;
+APFCONbits.P2SEL = 1;
+
+PWM1CONbits.EN = 1;
+PWM1CONbits.OE = 1;
+PWM1CONbits.MODE = 00;
+PWM1CONbits.POL = 0;
+
+PWM2CONbits.EN = 1;
+PWM2CONbits.OE = 1;
+PWM2CONbits.MODE = 00;
+PWM2CONbits.POL = 0;
+
+PWM3CONbits.EN = 1;
+PWM3CONbits.OE = 1;
+PWM3CONbits.MODE = 00;
+PWM3CONbits.POL = 0;
+
+
+
+PWM1CLKCONbits.PS = 00;
+PWM1CLKCONbits.CS = 00;
+
+
+PWM2CLKCONbits.PS = 00;
+PWM2CLKCONbits.CS = 00;
+
+PWM3CLKCONbits.PS = 00;
+PWM3CLKCONbits.CS = 00;
+
+
+
+
+PWM1PRH = 0xff;
+PWM1PRL = 0xff;
+PWM1DCH = 0xff;
+PWM1DCL = 0xff;
+
+PWM2PRH = 0xff;
+PWM2PRL = 0xff;
+PWM2DCH = 0xff;
+PWM2DCL = 0xff;
+
+PWM3PRH = 0xff;
+PWM3PRL = 0xff;
+PWM3DCH = 0xff;
+PWM3DCL = 0xff;
+
+
 }
+
+void close_PWM()
+{
+PWM1CONbits.OE = 0;
+PWM2CONbits.OE = 0;
+PWM3CONbits.OE = 0;
 }
 
+void open_PWM()
+{
+PWM1CONbits.OE = 1;
+PWM2CONbits.OE = 1;
+PWM3CONbits.OE = 1;
+}
+void set_pwmRED(unsigned int value)
+{
+PWM1PHH = (unsigned char)(value >> 8);
+PWM1PHL = (unsigned char)(value);
 
-
-void init() {
-
-OSCCON = 0b01111010;
-
-TRISA = 0b000000;
-ANSELA = 0X00;
-LATA = 0XFF;
+PWM1LD = 0xFF;
 }
 
-void interrupt InterruptHandlerLow ()
+void set_pwmGREEN(unsigned int value)
+{
+PWM2PHH = (unsigned char)(value >> 8);
+PWM2PHL = (unsigned char)(value);
+
+PWM2LD = 0xFF;
+
+}
+
+void set_pwmBLUE(unsigned int value)
 {
 
-if (PIR1bits.RCIF == 1)
+PWM3PHH = (unsigned char)(value >> 8);
+PWM3PHL = (unsigned char)(value);
+
+PWM3LD = 0xFF;
+}
+
+void set_color(unsigned int color[])
 {
 
-if (RCSTAbits.OERR == 1) {
-RCSTAbits.CREN = 0;
-cUART_char = RCREGbits.RCREG ;
-RCSTAbits.CREN = 1;
-}
+set_pwmRED(color[1]);
+set_pwmGREEN(color[2]);
+set_pwmBLUE(color[3]);
 
-else
-{
-get_message();
+color[0] = 0;
+color[1] = 0;
+color[2] = 0;
+color[3] = 0;
+color[4] = 0;
 }
-}
-
-}
-

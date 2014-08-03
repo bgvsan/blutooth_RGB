@@ -29,7 +29,7 @@ namespace RGB_Mood.Code
             return data_to_send;
         }
 
-        public async Task<bool> sendColor(Color color)
+        public static async Task<bool> sendColor(Color color)
         {
             try
             {

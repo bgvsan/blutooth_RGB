@@ -1,3 +1,6 @@
-void enableUSART_RX(void);
-void configUSART(void);
-char readUSART(void);
+void init_uart(void);
+
+void get_message(void);
+
+void putch(unsigned char byte);
+

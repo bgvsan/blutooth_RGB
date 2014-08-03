@@ -1,41 +1,49 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-[v F3780 `(v ~T0 @X0 1 tf1`ul ]
-"154 /Applications/microchip/xc8/v1.30/include/pic.h
-[v __delay `JF3780 ~T0 @X0 0 e ]
-[p i __delay ]
+"57 main.c
+[v _init `(v ~T0 @X0 0 ef ]
+"1 usart.h
+[v _init_uart `(v ~T0 @X0 0 ef ]
+"1663 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
+[v _LATA `Vuc ~T0 @X0 0 e@268 ]
+"2 pwm.h
+[v _init_pwm `(v ~T0 @X0 0 ef ]
+"12
+[v _close_PWM `(v ~T0 @X0 0 ef ]
+"13
+[v _open_PWM `(v ~T0 @X0 0 ef ]
+"8
+[v _set_pwmBLUE `(v ~T0 @X0 0 ef1`ui ]
+"6
+[v _set_pwmGREEN `(v ~T0 @X0 0 ef1`ui ]
+"4
+[v _set_pwmRED `(v ~T0 @X0 0 ef1`ui ]
 "1293 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
 "881
 [v _TRISA `Vuc ~T0 @X0 0 e@140 ]
-"409
-[v _PORTA `Vuc ~T0 @X0 0 e@12 ]
-"2 usart.h
-[v _configUSART `(v ~T0 @X0 0 ef ]
-"1
-[v _enableUSART_RX `(v ~T0 @X0 0 ef ]
-[s S61 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S61 . TMR1IE TMR2IE . TXIE RCIE ADIE TMR1GIE ]
-[u S60 `S61 1 ]
-[n S60 . . ]
-"954 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
-[v _PIE1bits `VS60 ~T0 @X0 0 e@145 ]
-[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S27 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-[s S28 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S28 . . T0IF . T0IE ]
-[u S26 `S27 1 `S28 1 ]
-[n S26 . . . ]
-"355
-[v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
-"10642
-[v _RCIF `Vb ~T0 @X0 0 e@141 ]
+"2184
+[v _ANSELA `Vuc ~T0 @X0 0 e@396 ]
+[s S33 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . TMR1IF TMR2IF . TXIF RCIF ADIF TMR1GIF ]
+[u S32 `S33 1 ]
+[n S32 . . ]
+"482
+[v _PIR1bits `VS32 ~T0 @X0 0 e@17 ]
+[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S149 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+[u S148 `S149 1 ]
+[n S148 . . ]
+"2524
+[v _RCSTAbits `VS148 ~T0 @X0 0 e@413 ]
+[s S141 :8 `uc 1 ]
+[n S141 . RCREG ]
+[u S140 `S141 1 ]
+[n S140 . . ]
+"2435
+[v _RCREGbits `VS140 ~T0 @X0 0 e@409 ]
 "3 usart.h
-[v _readUSART `(uc ~T0 @X0 0 ef ]
-"9940 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
-[v _OERR `Vb ~T0 @X0 0 e@3305 ]
-"9716
-[v _CREN `Vb ~T0 @X0 0 e@3308 ]
+[v _get_message `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 22: extern void __builtin_software_breakpoint(void);
 [; ;pic12f1572.h: 44: extern volatile unsigned char INDF0 @ 0x000;
 "46 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
@@ -3684,135 +3692,176 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 28: extern void __nop(void);
 [; ;pic.h: 80: extern unsigned int flash_read(unsigned short addr);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-[; ;usart.h: 1: void enableUSART_RX(void);
-[; ;usart.h: 2: void configUSART(void);
-[; ;usart.h: 3: char readUSART(void);
-"29 main.c
+[; ;usart.h: 1: void init_uart(void);
+[; ;usart.h: 3: void get_message(void);
+[; ;usart.h: 5: void putch(unsigned char byte);
+[; ;pwm.h: 2: void init_pwm(void);
+[; ;pwm.h: 4: void set_pwmRED(unsigned int);
+[; ;pwm.h: 6: void set_pwmGREEN(unsigned int value);
+[; ;pwm.h: 8: void set_pwmBLUE(unsigned int value);
+[; ;pwm.h: 10: void set_color( unsigned int value[]);
+[; ;pwm.h: 12: void close_PWM(void);
+[; ;pwm.h: 13: void open_PWM(void);
+"31 main.c
 [p x FOSC=INTOSC ]
-"30
-[p x WDTE=OFF ]
-"31
-[p x PWRTE=OFF ]
 "32
-[p x MCLRE=OFF ]
+[p x WDTE=OFF ]
 "33
-[p x CP=OFF ]
+[p x PWRTE=OFF ]
 "34
-[p x BOREN=OFF ]
+[p x MCLRE=OFF ]
 "35
+[p x CP=OFF ]
+"36
+[p x BOREN=OFF ]
+"37
 [p x CLKOUTEN=OFF ]
-"38
-[p x WRT=OFF ]
-"39
-[p x PLLEN=OFF ]
 "40
-[p x STVREN=ON ]
+[p x WRT=OFF ]
 "41
-[p x BORV=LO ]
+[p x PLLEN=OFF ]
 "42
-[p x LPBOREN=OFF ]
+[p x STVREN=ON ]
 "43
+[p x BORV=LO ]
+"44
+[p x LPBOREN=OFF ]
+"45
 [p x LVP=ON ]
-[; ;main.c: 46: void init(void);
-[; ;main.c: 47: void interrupt isr(void);
-"51
+"53
+[v _cUART_char `uc ~T0 @X0 1 e ]
+[; ;main.c: 53: unsigned char cUART_char;
+"54
+[v _cUART_data_flg `uc ~T0 @X0 1 e ]
+[; ;main.c: 54: unsigned char cUART_data_flg;
+[; ;main.c: 56: void init_uart(void);
+[; ;main.c: 57: void init(void);
+[; ;main.c: 58: void interrupt InterruptHandlerLow(void);
+"62
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 51: void main() {
+[; ;main.c: 62: void main() {
 [e :U _main ]
 [f ]
-[; ;main.c: 53: while(1)
-"53
+[; ;main.c: 66: init();
+"66
+[e ( _init ..  ]
+[; ;main.c: 67: init_uart();
+"67
+[e ( _init_uart ..  ]
+[; ;main.c: 68: LATA = 0xff;
+"68
+[e = _LATA -> -> 255 `i `uc ]
+[; ;main.c: 71: init_pwm();
+"71
+[e ( _init_pwm ..  ]
+[; ;main.c: 72: close_PWM();
+"72
+[e ( _close_PWM ..  ]
+[; ;main.c: 73: open_PWM();
+"73
+[e ( _open_PWM ..  ]
+[; ;main.c: 75: LATA = 0xff;
+"75
+[e = _LATA -> -> 255 `i `uc ]
+[; ;main.c: 77: set_pwmBLUE(0);
+"77
+[e ( _set_pwmBLUE (1 -> -> 0 `i `ui ]
+[; ;main.c: 78: set_pwmGREEN(0);
+"78
+[e ( _set_pwmGREEN (1 -> -> 0 `i `ui ]
+[; ;main.c: 79: set_pwmRED(0);
+"79
+[e ( _set_pwmRED (1 -> -> 0 `i `ui ]
+[; ;main.c: 80: while (1)
+"80
 [e :U 468 ]
-[; ;main.c: 54: {
-"54
+[; ;main.c: 81: {
+"81
 {
-[; ;main.c: 55: _delay((unsigned long)((100)*(16000000/4000.0)));
-"55
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"56
+"151
 }
 [e :U 467 ]
-"53
+"80
 [e $U 468  ]
 [e :U 469 ]
-[; ;main.c: 56: }
-[; ;main.c: 59: }
-"59
+[; ;main.c: 151: }
+[; ;main.c: 152: }
+"152
 [e :UE 466 ]
 }
-"62
+"156
 [v _init `(v ~T0 @X0 1 ef ]
-"63
 {
-[; ;main.c: 62: void init()
-[; ;main.c: 63: {
+[; ;main.c: 156: void init() {
 [e :U _init ]
 [f ]
-[; ;main.c: 65: OSCCON = 0b01111010;
-"65
+[; ;main.c: 158: OSCCON = 0b01111010;
+"158
 [e = _OSCCON -> -> 122 `i `uc ]
-[; ;main.c: 68: TRISA = 0x00;
-"68
+[; ;main.c: 160: TRISA = 0b000000;
+"160
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 69: PORTA = 0x01;
-"69
-[e = _PORTA -> -> 1 `i `uc ]
-[; ;main.c: 72: configUSART();
-"72
-[e ( _configUSART ..  ]
-[; ;main.c: 73: enableUSART_RX();
-"73
-[e ( _enableUSART_RX ..  ]
-[; ;main.c: 76: PIE1bits.RCIE = 1;
-"76
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 77: INTCONbits.PEIE = 1;
-"77
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;main.c: 78: INTCONbits.GIE = 1;
-"78
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;main.c: 81: }
-"81
+[; ;main.c: 161: ANSELA = 0X00;
+"161
+[e = _ANSELA -> -> 0 `i `uc ]
+[; ;main.c: 162: LATA = 0XFF;
+"162
+[e = _LATA -> -> 255 `i `uc ]
+[; ;main.c: 163: }
+"163
 [e :UE 470 ]
 }
-[v F3791 `(v ~T0 @X0 1 tf ]
-"84
-[v _isr `IF3791 ~T0 @X0 1 e ]
-"85
+[v F3808 `(v ~T0 @X0 1 tf ]
+"165
+[v _InterruptHandlerLow `IF3808 ~T0 @X0 1 e ]
+"166
 {
-[; ;main.c: 84: void interrupt isr(void)
-[; ;main.c: 85: {
-[e :U _isr ]
+[; ;main.c: 165: void interrupt InterruptHandlerLow ()
+[; ;main.c: 166: {
+[e :U _InterruptHandlerLow ]
 [f ]
-[; ;main.c: 87: if (RCIF == 1)
-"87
-[e $ ! == -> _RCIF `i -> 1 `i 472  ]
-[; ;main.c: 88: {
-"88
+[; ;main.c: 168: if (PIR1bits.RCIF == 1)
+"168
+[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 472  ]
+[; ;main.c: 169: {
+"169
 {
-[; ;main.c: 90: readUSART();
-"90
-[e ( _readUSART ..  ]
-[; ;main.c: 91: if(OERR ==1)
-"91
-[e $ ! == -> _OERR `i -> 1 `i 473  ]
-[; ;main.c: 92: {
-"92
+[; ;main.c: 171: if (RCSTAbits.OERR == 1) {
+"171
+[e $ ! == -> . . _RCSTAbits 0 1 `i -> 1 `i 473  ]
 {
-[; ;main.c: 93: CREN = 0;
-"93
-[e = _CREN -> -> 0 `i `b ]
-"94
+[; ;main.c: 172: RCSTAbits.CREN = 0;
+"172
+[e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 173: cUART_char = RCREGbits.RCREG ;
+"173
+[e = _cUART_char . . _RCREGbits 0 0 ]
+[; ;main.c: 174: RCSTAbits.CREN = 1;
+"174
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
+"175
 }
+[; ;main.c: 175: }
+[e $U 474  ]
+"177
 [e :U 473 ]
-"95
+[; ;main.c: 177: else
+[; ;main.c: 178: {
+"178
+{
+[; ;main.c: 179: get_message();
+"179
+[e ( _get_message ..  ]
+"180
+}
+[e :U 474 ]
+"181
 }
 [e :U 472 ]
-[; ;main.c: 94: }
-[; ;main.c: 95: }
-[; ;main.c: 97: }
-"97
+[; ;main.c: 180: }
+[; ;main.c: 181: }
+[; ;main.c: 183: }
+"183
 [e :UE 471 ]
 }

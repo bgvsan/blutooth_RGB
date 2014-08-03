@@ -1,60 +1,124 @@
 Version 3.2 HI-TECH Software Intermediate Code
-[s S58 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S58 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
-[s S59 :6 `uc 1 ]
-[n S59 . TRISA ]
-[u S57 `S58 1 `S59 1 ]
-[n S57 . . . ]
-"899 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
-[v _TRISAbits `VS57 ~T0 @X0 0 e@140 ]
-"2488
-[v _SPBRGH `Vuc ~T0 @X0 0 e@412 ]
-"2469
-[v _SPBRGL `Vuc ~T0 @X0 0 e@411 ]
-[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S149 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-[u S148 `S149 1 ]
-[n S148 . . ]
-"2524
-[v _RCSTAbits `VS148 ~T0 @X0 0 e@413 ]
-[s S153 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S153 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
-[u S152 `S153 1 ]
-[n S152 . . ]
-"2646
-[v _BAUDCONbits `VS152 ~T0 @X0 0 e@415 ]
-[s S151 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S151 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-[u S150 `S151 1 ]
-[n S150 . . ]
-"2585
-[v _TXSTAbits `VS150 ~T0 @X0 0 e@414 ]
-[s S61 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S61 . TMR1IE TMR2IE . TXIE RCIE ADIE TMR1GIE ]
-[u S60 `S61 1 ]
-[n S60 . . ]
-"954
-[v _PIE1bits `VS60 ~T0 @X0 0 e@145 ]
-[s S27 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S27 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-[s S28 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S28 . . T0IF . T0IE ]
-[u S26 `S27 1 `S28 1 ]
-[n S26 . . . ]
-"355
-[v _INTCONbits `VS26 ~T0 @X0 0 e@11 ]
-"10806
-[v _TXIF `Vb ~T0 @X0 0 e@140 ]
-"2444
-[v _TXREG `Vuc ~T0 @X0 0 e@410 ]
-[s S141 :8 `uc 1 ]
-[n S141 . RCREG ]
-[u S140 `S141 1 ]
-[n S140 . . ]
-"2435
-[v _RCREGbits `VS140 ~T0 @X0 0 e@409 ]
-"10 pwm.h
-[v _set_color `(v ~T0 @X0 0 ef1`*ui ]
+[s S119 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S119 . P1SEL P2SEL TXCKSEL T1GSEL . CWGBSEL CWGASEL RXDTSEL ]
+[u S118 `S119 1 ]
+[n S118 . . ]
+"2095 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
+[v _APFCONbits `VS118 ~T0 @X0 0 e@285 ]
+[s S249 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S249 . . MODE POL OUT OE EN ]
+[s S250 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S250 . . PWM1MOD0 PWM1MOD1 ]
+[s S251 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S251 . . PWM1MOD PWM1POL PWM1OUT PWM1OE PWM1EN ]
+[s S252 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S252 . . MODE0 MODE1 ]
+[u S248 `S249 1 `S250 1 `S251 1 `S252 1 ]
+[n S248 . . . . . ]
+"4842
+[v _PWM1CONbits `VS248 ~T0 @X0 0 e@3483 ]
+[s S331 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S331 . . MODE POL OUT OE EN ]
+[s S332 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S332 . . PWM2MOD0 PWM2MOD1 ]
+[s S333 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S333 . . PWM2MOD PWM2POL PWM2OUT PWM2OE PWM2EN ]
+[s S334 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S334 . . MODE0 MODE1 ]
+[u S330 `S331 1 `S332 1 `S333 1 `S334 1 ]
+[n S330 . . . . . ]
+"6794
+[v _PWM2CONbits `VS330 ~T0 @X0 0 e@3499 ]
+[s S413 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S413 . . MODE POL OUT OE EN ]
+[s S414 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S414 . . PWM3MOD0 PWM3MOD1 ]
+[s S415 :2 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S415 . . PWM3MOD PWM3POL PWM3OUT PWM3OE PWM3EN ]
+[s S416 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S416 . . MODE0 MODE1 ]
+[u S412 `S413 1 `S414 1 `S415 1 `S416 1 ]
+[n S412 . . . . . ]
+"8746
+[v _PWM3CONbits `VS412 ~T0 @X0 0 e@3515 ]
+[s S266 :2 `uc 1 :2 `uc 1 :3 `uc 1 ]
+[n S266 . CS . PS ]
+[s S267 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S267 . PWM1CS0 PWM1CS1 . PWM1PS0 PWM1PS1 PWM1PS2 ]
+[s S268 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S268 . PWM1CS . PWM1PS ]
+[s S269 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S269 . CS0 CS1 . PS0 PS1 PS2 ]
+[u S265 `S266 1 `S267 1 `S268 1 `S269 1 ]
+[n S265 . . . . . ]
+"5199
+[v _PWM1CLKCONbits `VS265 ~T0 @X0 0 e@3486 ]
+[s S348 :2 `uc 1 :2 `uc 1 :3 `uc 1 ]
+[n S348 . CS . PS ]
+[s S349 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S349 . PWM2CS0 PWM2CS1 . PWM2PS0 PWM2PS1 PWM2PS2 ]
+[s S350 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S350 . PWM2CS . PWM2PS ]
+[s S351 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S351 . CS0 CS1 . PS0 PS1 PS2 ]
+[u S347 `S348 1 `S349 1 `S350 1 `S351 1 ]
+[n S347 . . . . . ]
+"7151
+[v _PWM2CLKCONbits `VS347 ~T0 @X0 0 e@3502 ]
+[s S430 :2 `uc 1 :2 `uc 1 :3 `uc 1 ]
+[n S430 . CS . PS ]
+[s S431 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S431 . PWM3CS0 PWM3CS1 . PWM3PS0 PWM3PS1 PWM3PS2 ]
+[s S432 :3 `uc 1 :1 `uc 1 :3 `uc 1 ]
+[n S432 . PWM3CS . PWM3PS ]
+[s S433 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S433 . CS0 CS1 . PS0 PS1 PS2 ]
+[u S429 `S430 1 `S431 1 `S432 1 `S433 1 ]
+[n S429 . . . . . ]
+"9103
+[v _PWM3CLKCONbits `VS429 ~T0 @X0 0 e@3518 ]
+"4162
+[v _PWM1PRH `Vuc ~T0 @X0 0 e@3478 ]
+"4035
+[v _PWM1PRL `Vuc ~T0 @X0 0 e@3477 ]
+"3902
+[v _PWM1DCH `Vuc ~T0 @X0 0 e@3476 ]
+"3775
+[v _PWM1DCL `Vuc ~T0 @X0 0 e@3475 ]
+"6114
+[v _PWM2PRH `Vuc ~T0 @X0 0 e@3494 ]
+"5987
+[v _PWM2PRL `Vuc ~T0 @X0 0 e@3493 ]
+"5854
+[v _PWM2DCH `Vuc ~T0 @X0 0 e@3492 ]
+"5727
+[v _PWM2DCL `Vuc ~T0 @X0 0 e@3491 ]
+"8066
+[v _PWM3PRH `Vuc ~T0 @X0 0 e@3510 ]
+"7939
+[v _PWM3PRL `Vuc ~T0 @X0 0 e@3509 ]
+"7806
+[v _PWM3DCH `Vuc ~T0 @X0 0 e@3508 ]
+"7679
+[v _PWM3DCL `Vuc ~T0 @X0 0 e@3507 ]
+"3642
+[v _PWM1PHH `Vuc ~T0 @X0 0 e@3474 ]
+"3515
+[v _PWM1PHL `Vuc ~T0 @X0 0 e@3473 ]
+"10000
+[v _PWM1LD `Vb ~T0 @X0 0 e@27903 ]
+"5594
+[v _PWM2PHH `Vuc ~T0 @X0 0 e@3490 ]
+"5467
+[v _PWM2PHL `Vuc ~T0 @X0 0 e@3489 ]
+"10224
+[v _PWM2LD `Vb ~T0 @X0 0 e@28031 ]
+"7546
+[v _PWM3PHH `Vuc ~T0 @X0 0 e@3506 ]
+"7419
+[v _PWM3PHL `Vuc ~T0 @X0 0 e@3505 ]
+"10448
+[v _PWM3LD `Vb ~T0 @X0 0 e@28159 ]
 [; ;htc.h: 22: extern void __builtin_software_breakpoint(void);
 [; ;pic12f1572.h: 44: extern volatile unsigned char INDF0 @ 0x000;
 "46 /Applications/microchip/xc8/v1.30/include/pic12f1572.h
@@ -3703,145 +3767,264 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 28: extern void __nop(void);
 [; ;pic.h: 80: extern unsigned int flash_read(unsigned short addr);
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
-[; ;pwm.h: 2: void init_pwm(void);
-[; ;pwm.h: 4: void set_pwmRED(unsigned int);
-[; ;pwm.h: 6: void set_pwmGREEN(unsigned int value);
-[; ;pwm.h: 8: void set_pwmBLUE(unsigned int value);
-[; ;pwm.h: 10: void set_color( unsigned int value[]);
-[; ;pwm.h: 12: void close_PWM(void);
-[; ;pwm.h: 13: void open_PWM(void);
-"4 usart.c
-[v _cUART_char `uc ~T0 @X0 1 e ]
-[; ;usart.c: 4: unsigned char cUART_char;
-"5
-[v _cUART_data_count `uc ~T0 @X0 1 e ]
-[i _cUART_data_count
--> -> 0 `i `uc
-]
-[; ;usart.c: 5: unsigned char cUART_data_count = 0;
+"5 pwm.c
+[v _init_pwm `(v ~T0 @X0 1 ef ]
 "6
-[v _cUART_data_message `ui ~T0 @X0 -> 5 `i e ]
-[; ;usart.c: 6: unsigned int cUART_data_message[5];
-"8
-[v _init_uart `(v ~T0 @X0 1 ef ]
-"9
 {
-[; ;usart.c: 8: void init_uart(void)
-[; ;usart.c: 9: {
-[e :U _init_uart ]
+[; ;pwm.c: 5: void init_pwm()
+[; ;pwm.c: 6: {
+[e :U _init_pwm ]
 [f ]
-[; ;usart.c: 11: TRISAbits.TRISA1=1;
-"11
-[e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-[; ;usart.c: 12: TRISAbits.TRISA0=0;
+[; ;pwm.c: 9: APFCONbits.P1SEL = 1;
+"9
+[e = . . _APFCONbits 0 0 -> -> 1 `i `uc ]
+[; ;pwm.c: 10: APFCONbits.P2SEL = 1;
+"10
+[e = . . _APFCONbits 0 1 -> -> 1 `i `uc ]
+[; ;pwm.c: 12: PWM1CONbits.EN = 1;
 "12
-[e = . . _TRISAbits 0 0 -> -> 0 `i `uc ]
-[; ;usart.c: 13: SPBRGH = 0x01;
+[e = . . _PWM1CONbits 0 5 -> -> 1 `i `uc ]
+[; ;pwm.c: 13: PWM1CONbits.OE = 1;
 "13
-[e = _SPBRGH -> -> 1 `i `uc ]
-[; ;usart.c: 14: SPBRGL = 0xA0;
+[e = . . _PWM1CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 14: PWM1CONbits.MODE = 00;
 "14
-[e = _SPBRGL -> -> 160 `i `uc ]
-[; ;usart.c: 16: RCSTAbits.CREN=1;
-"16
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-[; ;usart.c: 17: RCSTAbits.SPEN=1;
+[e = . . _PWM1CONbits 0 1 -> -> 0 `i `uc ]
+[; ;pwm.c: 15: PWM1CONbits.POL = 0;
+"15
+[e = . . _PWM1CONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 17: PWM2CONbits.EN = 1;
 "17
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-[; ;usart.c: 18: BAUDCONbits.BRG16=1;
+[e = . . _PWM2CONbits 0 5 -> -> 1 `i `uc ]
+[; ;pwm.c: 18: PWM2CONbits.OE = 1;
 "18
-[e = . . _BAUDCONbits 0 3 -> -> 1 `i `uc ]
-[; ;usart.c: 20: TXSTAbits.SYNC=0;
+[e = . . _PWM2CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 19: PWM2CONbits.MODE = 00;
+"19
+[e = . . _PWM2CONbits 0 1 -> -> 0 `i `uc ]
+[; ;pwm.c: 20: PWM2CONbits.POL = 0;
 "20
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;usart.c: 21: TXSTAbits.BRGH=1;
-"21
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-[; ;usart.c: 22: TXSTAbits.TXEN=1;
+[e = . . _PWM2CONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 22: PWM3CONbits.EN = 1;
 "22
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-[; ;usart.c: 23: PIE1bits.RCIE=1;
+[e = . . _PWM3CONbits 0 5 -> -> 1 `i `uc ]
+[; ;pwm.c: 23: PWM3CONbits.OE = 1;
 "23
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-[; ;usart.c: 24: INTCONbits.GIE = 1;
+[e = . . _PWM3CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 24: PWM3CONbits.MODE = 00;
 "24
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;usart.c: 25: INTCONbits.PEIE = 1;
+[e = . . _PWM3CONbits 0 1 -> -> 0 `i `uc ]
+[; ;pwm.c: 25: PWM3CONbits.POL = 0;
 "25
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;usart.c: 28: }
-"28
+[e = . . _PWM3CONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 29: PWM1CLKCONbits.PS = 00;
+"29
+[e = . . _PWM1CLKCONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 30: PWM1CLKCONbits.CS = 00;
+"30
+[e = . . _PWM1CLKCONbits 0 0 -> -> 0 `i `uc ]
+[; ;pwm.c: 33: PWM2CLKCONbits.PS = 00;
+"33
+[e = . . _PWM2CLKCONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 34: PWM2CLKCONbits.CS = 00;
+"34
+[e = . . _PWM2CLKCONbits 0 0 -> -> 0 `i `uc ]
+[; ;pwm.c: 36: PWM3CLKCONbits.PS = 00;
+"36
+[e = . . _PWM3CLKCONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 37: PWM3CLKCONbits.CS = 00;
+"37
+[e = . . _PWM3CLKCONbits 0 0 -> -> 0 `i `uc ]
+[; ;pwm.c: 42: PWM1PRH = 0xff;
+"42
+[e = _PWM1PRH -> -> 255 `i `uc ]
+[; ;pwm.c: 43: PWM1PRL = 0xff;
+"43
+[e = _PWM1PRL -> -> 255 `i `uc ]
+[; ;pwm.c: 44: PWM1DCH = 0xff;
+"44
+[e = _PWM1DCH -> -> 255 `i `uc ]
+[; ;pwm.c: 45: PWM1DCL = 0xff;
+"45
+[e = _PWM1DCL -> -> 255 `i `uc ]
+[; ;pwm.c: 47: PWM2PRH = 0xff;
+"47
+[e = _PWM2PRH -> -> 255 `i `uc ]
+[; ;pwm.c: 48: PWM2PRL = 0xff;
+"48
+[e = _PWM2PRL -> -> 255 `i `uc ]
+[; ;pwm.c: 49: PWM2DCH = 0xff;
+"49
+[e = _PWM2DCH -> -> 255 `i `uc ]
+[; ;pwm.c: 50: PWM2DCL = 0xff;
+"50
+[e = _PWM2DCL -> -> 255 `i `uc ]
+[; ;pwm.c: 52: PWM3PRH = 0xff;
+"52
+[e = _PWM3PRH -> -> 255 `i `uc ]
+[; ;pwm.c: 53: PWM3PRL = 0xff;
+"53
+[e = _PWM3PRL -> -> 255 `i `uc ]
+[; ;pwm.c: 54: PWM3DCH = 0xff;
+"54
+[e = _PWM3DCH -> -> 255 `i `uc ]
+[; ;pwm.c: 55: PWM3DCL = 0xff;
+"55
+[e = _PWM3DCL -> -> 255 `i `uc ]
+[; ;pwm.c: 58: }
+"58
 [e :UE 466 ]
 }
-"29
-[v _putch `(v ~T0 @X0 1 ef1`uc ]
+"60
+[v _close_PWM `(v ~T0 @X0 1 ef ]
+"61
 {
-[; ;usart.c: 29: void putch(unsigned char byte) {
-[e :U _putch ]
-[v _byte `uc ~T0 @X0 1 r1 ]
+[; ;pwm.c: 60: void close_PWM()
+[; ;pwm.c: 61: {
+[e :U _close_PWM ]
 [f ]
-[; ;usart.c: 31: while(!TXIF)
-"31
-[e $U 468  ]
-[e :U 469 ]
-[; ;usart.c: 32: continue;
-"32
-[e $U 468  ]
-[e :U 468 ]
-"31
-[e $ ! _TXIF 469  ]
-[e :U 470 ]
-[; ;usart.c: 33: TXREG = byte;
-"33
-[e = _TXREG _byte ]
-[; ;usart.c: 34: }
-"34
+[; ;pwm.c: 62: PWM1CONbits.OE = 0;
+"62
+[e = . . _PWM1CONbits 0 4 -> -> 0 `i `uc ]
+[; ;pwm.c: 63: PWM2CONbits.OE = 0;
+"63
+[e = . . _PWM2CONbits 0 4 -> -> 0 `i `uc ]
+[; ;pwm.c: 64: PWM3CONbits.OE = 0;
+"64
+[e = . . _PWM3CONbits 0 4 -> -> 0 `i `uc ]
+[; ;pwm.c: 65: }
+"65
 [e :UE 467 ]
 }
-"39
-[v _get_message `(v ~T0 @X0 1 ef ]
-"40
+"67
+[v _open_PWM `(v ~T0 @X0 1 ef ]
+"68
 {
-[; ;usart.c: 39: void get_message()
-[; ;usart.c: 40: {
-[e :U _get_message ]
+[; ;pwm.c: 67: void open_PWM()
+[; ;pwm.c: 68: {
+[e :U _open_PWM ]
 [f ]
-[; ;usart.c: 42: cUART_char = RCREGbits.RCREG;
-"42
-[e = _cUART_char . . _RCREGbits 0 0 ]
-[; ;usart.c: 44: if(cUART_data_count < 4)
-"44
-[e $ ! < -> _cUART_data_count `i -> 4 `i 472  ]
-[; ;usart.c: 45: {
-"45
-{
-[; ;usart.c: 46: cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
-"46
-[e = *U + &U _cUART_data_message * -> _cUART_data_count `ux -> -> # *U &U _cUART_data_message `ui `ux -> * -> _cUART_char `i -> 257 `i `ui ]
-[; ;usart.c: 47: cUART_data_count++;
-"47
-[e ++ _cUART_data_count -> -> 1 `i `uc ]
-"48
+[; ;pwm.c: 69: PWM1CONbits.OE = 1;
+"69
+[e = . . _PWM1CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 70: PWM2CONbits.OE = 1;
+"70
+[e = . . _PWM2CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 71: PWM3CONbits.OE = 1;
+"71
+[e = . . _PWM3CONbits 0 4 -> -> 1 `i `uc ]
+[; ;pwm.c: 72: }
+"72
+[e :UE 468 ]
 }
-[; ;usart.c: 48: }
-[e $U 473  ]
-"49
-[e :U 472 ]
-[; ;usart.c: 49: else
-[; ;usart.c: 50: {
-"50
+"73
+[v _set_pwmRED `(v ~T0 @X0 1 ef1`ui ]
+"74
 {
-[; ;usart.c: 52: set_color(cUART_data_message);
-"52
-[e ( _set_color (1 &U _cUART_data_message ]
-[; ;usart.c: 53: cUART_data_count = 0;
-"53
-[e = _cUART_data_count -> -> 0 `i `uc ]
-"54
+[; ;pwm.c: 73: void set_pwmRED(unsigned int value)
+[; ;pwm.c: 74: {
+[e :U _set_pwmRED ]
+"73
+[v _value `ui ~T0 @X0 1 r1 ]
+"74
+[f ]
+[; ;pwm.c: 75: PWM1PHH = (unsigned char)(value >> 8);
+"75
+[e = _PWM1PHH -> >> _value -> 8 `i `uc ]
+[; ;pwm.c: 76: PWM1PHL = (unsigned char)(value);
+"76
+[e = _PWM1PHL -> _value `uc ]
+[; ;pwm.c: 78: PWM1LD = 0xFF;
+"78
+[e = _PWM1LD -> -> 255 `i `b ]
+[; ;pwm.c: 79: }
+"79
+[e :UE 469 ]
 }
-[e :U 473 ]
-[; ;usart.c: 54: }
-[; ;usart.c: 56: }
-"56
+"81
+[v _set_pwmGREEN `(v ~T0 @X0 1 ef1`ui ]
+"82
+{
+[; ;pwm.c: 81: void set_pwmGREEN(unsigned int value)
+[; ;pwm.c: 82: {
+[e :U _set_pwmGREEN ]
+"81
+[v _value `ui ~T0 @X0 1 r1 ]
+"82
+[f ]
+[; ;pwm.c: 83: PWM2PHH = (unsigned char)(value >> 8);
+"83
+[e = _PWM2PHH -> >> _value -> 8 `i `uc ]
+[; ;pwm.c: 84: PWM2PHL = (unsigned char)(value);
+"84
+[e = _PWM2PHL -> _value `uc ]
+[; ;pwm.c: 86: PWM2LD = 0xFF;
+"86
+[e = _PWM2LD -> -> 255 `i `b ]
+[; ;pwm.c: 88: }
+"88
+[e :UE 470 ]
+}
+"90
+[v _set_pwmBLUE `(v ~T0 @X0 1 ef1`ui ]
+"91
+{
+[; ;pwm.c: 90: void set_pwmBLUE(unsigned int value)
+[; ;pwm.c: 91: {
+[e :U _set_pwmBLUE ]
+"90
+[v _value `ui ~T0 @X0 1 r1 ]
+"91
+[f ]
+[; ;pwm.c: 93: PWM3PHH = (unsigned char)(value >> 8);
+"93
+[e = _PWM3PHH -> >> _value -> 8 `i `uc ]
+[; ;pwm.c: 94: PWM3PHL = (unsigned char)(value);
+"94
+[e = _PWM3PHL -> _value `uc ]
+[; ;pwm.c: 96: PWM3LD = 0xFF;
+"96
+[e = _PWM3LD -> -> 255 `i `b ]
+[; ;pwm.c: 97: }
+"97
 [e :UE 471 ]
+}
+"99
+[v _set_color `(v ~T0 @X0 1 ef1`*ui ]
+"100
+{
+[; ;pwm.c: 99: void set_color(unsigned int color[])
+[; ;pwm.c: 100: {
+[e :U _set_color ]
+"99
+[v _color `*ui ~T0 @X0 1 r1 ]
+"100
+[f ]
+[; ;pwm.c: 102: set_pwmRED(color[1]);
+"102
+[e ( _set_pwmRED (1 *U + _color * -> -> 1 `i `x -> -> # *U _color `i `x ]
+[; ;pwm.c: 103: set_pwmGREEN(color[2]);
+"103
+[e ( _set_pwmGREEN (1 *U + _color * -> -> 2 `i `x -> -> # *U _color `i `x ]
+[; ;pwm.c: 104: set_pwmBLUE(color[3]);
+"104
+[e ( _set_pwmBLUE (1 *U + _color * -> -> 3 `i `x -> -> # *U _color `i `x ]
+[; ;pwm.c: 106: color[0] = 0;
+"106
+[e = *U + _color * -> -> 0 `i `x -> -> # *U _color `i `x -> -> 0 `i `ui ]
+[; ;pwm.c: 107: color[1] = 0;
+"107
+[e = *U + _color * -> -> 1 `i `x -> -> # *U _color `i `x -> -> 0 `i `ui ]
+[; ;pwm.c: 108: color[2] = 0;
+"108
+[e = *U + _color * -> -> 2 `i `x -> -> # *U _color `i `x -> -> 0 `i `ui ]
+[; ;pwm.c: 109: color[3] = 0;
+"109
+[e = *U + _color * -> -> 3 `i `x -> -> # *U _color `i `x -> -> 0 `i `ui ]
+[; ;pwm.c: 110: color[4] = 0;
+"110
+[e = *U + _color * -> -> 4 `i `x -> -> # *U _color `i `x -> -> 0 `i `ui ]
+[; ;pwm.c: 111: }
+"111
+[e :UE 472 ]
 }

@@ -4774,27 +4774,72 @@ extern unsigned int flash_read(unsigned short addr);
 #pragma intrinsic(_delay)
 extern __nonreentrant void _delay(unsigned long);
 
-# 6 "usart.c"
-void enableUSART_RX()
+# 2 "pwm.h"
+void init_pwm(void);
+
+void set_pwmRED(unsigned int);
+
+void set_pwmGREEN(unsigned int value);
+
+void set_pwmBLUE(unsigned int value);
+
+void set_color( unsigned int value[]);
+
+void close_PWM(void);
+void open_PWM(void);
+
+# 4 "usart.c"
+unsigned char cUART_char;
+unsigned char cUART_data_count = 0;
+unsigned int cUART_data_message[5];
+
+void init_uart(void)
 {
-SPEN = 1;
-CREN = 1;
-SYNC = 0;
-SPEN = 1;
+
+TRISAbits.TRISA1=1;
+TRISAbits.TRISA0=0;
+SPBRGH = 0x01;
+SPBRGL = 0xA0;
+
+RCSTAbits.CREN=1;
+RCSTAbits.SPEN=1;
+BAUDCONbits.BRG16=1;
+
+TXSTAbits.SYNC=0;
+TXSTAbits.BRGH=1;
+TXSTAbits.TXEN=1;
+PIE1bits.RCIE=1;
+INTCONbits.GIE = 1;
+INTCONbits.PEIE = 1;
+
+
+}
+void putch(unsigned char byte) {
+
+while(!TXIF)
+continue;
+TXREG = byte;
 }
 
-void configUSART()
+
+
+
+void get_message()
 {
-BRG16 = 0;
-BRGH = 1;
 
+cUART_char = RCREGbits.RCREG;
 
+if(cUART_data_count < 4)
+{
+cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
+cUART_data_count++;
+}
+else
+{
 
-SPBRGH = 0x96;
-SPBRGL = 0x15;
+set_color(cUART_data_message);
+cUART_data_count = 0;
 }
 
-char readUSART()
-{
-return RCREG;
 }
+

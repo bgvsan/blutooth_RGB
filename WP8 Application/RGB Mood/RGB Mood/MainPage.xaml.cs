@@ -17,6 +17,7 @@ namespace RGB_Mood
     public partial class MainPage : PhoneApplicationPage
     {
         private bool connected = false;
+        private Bluetooth.BTConnection btpd;
 
         // Costruttore
         public MainPage()
@@ -26,25 +27,42 @@ namespace RGB_Mood
             this.colorPicker.ColorChanged += colorPicker_ColorChanged;
         }
 
-        void colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
+        async void  colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
         {
-
-            if (connected)
+            try
             {
-                var result = Code.BT_Protocol.getCMDColor(color);
-                Bluetooth.BTConnection btpd = new BTConnection();
-                //Send data to BT module 
-                btpd.Send_Data(result, 1, Code.Stuff._MACADDRESS);
+          
+
+            if (!connected)
+            {
+                Connection();
             }
+            var commandColor = Code.BT_Protocol.getCMDColor(color);
+            string tempstring = "";
+            foreach (byte s in commandColor)
+            {
+                tempstring += s.ToString() + " ";
+            }
+            Debug.WriteLine(tempstring);
+            //Send data to BT module 
+
+                await btpd.Send_Data(commandColor,0, Code.Stuff._MACADDRESS);
+            }
+            catch(Exception ex)
+             {
+
+                 Debug.WriteLine(ex.ToString());
+             }
+
         }
 
-      
+
 
         private async void Connection()
         {
             try
             {
-                Bluetooth.BTConnection btpd = new BTConnection();
+                btpd = new BTConnection();
                 await btpd.ConnectToDevice(Code.Stuff._MACADDRESS);
             }
             catch (Bluetooth.BluetoothDeviceException ex)
