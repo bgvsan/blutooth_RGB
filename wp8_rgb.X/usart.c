@@ -27,14 +27,11 @@ void init_uart(void) // init UART module for 9600bps boud, start bit 1, stopbit 
 
 }
 void putch(unsigned char byte) {
-/* output one byte */
-while(!TXIF)	/* set when register is empty */
-	continue;
-TXREG = byte;
+    /* output one byte */
+    while(!TXIF)	/* set when register is empty */
+            continue;
+    TXREG = byte;
 }
-
-
-
 
 void get_message()
 {
@@ -48,7 +45,6 @@ void get_message()
     }
     else
     {
-
         set_color(cUART_data_message);
         cUART_data_count = 0;
     }

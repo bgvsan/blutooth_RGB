@@ -44,29 +44,22 @@
 #pragma config LPBOREN = OFF    // Low Power Brown-out Reset enable bit (LPBOR is disabled)
 #pragma config LVP = ON         // Low-Voltage Programming Enable (Low-voltage programming enabled)
 
-
-
 #define LEDGREEN   LATAbits.LATA4
 #define LEDBLUE  LATAbits.LATA2
 #define LEDRED LATAbits.LATA5
 
-unsigned char cUART_char;
-unsigned char cUART_data_flg;
 
 void init_uart(void);
 void init(void);
 void interrupt InterruptHandlerLow(void);
 
-//void configUSART(void);
+unsigned char cUART_char;
 
 void main() {
 
-    
-    
     init();
     init_uart();
     LATA = 0xff;
-
 
     init_pwm();
     close_PWM();
@@ -79,80 +72,11 @@ void main() {
     set_pwmRED(0);
     while (1)
     {
-
-
-         /*
-         * unsigned int valueRED = rand() % 60000;
-    unsigned int valueGREEN = rand() % 30000;
-    unsigned int valueBLUE = rand() % 10000;
-    unsigned char reverseRED = 0;
-    unsigned char reverseGREEN = 0;
-    unsigned char reverseBLUE =0;
-         *
-         *
-         *
-         * int tempRED = rand() % 1000;
-        int tempGREEN = rand() % 1000;
-        int tempBLUE = rand() % 1000;
-
-        if(reverseRED == 0)
-        {
-            valueRED += tempRED;
-            if(valueRED >= 63000)
-                reverseRED = 1 ;
-        }
-        else
-        {
-
-            valueRED -tempRED <= 1000 ? valueRED = valueRED: valueRED -= tempRED;
-            if(valueRED <=1200)
-                reverseRED = 0;
-        }
-
-        if(reverseGREEN == 0)
-        {
-            valueGREEN += tempGREEN;
-            if(valueGREEN >= 63000)
-                reverseGREEN = 1;
-        }
-        else
-        {
-            valueGREEN -tempGREEN <= 1000 ? valueGREEN = valueGREEN: valueGREEN -= tempGREEN;
-            if(valueGREEN <=1200)
-                reverseGREEN = 0;
-        }
-
-
-        if(reverseBLUE == 0)
-        {
-
-            valueBLUE += tempBLUE;
-            if(valueBLUE >=63000)
-                reverseBLUE = 1;
-        }
-        else
-        {
-            valueBLUE - tempBLUE <= 1000 ? valueBLUE = valueBLUE: valueBLUE -= tempBLUE;
-            if (valueBLUE <= 1200)
-                reverseBLUE = 0;
-        }
-
-
-        
-        set_pwmRED(valueRED);
-        set_pwmBLUE(valueBLUE);
-        set_pwmGREEN(valueGREEN);*/
-
-        //__delay_ms(10);
-
-        
-    
         
     }
 }
 
-// initialiaze peripherals
-
+// initialiaze peripheral
 void init() {
     //CLOCK 16MHz
     OSCCON = 0b01111010;

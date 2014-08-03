@@ -1,6 +1,6 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"57 main.c
+"53 main.c
 [v _init `(v ~T0 @X0 0 ef ]
 "1 usart.h
 [v _init_uart `(v ~T0 @X0 0 ef ]
@@ -3694,7 +3694,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 154: extern __nonreentrant void _delay(unsigned long);
 [; ;usart.h: 1: void init_uart(void);
 [; ;usart.h: 3: void get_message(void);
-[; ;usart.h: 5: void putch(unsigned char byte);
 [; ;pwm.h: 2: void init_pwm(void);
 [; ;pwm.h: 4: void set_pwmRED(unsigned int);
 [; ;pwm.h: 6: void set_pwmGREEN(unsigned int value);
@@ -3728,140 +3727,137 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x LPBOREN=OFF ]
 "45
 [p x LVP=ON ]
-"53
+[; ;main.c: 52: void init_uart(void);
+[; ;main.c: 53: void init(void);
+[; ;main.c: 54: void interrupt InterruptHandlerLow(void);
+"56
 [v _cUART_char `uc ~T0 @X0 1 e ]
-[; ;main.c: 53: unsigned char cUART_char;
-"54
-[v _cUART_data_flg `uc ~T0 @X0 1 e ]
-[; ;main.c: 54: unsigned char cUART_data_flg;
-[; ;main.c: 56: void init_uart(void);
-[; ;main.c: 57: void init(void);
-[; ;main.c: 58: void interrupt InterruptHandlerLow(void);
-"62
+[; ;main.c: 56: unsigned char cUART_char;
+"58
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 62: void main() {
+[; ;main.c: 58: void main() {
 [e :U _main ]
 [f ]
-[; ;main.c: 66: init();
-"66
+[; ;main.c: 60: init();
+"60
 [e ( _init ..  ]
-[; ;main.c: 67: init_uart();
-"67
+[; ;main.c: 61: init_uart();
+"61
 [e ( _init_uart ..  ]
+[; ;main.c: 62: LATA = 0xff;
+"62
+[e = _LATA -> -> 255 `i `uc ]
+[; ;main.c: 64: init_pwm();
+"64
+[e ( _init_pwm ..  ]
+[; ;main.c: 65: close_PWM();
+"65
+[e ( _close_PWM ..  ]
+[; ;main.c: 66: open_PWM();
+"66
+[e ( _open_PWM ..  ]
 [; ;main.c: 68: LATA = 0xff;
 "68
 [e = _LATA -> -> 255 `i `uc ]
-[; ;main.c: 71: init_pwm();
-"71
-[e ( _init_pwm ..  ]
-[; ;main.c: 72: close_PWM();
-"72
-[e ( _close_PWM ..  ]
-[; ;main.c: 73: open_PWM();
-"73
-[e ( _open_PWM ..  ]
-[; ;main.c: 75: LATA = 0xff;
-"75
-[e = _LATA -> -> 255 `i `uc ]
-[; ;main.c: 77: set_pwmBLUE(0);
-"77
+[; ;main.c: 70: set_pwmBLUE(0);
+"70
 [e ( _set_pwmBLUE (1 -> -> 0 `i `ui ]
-[; ;main.c: 78: set_pwmGREEN(0);
-"78
+[; ;main.c: 71: set_pwmGREEN(0);
+"71
 [e ( _set_pwmGREEN (1 -> -> 0 `i `ui ]
-[; ;main.c: 79: set_pwmRED(0);
-"79
+[; ;main.c: 72: set_pwmRED(0);
+"72
 [e ( _set_pwmRED (1 -> -> 0 `i `ui ]
-[; ;main.c: 80: while (1)
-"80
+[; ;main.c: 73: while (1)
+"73
 [e :U 468 ]
-[; ;main.c: 81: {
-"81
+[; ;main.c: 74: {
+"74
 {
-"151
+"76
 }
 [e :U 467 ]
-"80
+"73
 [e $U 468  ]
 [e :U 469 ]
-[; ;main.c: 151: }
-[; ;main.c: 152: }
-"152
+[; ;main.c: 76: }
+[; ;main.c: 77: }
+"77
 [e :UE 466 ]
 }
-"156
+"80
 [v _init `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 156: void init() {
+[; ;main.c: 80: void init() {
 [e :U _init ]
 [f ]
-[; ;main.c: 158: OSCCON = 0b01111010;
-"158
+[; ;main.c: 82: OSCCON = 0b01111010;
+"82
 [e = _OSCCON -> -> 122 `i `uc ]
-[; ;main.c: 160: TRISA = 0b000000;
-"160
+[; ;main.c: 84: TRISA = 0b000000;
+"84
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 161: ANSELA = 0X00;
-"161
+[; ;main.c: 85: ANSELA = 0X00;
+"85
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 162: LATA = 0XFF;
-"162
+[; ;main.c: 86: LATA = 0XFF;
+"86
 [e = _LATA -> -> 255 `i `uc ]
-[; ;main.c: 163: }
-"163
+[; ;main.c: 87: }
+"87
 [e :UE 470 ]
 }
-[v F3808 `(v ~T0 @X0 1 tf ]
-"165
-[v _InterruptHandlerLow `IF3808 ~T0 @X0 1 e ]
-"166
+[v F3804 `(v ~T0 @X0 1 tf ]
+"89
+[v _InterruptHandlerLow `IF3804 ~T0 @X0 1 e ]
+"90
 {
-[; ;main.c: 165: void interrupt InterruptHandlerLow ()
-[; ;main.c: 166: {
+[; ;main.c: 89: void interrupt InterruptHandlerLow ()
+[; ;main.c: 90: {
 [e :U _InterruptHandlerLow ]
 [f ]
-[; ;main.c: 168: if (PIR1bits.RCIF == 1)
-"168
+[; ;main.c: 92: if (PIR1bits.RCIF == 1)
+"92
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 472  ]
-[; ;main.c: 169: {
-"169
+[; ;main.c: 93: {
+"93
 {
-[; ;main.c: 171: if (RCSTAbits.OERR == 1) {
-"171
+[; ;main.c: 95: if (RCSTAbits.OERR == 1) {
+"95
 [e $ ! == -> . . _RCSTAbits 0 1 `i -> 1 `i 473  ]
 {
-[; ;main.c: 172: RCSTAbits.CREN = 0;
-"172
+[; ;main.c: 96: RCSTAbits.CREN = 0;
+"96
 [e = . . _RCSTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 173: cUART_char = RCREGbits.RCREG ;
-"173
+[; ;main.c: 97: cUART_char = RCREGbits.RCREG ;
+"97
 [e = _cUART_char . . _RCREGbits 0 0 ]
-[; ;main.c: 174: RCSTAbits.CREN = 1;
-"174
+[; ;main.c: 98: RCSTAbits.CREN = 1;
+"98
 [e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"175
+"99
 }
-[; ;main.c: 175: }
+[; ;main.c: 99: }
 [e $U 474  ]
-"177
+"101
 [e :U 473 ]
-[; ;main.c: 177: else
-[; ;main.c: 178: {
-"178
+[; ;main.c: 101: else
+[; ;main.c: 102: {
+"102
 {
-[; ;main.c: 179: get_message();
-"179
+[; ;main.c: 103: get_message();
+"103
 [e ( _get_message ..  ]
-"180
+"104
 }
 [e :U 474 ]
-"181
+"105
 }
 [e :U 472 ]
-[; ;main.c: 180: }
-[; ;main.c: 181: }
-[; ;main.c: 183: }
-"183
+[; ;main.c: 104: }
+[; ;main.c: 105: }
+[; ;main.c: 107: }
+"107
 [e :UE 471 ]
 }

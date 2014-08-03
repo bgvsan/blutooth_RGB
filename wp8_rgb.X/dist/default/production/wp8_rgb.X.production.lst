@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.30 build 55553 
-                                                                                               Sun Aug  3 19:28:57 2014
+                                                                                               Sun Aug  3 22:58:20 2014
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 55553
      1                           	processor	12F1572
@@ -590,1416 +590,1413 @@ Microchip Technology Omniscient Code Generator (Lite mode) build 55553
    584                           ; Clear objects allocated to COMMON
    585  001B  01FA               	clrf	__pbssCOMMON& (0+127)
    586  001C  01FB               	clrf	(__pbssCOMMON+1)& (0+127)
-   587  001D  01FC               	clrf	(__pbssCOMMON+2)& (0+127)
-   588                           
-   589                           ; Clear objects allocated to BANK0
-   590  001E  01A0               	clrf	__pbssBANK0& (0+127)
-   591  001F  01A1               	clrf	(__pbssBANK0+1)& (0+127)
-   592  0020  01A2               	clrf	(__pbssBANK0+2)& (0+127)
-   593  0021  01A3               	clrf	(__pbssBANK0+3)& (0+127)
-   594  0022  01A4               	clrf	(__pbssBANK0+4)& (0+127)
-   595  0023  01A5               	clrf	(__pbssBANK0+5)& (0+127)
-   596  0024  01A6               	clrf	(__pbssBANK0+6)& (0+127)
-   597  0025  01A7               	clrf	(__pbssBANK0+7)& (0+127)
-   598  0026  01A8               	clrf	(__pbssBANK0+8)& (0+127)
-   599  0027  01A9               	clrf	(__pbssBANK0+9)& (0+127)
-   600  0028                     end_of_initialization:	
-   601                           ;End of C runtime variable initialization code
-   602                           
-   603  0028                     __end_of__initialization:	
-   604  0028  0020               	movlb	0
-   605  0029  28C8               	ljmp	_main	;jump to C main() function
-   606                           
-   607                           	psect	bssCOMMON
-   608  007A                     __pbssCOMMON:	
-   609  007A                     _cUART_char:	
-   610  007A                     	ds	1
-   611  007B                     _cUART_data_count:	
-   612  007B                     	ds	1
-   613  007C                     _cUART_data_flg:	
-   614  007C                     	ds	1
-   615                           
-   616                           	psect	bssBANK0
-   617  0020                     __pbssBANK0:	
-   618  0020                     _cUART_data_message:	
-   619  0020                     	ds	10
-   620                           
-   621                           	psect	cstackCOMMON
-   622  0070                     __pcstackCOMMON:	
-   623  0070                     ?_init:	
-   624  0070                     ?_init_uart:	
+   587                           
+   588                           ; Clear objects allocated to BANK0
+   589  001D  01A0               	clrf	__pbssBANK0& (0+127)
+   590  001E  01A1               	clrf	(__pbssBANK0+1)& (0+127)
+   591  001F  01A2               	clrf	(__pbssBANK0+2)& (0+127)
+   592  0020  01A3               	clrf	(__pbssBANK0+3)& (0+127)
+   593  0021  01A4               	clrf	(__pbssBANK0+4)& (0+127)
+   594  0022  01A5               	clrf	(__pbssBANK0+5)& (0+127)
+   595  0023  01A6               	clrf	(__pbssBANK0+6)& (0+127)
+   596  0024  01A7               	clrf	(__pbssBANK0+7)& (0+127)
+   597  0025  01A8               	clrf	(__pbssBANK0+8)& (0+127)
+   598  0026  01A9               	clrf	(__pbssBANK0+9)& (0+127)
+   599  0027                     end_of_initialization:	
+   600                           ;End of C runtime variable initialization code
+   601                           
+   602  0027                     __end_of__initialization:	
+   603  0027  0020               	movlb	0
+   604  0028  28C7               	ljmp	_main	;jump to C main() function
+   605                           
+   606                           	psect	bssCOMMON
+   607  007A                     __pbssCOMMON:	
+   608  007A                     _cUART_char:	
+   609  007A                     	ds	1
+   610  007B                     _cUART_data_count:	
+   611  007B                     	ds	1
+   612                           
+   613                           	psect	bssBANK0
+   614  0020                     __pbssBANK0:	
+   615  0020                     _cUART_data_message:	
+   616  0020                     	ds	10
+   617                           
+   618                           	psect	cstackCOMMON
+   619  0070                     __pcstackCOMMON:	
+   620  0070                     ?_init:	
+   621  0070                     ?_init_uart:	
+   622                           ; 0 bytes @ 0x0
+   623                           
+   624  0070                     ?_init_pwm:	
    625                           ; 0 bytes @ 0x0
    626                           
-   627  0070                     ?_init_pwm:	
+   627  0070                     ?_close_PWM:	
    628                           ; 0 bytes @ 0x0
    629                           
-   630  0070                     ?_close_PWM:	
+   630  0070                     ?_open_PWM:	
    631                           ; 0 bytes @ 0x0
    632                           
-   633  0070                     ?_open_PWM:	
+   633  0070                     ?_get_message:	
    634                           ; 0 bytes @ 0x0
    635                           
-   636  0070                     ?_get_message:	
+   636  0070                     ?_set_color:	
    637                           ; 0 bytes @ 0x0
    638                           
-   639  0070                     ?_set_color:	
+   639  0070                     ?_main:	
    640                           ; 0 bytes @ 0x0
    641                           
-   642  0070                     ?_main:	
+   642  0070                     ?_InterruptHandlerLow:	
    643                           ; 0 bytes @ 0x0
    644                           
-   645  0070                     ?_InterruptHandlerLow:	
+   645  0070                     ?i1_set_pwmRED:	
    646                           ; 0 bytes @ 0x0
    647                           
-   648  0070                     ?i1_set_pwmRED:	
+   648  0070                     ?i1_set_pwmGREEN:	
    649                           ; 0 bytes @ 0x0
    650                           
-   651  0070                     ?i1_set_pwmGREEN:	
+   651  0070                     ?i1_set_pwmBLUE:	
    652                           ; 0 bytes @ 0x0
    653                           
-   654  0070                     ?i1_set_pwmBLUE:	
+   654  0070                     ?___wmul:	
    655                           ; 0 bytes @ 0x0
    656                           
-   657  0070                     ?___wmul:	
-   658                           ; 0 bytes @ 0x0
+   657  0070                     ___wmul@multiplier:	
+   658                           ; 2 bytes @ 0x0
    659                           
-   660  0070                     ___wmul@multiplier:	
+   660  0070                     i1set_pwmRED@value:	
    661                           ; 2 bytes @ 0x0
    662                           
-   663  0070                     i1set_pwmRED@value:	
+   663  0070                     i1set_pwmGREEN@value:	
    664                           ; 2 bytes @ 0x0
    665                           
-   666  0070                     i1set_pwmGREEN@value:	
+   666  0070                     i1set_pwmBLUE@value:	
    667                           ; 2 bytes @ 0x0
    668                           
-   669  0070                     i1set_pwmBLUE@value:	
+   669                           
    670                           ; 2 bytes @ 0x0
-   671                           
-   672                           
-   673                           ; 2 bytes @ 0x0
-   674  0070                     	ds	2
-   675  0072                     ??_set_color:	
-   676  0072                     ??i1_set_pwmRED:	
+   671  0070                     	ds	2
+   672  0072                     ??_set_color:	
+   673  0072                     ??i1_set_pwmRED:	
+   674                           ; 0 bytes @ 0x2
+   675                           
+   676  0072                     ??i1_set_pwmGREEN:	
    677                           ; 0 bytes @ 0x2
    678                           
-   679  0072                     ??i1_set_pwmGREEN:	
+   679  0072                     ??i1_set_pwmBLUE:	
    680                           ; 0 bytes @ 0x2
    681                           
-   682  0072                     ??i1_set_pwmBLUE:	
+   682  0072                     set_color@color:	
    683                           ; 0 bytes @ 0x2
    684                           
-   685  0072                     set_color@color:	
-   686                           ; 0 bytes @ 0x2
+   685  0072                     ___wmul@multiplicand:	
+   686                           ; 1 bytes @ 0x2
    687                           
-   688  0072                     ___wmul@multiplicand:	
-   689                           ; 1 bytes @ 0x2
-   690                           
-   691                           
-   692                           ; 2 bytes @ 0x2
-   693  0072                     	ds	2
-   694  0074                     ??___wmul:	
-   695  0074                     ___wmul@product:	
-   696                           ; 0 bytes @ 0x4
-   697                           
-   698                           
-   699                           ; 2 bytes @ 0x4
-   700  0074                     	ds	2
-   701  0076                     ??_get_message:	
-   702                           
-   703                           ; 0 bytes @ 0x6
-   704  0076                     	ds	2
-   705  0078                     ??_InterruptHandlerLow:	
+   688                           
+   689                           ; 2 bytes @ 0x2
+   690  0072                     	ds	2
+   691  0074                     ??___wmul:	
+   692  0074                     ___wmul@product:	
+   693                           ; 0 bytes @ 0x4
+   694                           
+   695                           
+   696                           ; 2 bytes @ 0x4
+   697  0074                     	ds	2
+   698  0076                     ??_get_message:	
+   699                           
+   700                           ; 0 bytes @ 0x6
+   701  0076                     	ds	2
+   702  0078                     ??_InterruptHandlerLow:	
+   703                           
+   704                           ; 0 bytes @ 0x8
+   705  0078                     	ds	2
    706                           
-   707                           ; 0 bytes @ 0x8
-   708  0078                     	ds	2
-   709                           
-   710                           	psect	cstackBANK0
-   711  002A                     __pcstackBANK0:	
-   712  002A                     ??_init:	
-   713  002A                     ??_init_uart:	
+   707                           	psect	cstackBANK0
+   708  002A                     __pcstackBANK0:	
+   709  002A                     ??_init:	
+   710  002A                     ??_init_uart:	
+   711                           ; 0 bytes @ 0x0
+   712                           
+   713  002A                     ??_init_pwm:	
    714                           ; 0 bytes @ 0x0
    715                           
-   716  002A                     ??_init_pwm:	
+   716  002A                     ??_close_PWM:	
    717                           ; 0 bytes @ 0x0
    718                           
-   719  002A                     ??_close_PWM:	
+   719  002A                     ??_open_PWM:	
    720                           ; 0 bytes @ 0x0
    721                           
-   722  002A                     ??_open_PWM:	
+   722  002A                     ?_set_pwmBLUE:	
    723                           ; 0 bytes @ 0x0
    724                           
-   725  002A                     ?_set_pwmBLUE:	
+   725  002A                     ?_set_pwmGREEN:	
    726                           ; 0 bytes @ 0x0
    727                           
-   728  002A                     ?_set_pwmGREEN:	
+   728  002A                     ?_set_pwmRED:	
    729                           ; 0 bytes @ 0x0
    730                           
-   731  002A                     ?_set_pwmRED:	
+   731  002A                     set_pwmRED@value:	
    732                           ; 0 bytes @ 0x0
    733                           
-   734  002A                     set_pwmRED@value:	
-   735                           ; 0 bytes @ 0x0
+   734  002A                     set_pwmGREEN@value:	
+   735                           ; 2 bytes @ 0x0
    736                           
-   737  002A                     set_pwmGREEN@value:	
+   737  002A                     set_pwmBLUE@value:	
    738                           ; 2 bytes @ 0x0
    739                           
-   740  002A                     set_pwmBLUE@value:	
+   740                           
    741                           ; 2 bytes @ 0x0
-   742                           
-   743                           
-   744                           ; 2 bytes @ 0x0
-   745  002A                     	ds	2
-   746  002C                     ??_set_pwmBLUE:	
-   747  002C                     ??_set_pwmGREEN:	
+   742  002A                     	ds	2
+   743  002C                     ??_set_pwmBLUE:	
+   744  002C                     ??_set_pwmGREEN:	
+   745                           ; 0 bytes @ 0x2
+   746                           
+   747  002C                     ??_set_pwmRED:	
    748                           ; 0 bytes @ 0x2
    749                           
-   750  002C                     ??_set_pwmRED:	
+   750  002C                     ??_main:	
    751                           ; 0 bytes @ 0x2
    752                           
-   753  002C                     ??_main:	
-   754                           ; 0 bytes @ 0x2
-   755                           
-   756                           
-   757                           	psect	maintext
-   758  00C8                     __pmaintext:	
-   759                           ; 0 bytes @ 0x2
-   760 ;;
-   761 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
-   762 ;;
-   763 ;; *************** function _main *****************
-   764 ;; Defined at:
-   765 ;;		line 62 in file "main.c"
-   766 ;; Parameters:    Size  Location     Type
-   767 ;;		None
-   768 ;; Auto vars:     Size  Location     Type
-   769 ;;		None
-   770 ;; Return value:  Size  Location     Type
-   771 ;;		None               void
-   772 ;; Registers used:
-   773 ;;		wreg, status,2, status,0, pclath, cstack
-   774 ;; Tracked objects:
-   775 ;;		On entry : 17F/0
-   776 ;;		On exit  : 0/0
-   777 ;;		Unchanged: 0/0
-   778 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-   779 ;;      Params:         0       0       0       0
-   780 ;;      Locals:         0       0       0       0
-   781 ;;      Temps:          0       0       0       0
-   782 ;;      Totals:         0       0       0       0
-   783 ;;Total ram usage:        0 bytes
-   784 ;; Hardware stack levels required when called:    5
-   785 ;; This function calls:
-   786 ;;		_close_PWM
-   787 ;;		_init
-   788 ;;		_init_pwm
-   789 ;;		_init_uart
-   790 ;;		_open_PWM
-   791 ;;		_set_pwmBLUE
-   792 ;;		_set_pwmGREEN
-   793 ;;		_set_pwmRED
-   794 ;; This function is called by:
-   795 ;;		Startup code after reset
-   796 ;; This function uses a non-reentrant model
-   797 ;;
-   798                           
+   753                           
+   754                           	psect	maintext
+   755  00C7                     __pmaintext:	
+   756                           ; 0 bytes @ 0x2
+   757 ;;
+   758 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   759 ;;
+   760 ;; *************** function _main *****************
+   761 ;; Defined at:
+   762 ;;		line 58 in file "main.c"
+   763 ;; Parameters:    Size  Location     Type
+   764 ;;		None
+   765 ;; Auto vars:     Size  Location     Type
+   766 ;;		None
+   767 ;; Return value:  Size  Location     Type
+   768 ;;		None               void
+   769 ;; Registers used:
+   770 ;;		wreg, status,2, status,0, pclath, cstack
+   771 ;; Tracked objects:
+   772 ;;		On entry : 17F/0
+   773 ;;		On exit  : 0/0
+   774 ;;		Unchanged: 0/0
+   775 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   776 ;;      Params:         0       0       0       0
+   777 ;;      Locals:         0       0       0       0
+   778 ;;      Temps:          0       0       0       0
+   779 ;;      Totals:         0       0       0       0
+   780 ;;Total ram usage:        0 bytes
+   781 ;; Hardware stack levels required when called:    5
+   782 ;; This function calls:
+   783 ;;		_close_PWM
+   784 ;;		_init
+   785 ;;		_init_pwm
+   786 ;;		_init_uart
+   787 ;;		_open_PWM
+   788 ;;		_set_pwmBLUE
+   789 ;;		_set_pwmGREEN
+   790 ;;		_set_pwmRED
+   791 ;; This function is called by:
+   792 ;;		Startup code after reset
+   793 ;; This function uses a non-reentrant model
+   794 ;;
+   795                           
+   796                           
+   797                           ;psect for function _main
+   798  00C7                     _main:	
    799                           
-   800                           ;psect for function _main
-   801  00C8                     _main:	
-   802                           
-   803                           ;main.c: 66: init();
-   804                           
-   805                           ;incstack = 0
-   806                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
-   807  00C8  2134               	fcall	_init
+   800                           ;main.c: 60: init();
+   801                           
+   802                           ;incstack = 0
+   803                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
+   804  00C7  2133               	fcall	_init
+   805                           
+   806                           ;main.c: 61: init_uart();
+   807  00C8  2102               	fcall	_init_uart
    808                           
-   809                           ;main.c: 67: init_uart();
-   810  00C9  2103               	fcall	_init_uart
-   811                           
-   812                           ;main.c: 68: LATA = 0xff;
-   813  00CA  30FF               	movlw	255
-   814  00CB  0022               	movlb	2	; select bank2
-   815  00CC  008C               	movwf	12	;volatile
+   809                           ;main.c: 62: LATA = 0xff;
+   810  00C9  30FF               	movlw	255
+   811  00CA  0022               	movlb	2	; select bank2
+   812  00CB  008C               	movwf	12	;volatile
+   813                           
+   814                           ;main.c: 64: init_pwm();
+   815  00CC  2068               	fcall	_init_pwm
    816                           
-   817                           ;main.c: 71: init_pwm();
-   818  00CD  2069               	fcall	_init_pwm
+   817                           ;main.c: 65: close_PWM();
+   818  00CD  2157               	fcall	_close_PWM
    819                           
-   820                           ;main.c: 72: close_PWM();
-   821  00CE  2158               	fcall	_close_PWM
+   820                           ;main.c: 66: open_PWM();
+   821  00CE  2152               	fcall	_open_PWM
    822                           
-   823                           ;main.c: 73: open_PWM();
-   824  00CF  2153               	fcall	_open_PWM
-   825                           
-   826                           ;main.c: 75: LATA = 0xff;
-   827  00D0  30FF               	movlw	255
-   828  00D1  0022               	movlb	2	; select bank2
-   829  00D2  008C               	movwf	12	;volatile
-   830                           
-   831                           ;main.c: 77: set_pwmBLUE(0);
-   832  00D3  3000               	movlw	0
-   833  00D4  0020               	movlb	0	; select bank0
-   834  00D5  00AA               	movwf	set_pwmBLUE@value
-   835  00D6  3000               	movlw	0
-   836  00D7  00AB               	movwf	set_pwmBLUE@value+1
-   837  00D8  212A               	fcall	_set_pwmBLUE
-   838                           
-   839                           ;main.c: 78: set_pwmGREEN(0);
-   840  00D9  3000               	movlw	0
-   841  00DA  0020               	movlb	0	; select bank0
-   842  00DB  00AA               	movwf	set_pwmGREEN@value
-   843  00DC  3000               	movlw	0
-   844  00DD  00AB               	movwf	set_pwmGREEN@value+1
-   845  00DE  2120               	fcall	_set_pwmGREEN
-   846                           
-   847                           ;main.c: 79: set_pwmRED(0);
-   848  00DF  3000               	movlw	0
-   849  00E0  0020               	movlb	0	; select bank0
-   850  00E1  00AA               	movwf	set_pwmRED@value
-   851  00E2  3000               	movlw	0
-   852  00E3  00AB               	movwf	set_pwmRED@value+1
-   853  00E4  2116               	fcall	_set_pwmRED
-   854  00E5                     l39:	
-   855                           ;main.c: 80: while (1)
-   856                           
-   857                           
-   858                           ;main.c: 81: {
-   859  00E5  28E5               	goto	l39
-   860  00E6                     __end_of_main:	
-   861                           
-   862                           	psect	text1
-   863  0116                     __ptext1:	
-   864 ;; *************** function _set_pwmRED *****************
-   865 ;; Defined at:
-   866 ;;		line 73 in file "pwm.c"
-   867 ;; Parameters:    Size  Location     Type
-   868 ;;  value           2    0[BANK0 ] unsigned int 
-   869 ;; Auto vars:     Size  Location     Type
-   870 ;;		None
-   871 ;; Return value:  Size  Location     Type
-   872 ;;		None               void
-   873 ;; Registers used:
-   874 ;;		wreg, status,2
-   875 ;; Tracked objects:
-   876 ;;		On entry : 0/0
-   877 ;;		On exit  : 0/0
-   878 ;;		Unchanged: 0/0
-   879 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-   880 ;;      Params:         0       2       0       0
-   881 ;;      Locals:         0       0       0       0
-   882 ;;      Temps:          0       0       0       0
-   883 ;;      Totals:         0       2       0       0
-   884 ;;Total ram usage:        2 bytes
-   885 ;; Hardware stack levels used:    1
-   886 ;; Hardware stack levels required when called:    4
-   887 ;; This function calls:
-   888 ;;		Nothing
-   889 ;; This function is called by:
-   890 ;;		_main
-   891 ;; This function uses a non-reentrant model
-   892 ;;
-   893                           
+   823                           ;main.c: 68: LATA = 0xff;
+   824  00CF  30FF               	movlw	255
+   825  00D0  0022               	movlb	2	; select bank2
+   826  00D1  008C               	movwf	12	;volatile
+   827                           
+   828                           ;main.c: 70: set_pwmBLUE(0);
+   829  00D2  3000               	movlw	0
+   830  00D3  0020               	movlb	0	; select bank0
+   831  00D4  00AA               	movwf	set_pwmBLUE@value
+   832  00D5  3000               	movlw	0
+   833  00D6  00AB               	movwf	set_pwmBLUE@value+1
+   834  00D7  2129               	fcall	_set_pwmBLUE
+   835                           
+   836                           ;main.c: 71: set_pwmGREEN(0);
+   837  00D8  3000               	movlw	0
+   838  00D9  0020               	movlb	0	; select bank0
+   839  00DA  00AA               	movwf	set_pwmGREEN@value
+   840  00DB  3000               	movlw	0
+   841  00DC  00AB               	movwf	set_pwmGREEN@value+1
+   842  00DD  211F               	fcall	_set_pwmGREEN
+   843                           
+   844                           ;main.c: 72: set_pwmRED(0);
+   845  00DE  3000               	movlw	0
+   846  00DF  0020               	movlb	0	; select bank0
+   847  00E0  00AA               	movwf	set_pwmRED@value
+   848  00E1  3000               	movlw	0
+   849  00E2  00AB               	movwf	set_pwmRED@value+1
+   850  00E3  2115               	fcall	_set_pwmRED
+   851  00E4                     l37:	
+   852                           ;main.c: 73: while (1)
+   853                           
+   854                           
+   855                           ;main.c: 74: {
+   856  00E4  28E4               	goto	l37
+   857  00E5                     __end_of_main:	
+   858                           
+   859                           	psect	text1
+   860  0115                     __ptext1:	
+   861 ;; *************** function _set_pwmRED *****************
+   862 ;; Defined at:
+   863 ;;		line 73 in file "pwm.c"
+   864 ;; Parameters:    Size  Location     Type
+   865 ;;  value           2    0[BANK0 ] unsigned int 
+   866 ;; Auto vars:     Size  Location     Type
+   867 ;;		None
+   868 ;; Return value:  Size  Location     Type
+   869 ;;		None               void
+   870 ;; Registers used:
+   871 ;;		wreg, status,2
+   872 ;; Tracked objects:
+   873 ;;		On entry : 0/0
+   874 ;;		On exit  : 0/0
+   875 ;;		Unchanged: 0/0
+   876 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   877 ;;      Params:         0       2       0       0
+   878 ;;      Locals:         0       0       0       0
+   879 ;;      Temps:          0       0       0       0
+   880 ;;      Totals:         0       2       0       0
+   881 ;;Total ram usage:        2 bytes
+   882 ;; Hardware stack levels used:    1
+   883 ;; Hardware stack levels required when called:    4
+   884 ;; This function calls:
+   885 ;;		Nothing
+   886 ;; This function is called by:
+   887 ;;		_main
+   888 ;; This function uses a non-reentrant model
+   889 ;;
+   890                           
+   891                           
+   892                           ;psect for function _set_pwmRED
+   893  0115                     _set_pwmRED:	
    894                           
-   895                           ;psect for function _set_pwmRED
-   896  0116                     _set_pwmRED:	
-   897                           
-   898                           ;pwm.c: 75: PWM1PHH = (unsigned char)(value >> 8);
-   899                           
-   900                           ;incstack = 0
-   901                           ; Regs used in _set_pwmRED: [wreg+status,2]
-   902  0116  0020               	movlb	0	; select bank0
-   903  0117  082B               	movf	set_pwmRED@value+1,w
-   904  0118  003B               	movlb	27	; select bank27
-   905  0119  0092               	movwf	18	;volatile
-   906                           
-   907                           ;pwm.c: 76: PWM1PHL = (unsigned char)(value);
-   908  011A  0020               	movlb	0	; select bank0
-   909  011B  082A               	movf	set_pwmRED@value,w
-   910  011C  003B               	movlb	27	; select bank27
-   911  011D  0091               	movwf	17	;volatile
-   912                           
-   913                           ;pwm.c: 78: PWM1LD = 0xFF;
-   914  011E  179F               	bsf	31,7	;volatile
-   915  011F  0008               	return
-   916  0120                     __end_of_set_pwmRED:	
-   917                           
-   918                           	psect	text2
-   919  0120                     __ptext2:	
-   920 ;; *************** function _set_pwmGREEN *****************
-   921 ;; Defined at:
-   922 ;;		line 81 in file "pwm.c"
-   923 ;; Parameters:    Size  Location     Type
-   924 ;;  value           2    0[BANK0 ] unsigned int 
-   925 ;; Auto vars:     Size  Location     Type
-   926 ;;		None
-   927 ;; Return value:  Size  Location     Type
-   928 ;;		None               void
-   929 ;; Registers used:
-   930 ;;		wreg, status,2
-   931 ;; Tracked objects:
-   932 ;;		On entry : 0/0
-   933 ;;		On exit  : 0/0
-   934 ;;		Unchanged: 0/0
-   935 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-   936 ;;      Params:         0       2       0       0
-   937 ;;      Locals:         0       0       0       0
-   938 ;;      Temps:          0       0       0       0
-   939 ;;      Totals:         0       2       0       0
-   940 ;;Total ram usage:        2 bytes
-   941 ;; Hardware stack levels used:    1
-   942 ;; Hardware stack levels required when called:    4
-   943 ;; This function calls:
-   944 ;;		Nothing
-   945 ;; This function is called by:
-   946 ;;		_main
-   947 ;; This function uses a non-reentrant model
-   948 ;;
-   949                           
+   895                           ;pwm.c: 75: PWM1PHH = (unsigned char)(value >> 8);
+   896                           
+   897                           ;incstack = 0
+   898                           ; Regs used in _set_pwmRED: [wreg+status,2]
+   899  0115  0020               	movlb	0	; select bank0
+   900  0116  082B               	movf	set_pwmRED@value+1,w
+   901  0117  003B               	movlb	27	; select bank27
+   902  0118  0092               	movwf	18	;volatile
+   903                           
+   904                           ;pwm.c: 76: PWM1PHL = (unsigned char)(value);
+   905  0119  0020               	movlb	0	; select bank0
+   906  011A  082A               	movf	set_pwmRED@value,w
+   907  011B  003B               	movlb	27	; select bank27
+   908  011C  0091               	movwf	17	;volatile
+   909                           
+   910                           ;pwm.c: 78: PWM1LD = 0xFF;
+   911  011D  179F               	bsf	31,7	;volatile
+   912  011E  0008               	return
+   913  011F                     __end_of_set_pwmRED:	
+   914                           
+   915                           	psect	text2
+   916  011F                     __ptext2:	
+   917 ;; *************** function _set_pwmGREEN *****************
+   918 ;; Defined at:
+   919 ;;		line 81 in file "pwm.c"
+   920 ;; Parameters:    Size  Location     Type
+   921 ;;  value           2    0[BANK0 ] unsigned int 
+   922 ;; Auto vars:     Size  Location     Type
+   923 ;;		None
+   924 ;; Return value:  Size  Location     Type
+   925 ;;		None               void
+   926 ;; Registers used:
+   927 ;;		wreg, status,2
+   928 ;; Tracked objects:
+   929 ;;		On entry : 0/0
+   930 ;;		On exit  : 0/0
+   931 ;;		Unchanged: 0/0
+   932 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   933 ;;      Params:         0       2       0       0
+   934 ;;      Locals:         0       0       0       0
+   935 ;;      Temps:          0       0       0       0
+   936 ;;      Totals:         0       2       0       0
+   937 ;;Total ram usage:        2 bytes
+   938 ;; Hardware stack levels used:    1
+   939 ;; Hardware stack levels required when called:    4
+   940 ;; This function calls:
+   941 ;;		Nothing
+   942 ;; This function is called by:
+   943 ;;		_main
+   944 ;; This function uses a non-reentrant model
+   945 ;;
+   946                           
+   947                           
+   948                           ;psect for function _set_pwmGREEN
+   949  011F                     _set_pwmGREEN:	
    950                           
-   951                           ;psect for function _set_pwmGREEN
-   952  0120                     _set_pwmGREEN:	
-   953                           
-   954                           ;pwm.c: 83: PWM2PHH = (unsigned char)(value >> 8);
-   955                           
-   956                           ;incstack = 0
-   957                           ; Regs used in _set_pwmGREEN: [wreg+status,2]
-   958  0120  0020               	movlb	0	; select bank0
-   959  0121  082B               	movf	set_pwmGREEN@value+1,w
-   960  0122  003B               	movlb	27	; select bank27
-   961  0123  00A2               	movwf	34	;volatile
-   962                           
-   963                           ;pwm.c: 84: PWM2PHL = (unsigned char)(value);
-   964  0124  0020               	movlb	0	; select bank0
-   965  0125  082A               	movf	set_pwmGREEN@value,w
-   966  0126  003B               	movlb	27	; select bank27
-   967  0127  00A1               	movwf	33	;volatile
-   968                           
-   969                           ;pwm.c: 86: PWM2LD = 0xFF;
-   970  0128  17AF               	bsf	47,7	;volatile
-   971  0129  0008               	return
-   972  012A                     __end_of_set_pwmGREEN:	
-   973                           
-   974                           	psect	text3
-   975  012A                     __ptext3:	
-   976 ;; *************** function _set_pwmBLUE *****************
-   977 ;; Defined at:
-   978 ;;		line 90 in file "pwm.c"
-   979 ;; Parameters:    Size  Location     Type
-   980 ;;  value           2    0[BANK0 ] unsigned int 
-   981 ;; Auto vars:     Size  Location     Type
-   982 ;;		None
-   983 ;; Return value:  Size  Location     Type
-   984 ;;		None               void
-   985 ;; Registers used:
-   986 ;;		wreg, status,2
-   987 ;; Tracked objects:
-   988 ;;		On entry : 0/0
-   989 ;;		On exit  : 0/0
-   990 ;;		Unchanged: 0/0
-   991 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-   992 ;;      Params:         0       2       0       0
-   993 ;;      Locals:         0       0       0       0
-   994 ;;      Temps:          0       0       0       0
-   995 ;;      Totals:         0       2       0       0
-   996 ;;Total ram usage:        2 bytes
-   997 ;; Hardware stack levels used:    1
-   998 ;; Hardware stack levels required when called:    4
-   999 ;; This function calls:
-  1000 ;;		Nothing
-  1001 ;; This function is called by:
-  1002 ;;		_main
-  1003 ;; This function uses a non-reentrant model
-  1004 ;;
-  1005                           
+   951                           ;pwm.c: 83: PWM2PHH = (unsigned char)(value >> 8);
+   952                           
+   953                           ;incstack = 0
+   954                           ; Regs used in _set_pwmGREEN: [wreg+status,2]
+   955  011F  0020               	movlb	0	; select bank0
+   956  0120  082B               	movf	set_pwmGREEN@value+1,w
+   957  0121  003B               	movlb	27	; select bank27
+   958  0122  00A2               	movwf	34	;volatile
+   959                           
+   960                           ;pwm.c: 84: PWM2PHL = (unsigned char)(value);
+   961  0123  0020               	movlb	0	; select bank0
+   962  0124  082A               	movf	set_pwmGREEN@value,w
+   963  0125  003B               	movlb	27	; select bank27
+   964  0126  00A1               	movwf	33	;volatile
+   965                           
+   966                           ;pwm.c: 86: PWM2LD = 0xFF;
+   967  0127  17AF               	bsf	47,7	;volatile
+   968  0128  0008               	return
+   969  0129                     __end_of_set_pwmGREEN:	
+   970                           
+   971                           	psect	text3
+   972  0129                     __ptext3:	
+   973 ;; *************** function _set_pwmBLUE *****************
+   974 ;; Defined at:
+   975 ;;		line 90 in file "pwm.c"
+   976 ;; Parameters:    Size  Location     Type
+   977 ;;  value           2    0[BANK0 ] unsigned int 
+   978 ;; Auto vars:     Size  Location     Type
+   979 ;;		None
+   980 ;; Return value:  Size  Location     Type
+   981 ;;		None               void
+   982 ;; Registers used:
+   983 ;;		wreg, status,2
+   984 ;; Tracked objects:
+   985 ;;		On entry : 0/0
+   986 ;;		On exit  : 0/0
+   987 ;;		Unchanged: 0/0
+   988 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   989 ;;      Params:         0       2       0       0
+   990 ;;      Locals:         0       0       0       0
+   991 ;;      Temps:          0       0       0       0
+   992 ;;      Totals:         0       2       0       0
+   993 ;;Total ram usage:        2 bytes
+   994 ;; Hardware stack levels used:    1
+   995 ;; Hardware stack levels required when called:    4
+   996 ;; This function calls:
+   997 ;;		Nothing
+   998 ;; This function is called by:
+   999 ;;		_main
+  1000 ;; This function uses a non-reentrant model
+  1001 ;;
+  1002                           
+  1003                           
+  1004                           ;psect for function _set_pwmBLUE
+  1005  0129                     _set_pwmBLUE:	
   1006                           
-  1007                           ;psect for function _set_pwmBLUE
-  1008  012A                     _set_pwmBLUE:	
-  1009                           
-  1010                           ;pwm.c: 93: PWM3PHH = (unsigned char)(value >> 8);
-  1011                           
-  1012                           ;incstack = 0
-  1013                           ; Regs used in _set_pwmBLUE: [wreg+status,2]
-  1014  012A  0020               	movlb	0	; select bank0
-  1015  012B  082B               	movf	set_pwmBLUE@value+1,w
-  1016  012C  003B               	movlb	27	; select bank27
-  1017  012D  00B2               	movwf	50	;volatile
-  1018                           
-  1019                           ;pwm.c: 94: PWM3PHL = (unsigned char)(value);
-  1020  012E  0020               	movlb	0	; select bank0
-  1021  012F  082A               	movf	set_pwmBLUE@value,w
-  1022  0130  003B               	movlb	27	; select bank27
-  1023  0131  00B1               	movwf	49	;volatile
-  1024                           
-  1025                           ;pwm.c: 96: PWM3LD = 0xFF;
-  1026  0132  17BF               	bsf	63,7	;volatile
-  1027  0133  0008               	return
-  1028  0134                     __end_of_set_pwmBLUE:	
-  1029                           
-  1030                           	psect	text4
-  1031  0153                     __ptext4:	
-  1032 ;; *************** function _open_PWM *****************
-  1033 ;; Defined at:
-  1034 ;;		line 67 in file "pwm.c"
-  1035 ;; Parameters:    Size  Location     Type
-  1036 ;;		None
-  1037 ;; Auto vars:     Size  Location     Type
-  1038 ;;		None
-  1039 ;; Return value:  Size  Location     Type
-  1040 ;;		None               void
-  1041 ;; Registers used:
-  1042 ;;		None
-  1043 ;; Tracked objects:
-  1044 ;;		On entry : 0/0
-  1045 ;;		On exit  : 0/0
-  1046 ;;		Unchanged: 0/0
-  1047 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1048 ;;      Params:         0       0       0       0
-  1049 ;;      Locals:         0       0       0       0
-  1050 ;;      Temps:          0       0       0       0
-  1051 ;;      Totals:         0       0       0       0
-  1052 ;;Total ram usage:        0 bytes
-  1053 ;; Hardware stack levels used:    1
-  1054 ;; Hardware stack levels required when called:    4
-  1055 ;; This function calls:
-  1056 ;;		Nothing
-  1057 ;; This function is called by:
-  1058 ;;		_main
-  1059 ;; This function uses a non-reentrant model
-  1060 ;;
-  1061                           
+  1007                           ;pwm.c: 93: PWM3PHH = (unsigned char)(value >> 8);
+  1008                           
+  1009                           ;incstack = 0
+  1010                           ; Regs used in _set_pwmBLUE: [wreg+status,2]
+  1011  0129  0020               	movlb	0	; select bank0
+  1012  012A  082B               	movf	set_pwmBLUE@value+1,w
+  1013  012B  003B               	movlb	27	; select bank27
+  1014  012C  00B2               	movwf	50	;volatile
+  1015                           
+  1016                           ;pwm.c: 94: PWM3PHL = (unsigned char)(value);
+  1017  012D  0020               	movlb	0	; select bank0
+  1018  012E  082A               	movf	set_pwmBLUE@value,w
+  1019  012F  003B               	movlb	27	; select bank27
+  1020  0130  00B1               	movwf	49	;volatile
+  1021                           
+  1022                           ;pwm.c: 96: PWM3LD = 0xFF;
+  1023  0131  17BF               	bsf	63,7	;volatile
+  1024  0132  0008               	return
+  1025  0133                     __end_of_set_pwmBLUE:	
+  1026                           
+  1027                           	psect	text4
+  1028  0152                     __ptext4:	
+  1029 ;; *************** function _open_PWM *****************
+  1030 ;; Defined at:
+  1031 ;;		line 67 in file "pwm.c"
+  1032 ;; Parameters:    Size  Location     Type
+  1033 ;;		None
+  1034 ;; Auto vars:     Size  Location     Type
+  1035 ;;		None
+  1036 ;; Return value:  Size  Location     Type
+  1037 ;;		None               void
+  1038 ;; Registers used:
+  1039 ;;		None
+  1040 ;; Tracked objects:
+  1041 ;;		On entry : 0/0
+  1042 ;;		On exit  : 0/0
+  1043 ;;		Unchanged: 0/0
+  1044 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1045 ;;      Params:         0       0       0       0
+  1046 ;;      Locals:         0       0       0       0
+  1047 ;;      Temps:          0       0       0       0
+  1048 ;;      Totals:         0       0       0       0
+  1049 ;;Total ram usage:        0 bytes
+  1050 ;; Hardware stack levels used:    1
+  1051 ;; Hardware stack levels required when called:    4
+  1052 ;; This function calls:
+  1053 ;;		Nothing
+  1054 ;; This function is called by:
+  1055 ;;		_main
+  1056 ;; This function uses a non-reentrant model
+  1057 ;;
+  1058                           
+  1059                           
+  1060                           ;psect for function _open_PWM
+  1061  0152                     _open_PWM:	
   1062                           
-  1063                           ;psect for function _open_PWM
-  1064  0153                     _open_PWM:	
-  1065                           
-  1066                           ;pwm.c: 69: PWM1CONbits.OE = 1;
-  1067                           
-  1068                           ;incstack = 0
-  1069                           ; Regs used in _open_PWM: []
-  1070  0153  003B               	movlb	27	; select bank27
-  1071  0154  171B               	bsf	27,6	;volatile
+  1063                           ;pwm.c: 69: PWM1CONbits.OE = 1;
+  1064                           
+  1065                           ;incstack = 0
+  1066                           ; Regs used in _open_PWM: []
+  1067  0152  003B               	movlb	27	; select bank27
+  1068  0153  171B               	bsf	27,6	;volatile
+  1069                           
+  1070                           ;pwm.c: 70: PWM2CONbits.OE = 1;
+  1071  0154  172B               	bsf	43,6	;volatile
   1072                           
-  1073                           ;pwm.c: 70: PWM2CONbits.OE = 1;
-  1074  0155  172B               	bsf	43,6	;volatile
-  1075                           
-  1076                           ;pwm.c: 71: PWM3CONbits.OE = 1;
-  1077  0156  173B               	bsf	59,6	;volatile
-  1078  0157  0008               	return
-  1079  0158                     __end_of_open_PWM:	
-  1080                           
-  1081                           	psect	text5
-  1082  0103                     __ptext5:	
-  1083 ;; *************** function _init_uart *****************
-  1084 ;; Defined at:
-  1085 ;;		line 8 in file "usart.c"
-  1086 ;; Parameters:    Size  Location     Type
-  1087 ;;		None
-  1088 ;; Auto vars:     Size  Location     Type
-  1089 ;;		None
-  1090 ;; Return value:  Size  Location     Type
-  1091 ;;		None               void
-  1092 ;; Registers used:
-  1093 ;;		wreg
-  1094 ;; Tracked objects:
-  1095 ;;		On entry : 0/0
-  1096 ;;		On exit  : 0/0
-  1097 ;;		Unchanged: 0/0
-  1098 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1099 ;;      Params:         0       0       0       0
-  1100 ;;      Locals:         0       0       0       0
-  1101 ;;      Temps:          0       0       0       0
-  1102 ;;      Totals:         0       0       0       0
-  1103 ;;Total ram usage:        0 bytes
-  1104 ;; Hardware stack levels used:    1
-  1105 ;; Hardware stack levels required when called:    4
-  1106 ;; This function calls:
-  1107 ;;		Nothing
-  1108 ;; This function is called by:
-  1109 ;;		_main
-  1110 ;; This function uses a non-reentrant model
-  1111 ;;
-  1112                           
+  1073                           ;pwm.c: 71: PWM3CONbits.OE = 1;
+  1074  0155  173B               	bsf	59,6	;volatile
+  1075  0156  0008               	return
+  1076  0157                     __end_of_open_PWM:	
+  1077                           
+  1078                           	psect	text5
+  1079  0102                     __ptext5:	
+  1080 ;; *************** function _init_uart *****************
+  1081 ;; Defined at:
+  1082 ;;		line 8 in file "usart.c"
+  1083 ;; Parameters:    Size  Location     Type
+  1084 ;;		None
+  1085 ;; Auto vars:     Size  Location     Type
+  1086 ;;		None
+  1087 ;; Return value:  Size  Location     Type
+  1088 ;;		None               void
+  1089 ;; Registers used:
+  1090 ;;		wreg
+  1091 ;; Tracked objects:
+  1092 ;;		On entry : 0/0
+  1093 ;;		On exit  : 0/0
+  1094 ;;		Unchanged: 0/0
+  1095 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1096 ;;      Params:         0       0       0       0
+  1097 ;;      Locals:         0       0       0       0
+  1098 ;;      Temps:          0       0       0       0
+  1099 ;;      Totals:         0       0       0       0
+  1100 ;;Total ram usage:        0 bytes
+  1101 ;; Hardware stack levels used:    1
+  1102 ;; Hardware stack levels required when called:    4
+  1103 ;; This function calls:
+  1104 ;;		Nothing
+  1105 ;; This function is called by:
+  1106 ;;		_main
+  1107 ;; This function uses a non-reentrant model
+  1108 ;;
+  1109                           
+  1110                           
+  1111                           ;psect for function _init_uart
+  1112  0102                     _init_uart:	
   1113                           
-  1114                           ;psect for function _init_uart
-  1115  0103                     _init_uart:	
-  1116                           
-  1117                           ;usart.c: 11: TRISAbits.TRISA1=1;
-  1118                           
-  1119                           ;incstack = 0
-  1120                           ; Regs used in _init_uart: [wreg]
-  1121  0103  0021               	movlb	1	; select bank1
-  1122  0104  148C               	bsf	12,1	;volatile
+  1114                           ;usart.c: 11: TRISAbits.TRISA1=1;
+  1115                           
+  1116                           ;incstack = 0
+  1117                           ; Regs used in _init_uart: [wreg]
+  1118  0102  0021               	movlb	1	; select bank1
+  1119  0103  148C               	bsf	12,1	;volatile
+  1120                           
+  1121                           ;usart.c: 12: TRISAbits.TRISA0=0;
+  1122  0104  100C               	bcf	12,0	;volatile
   1123                           
-  1124                           ;usart.c: 12: TRISAbits.TRISA0=0;
-  1125  0105  100C               	bcf	12,0	;volatile
-  1126                           
-  1127                           ;usart.c: 13: SPBRGH = 0x01;
-  1128  0106  3001               	movlw	1
-  1129  0107  0023               	movlb	3	; select bank3
-  1130  0108  009C               	movwf	28	;volatile
-  1131                           
-  1132                           ;usart.c: 14: SPBRGL = 0xA0;
-  1133  0109  30A0               	movlw	160
-  1134  010A  009B               	movwf	27	;volatile
+  1124                           ;usart.c: 13: SPBRGH = 0x01;
+  1125  0105  3001               	movlw	1
+  1126  0106  0023               	movlb	3	; select bank3
+  1127  0107  009C               	movwf	28	;volatile
+  1128                           
+  1129                           ;usart.c: 14: SPBRGL = 0xA0;
+  1130  0108  30A0               	movlw	160
+  1131  0109  009B               	movwf	27	;volatile
+  1132                           
+  1133                           ;usart.c: 16: RCSTAbits.CREN=1;
+  1134  010A  161D               	bsf	29,4	;volatile
   1135                           
-  1136                           ;usart.c: 16: RCSTAbits.CREN=1;
-  1137  010B  161D               	bsf	29,4	;volatile
+  1136                           ;usart.c: 17: RCSTAbits.SPEN=1;
+  1137  010B  179D               	bsf	29,7	;volatile
   1138                           
-  1139                           ;usart.c: 17: RCSTAbits.SPEN=1;
-  1140  010C  179D               	bsf	29,7	;volatile
+  1139                           ;usart.c: 18: BAUDCONbits.BRG16=1;
+  1140  010C  159F               	bsf	31,3	;volatile
   1141                           
-  1142                           ;usart.c: 18: BAUDCONbits.BRG16=1;
-  1143  010D  159F               	bsf	31,3	;volatile
+  1142                           ;usart.c: 20: TXSTAbits.SYNC=0;
+  1143  010D  121E               	bcf	30,4	;volatile
   1144                           
-  1145                           ;usart.c: 20: TXSTAbits.SYNC=0;
-  1146  010E  121E               	bcf	30,4	;volatile
+  1145                           ;usart.c: 21: TXSTAbits.BRGH=1;
+  1146  010E  151E               	bsf	30,2	;volatile
   1147                           
-  1148                           ;usart.c: 21: TXSTAbits.BRGH=1;
-  1149  010F  151E               	bsf	30,2	;volatile
+  1148                           ;usart.c: 22: TXSTAbits.TXEN=1;
+  1149  010F  169E               	bsf	30,5	;volatile
   1150                           
-  1151                           ;usart.c: 22: TXSTAbits.TXEN=1;
-  1152  0110  169E               	bsf	30,5	;volatile
-  1153                           
-  1154                           ;usart.c: 23: PIE1bits.RCIE=1;
-  1155  0111  0021               	movlb	1	; select bank1
-  1156  0112  1691               	bsf	17,5	;volatile
+  1151                           ;usart.c: 23: PIE1bits.RCIE=1;
+  1152  0110  0021               	movlb	1	; select bank1
+  1153  0111  1691               	bsf	17,5	;volatile
+  1154                           
+  1155                           ;usart.c: 24: INTCONbits.GIE = 1;
+  1156  0112  178B               	bsf	11,7	;volatile
   1157                           
-  1158                           ;usart.c: 24: INTCONbits.GIE = 1;
-  1159  0113  178B               	bsf	11,7	;volatile
-  1160                           
-  1161                           ;usart.c: 25: INTCONbits.PEIE = 1;
-  1162  0114  170B               	bsf	11,6	;volatile
-  1163  0115  0008               	return
-  1164  0116                     __end_of_init_uart:	
-  1165                           
-  1166                           	psect	text6
-  1167  0069                     __ptext6:	
-  1168 ;; *************** function _init_pwm *****************
-  1169 ;; Defined at:
-  1170 ;;		line 5 in file "pwm.c"
-  1171 ;; Parameters:    Size  Location     Type
-  1172 ;;		None
-  1173 ;; Auto vars:     Size  Location     Type
-  1174 ;;		None
-  1175 ;; Return value:  Size  Location     Type
-  1176 ;;		None               void
-  1177 ;; Registers used:
-  1178 ;;		wreg, status,2, status,0
-  1179 ;; Tracked objects:
-  1180 ;;		On entry : 0/0
-  1181 ;;		On exit  : 0/0
-  1182 ;;		Unchanged: 0/0
-  1183 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1184 ;;      Params:         0       0       0       0
-  1185 ;;      Locals:         0       0       0       0
-  1186 ;;      Temps:          0       0       0       0
-  1187 ;;      Totals:         0       0       0       0
-  1188 ;;Total ram usage:        0 bytes
-  1189 ;; Hardware stack levels used:    1
-  1190 ;; Hardware stack levels required when called:    4
-  1191 ;; This function calls:
-  1192 ;;		Nothing
-  1193 ;; This function is called by:
-  1194 ;;		_main
-  1195 ;; This function uses a non-reentrant model
-  1196 ;;
-  1197                           
+  1158                           ;usart.c: 25: INTCONbits.PEIE = 1;
+  1159  0113  170B               	bsf	11,6	;volatile
+  1160  0114  0008               	return
+  1161  0115                     __end_of_init_uart:	
+  1162                           
+  1163                           	psect	text6
+  1164  0068                     __ptext6:	
+  1165 ;; *************** function _init_pwm *****************
+  1166 ;; Defined at:
+  1167 ;;		line 5 in file "pwm.c"
+  1168 ;; Parameters:    Size  Location     Type
+  1169 ;;		None
+  1170 ;; Auto vars:     Size  Location     Type
+  1171 ;;		None
+  1172 ;; Return value:  Size  Location     Type
+  1173 ;;		None               void
+  1174 ;; Registers used:
+  1175 ;;		wreg, status,2, status,0
+  1176 ;; Tracked objects:
+  1177 ;;		On entry : 0/0
+  1178 ;;		On exit  : 0/0
+  1179 ;;		Unchanged: 0/0
+  1180 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1181 ;;      Params:         0       0       0       0
+  1182 ;;      Locals:         0       0       0       0
+  1183 ;;      Temps:          0       0       0       0
+  1184 ;;      Totals:         0       0       0       0
+  1185 ;;Total ram usage:        0 bytes
+  1186 ;; Hardware stack levels used:    1
+  1187 ;; Hardware stack levels required when called:    4
+  1188 ;; This function calls:
+  1189 ;;		Nothing
+  1190 ;; This function is called by:
+  1191 ;;		_main
+  1192 ;; This function uses a non-reentrant model
+  1193 ;;
+  1194                           
+  1195                           
+  1196                           ;psect for function _init_pwm
+  1197  0068                     _init_pwm:	
   1198                           
-  1199                           ;psect for function _init_pwm
-  1200  0069                     _init_pwm:	
-  1201                           
-  1202                           ;pwm.c: 9: APFCONbits.P1SEL = 1;
-  1203                           
-  1204                           ;incstack = 0
-  1205                           ; Regs used in _init_pwm: [wreg+status,2+status,0]
-  1206  0069  0022               	movlb	2	; select bank2
-  1207  006A  141D               	bsf	29,0	;volatile
+  1199                           ;pwm.c: 9: APFCONbits.P1SEL = 1;
+  1200                           
+  1201                           ;incstack = 0
+  1202                           ; Regs used in _init_pwm: [wreg+status,2+status,0]
+  1203  0068  0022               	movlb	2	; select bank2
+  1204  0069  141D               	bsf	29,0	;volatile
+  1205                           
+  1206                           ;pwm.c: 10: APFCONbits.P2SEL = 1;
+  1207  006A  149D               	bsf	29,1	;volatile
   1208                           
-  1209                           ;pwm.c: 10: APFCONbits.P2SEL = 1;
-  1210  006B  149D               	bsf	29,1	;volatile
-  1211                           
-  1212                           ;pwm.c: 12: PWM1CONbits.EN = 1;
-  1213  006C  003B               	movlb	27	; select bank27
-  1214  006D  179B               	bsf	27,7	;volatile
+  1209                           ;pwm.c: 12: PWM1CONbits.EN = 1;
+  1210  006B  003B               	movlb	27	; select bank27
+  1211  006C  179B               	bsf	27,7	;volatile
+  1212                           
+  1213                           ;pwm.c: 13: PWM1CONbits.OE = 1;
+  1214  006D  171B               	bsf	27,6	;volatile
   1215                           
-  1216                           ;pwm.c: 13: PWM1CONbits.OE = 1;
-  1217  006E  171B               	bsf	27,6	;volatile
-  1218                           
-  1219                           ;pwm.c: 14: PWM1CONbits.MODE = 00;
-  1220  006F  30F3               	movlw	-13
-  1221  0070  059B               	andwf	27,f	;volatile
+  1216                           ;pwm.c: 14: PWM1CONbits.MODE = 00;
+  1217  006E  30F3               	movlw	-13
+  1218  006F  059B               	andwf	27,f	;volatile
+  1219                           
+  1220                           ;pwm.c: 15: PWM1CONbits.POL = 0;
+  1221  0070  121B               	bcf	27,4	;volatile
   1222                           
-  1223                           ;pwm.c: 15: PWM1CONbits.POL = 0;
-  1224  0071  121B               	bcf	27,4	;volatile
+  1223                           ;pwm.c: 17: PWM2CONbits.EN = 1;
+  1224  0071  17AB               	bsf	43,7	;volatile
   1225                           
-  1226                           ;pwm.c: 17: PWM2CONbits.EN = 1;
-  1227  0072  17AB               	bsf	43,7	;volatile
+  1226                           ;pwm.c: 18: PWM2CONbits.OE = 1;
+  1227  0072  172B               	bsf	43,6	;volatile
   1228                           
-  1229                           ;pwm.c: 18: PWM2CONbits.OE = 1;
-  1230  0073  172B               	bsf	43,6	;volatile
-  1231                           
-  1232                           ;pwm.c: 19: PWM2CONbits.MODE = 00;
-  1233  0074  30F3               	movlw	-13
-  1234  0075  05AB               	andwf	43,f	;volatile
+  1229                           ;pwm.c: 19: PWM2CONbits.MODE = 00;
+  1230  0073  30F3               	movlw	-13
+  1231  0074  05AB               	andwf	43,f	;volatile
+  1232                           
+  1233                           ;pwm.c: 20: PWM2CONbits.POL = 0;
+  1234  0075  122B               	bcf	43,4	;volatile
   1235                           
-  1236                           ;pwm.c: 20: PWM2CONbits.POL = 0;
-  1237  0076  122B               	bcf	43,4	;volatile
+  1236                           ;pwm.c: 22: PWM3CONbits.EN = 1;
+  1237  0076  17BB               	bsf	59,7	;volatile
   1238                           
-  1239                           ;pwm.c: 22: PWM3CONbits.EN = 1;
-  1240  0077  17BB               	bsf	59,7	;volatile
+  1239                           ;pwm.c: 23: PWM3CONbits.OE = 1;
+  1240  0077  173B               	bsf	59,6	;volatile
   1241                           
-  1242                           ;pwm.c: 23: PWM3CONbits.OE = 1;
-  1243  0078  173B               	bsf	59,6	;volatile
-  1244                           
-  1245                           ;pwm.c: 24: PWM3CONbits.MODE = 00;
-  1246  0079  30F3               	movlw	-13
-  1247  007A  05BB               	andwf	59,f	;volatile
+  1242                           ;pwm.c: 24: PWM3CONbits.MODE = 00;
+  1243  0078  30F3               	movlw	-13
+  1244  0079  05BB               	andwf	59,f	;volatile
+  1245                           
+  1246                           ;pwm.c: 25: PWM3CONbits.POL = 0;
+  1247  007A  123B               	bcf	59,4	;volatile
   1248                           
-  1249                           ;pwm.c: 25: PWM3CONbits.POL = 0;
-  1250  007B  123B               	bcf	59,4	;volatile
-  1251                           
-  1252                           ;pwm.c: 29: PWM1CLKCONbits.PS = 00;
-  1253  007C  308F               	movlw	-113
-  1254  007D  059E               	andwf	30,f	;volatile
-  1255                           
-  1256                           ;pwm.c: 30: PWM1CLKCONbits.CS = 00;
-  1257  007E  30FC               	movlw	-4
-  1258  007F  059E               	andwf	30,f	;volatile
-  1259                           
-  1260                           ;pwm.c: 33: PWM2CLKCONbits.PS = 00;
-  1261  0080  308F               	movlw	-113
-  1262  0081  05AE               	andwf	46,f	;volatile
-  1263                           
-  1264                           ;pwm.c: 34: PWM2CLKCONbits.CS = 00;
-  1265  0082  30FC               	movlw	-4
-  1266  0083  05AE               	andwf	46,f	;volatile
-  1267                           
-  1268                           ;pwm.c: 36: PWM3CLKCONbits.PS = 00;
-  1269  0084  308F               	movlw	-113
-  1270  0085  05BE               	andwf	62,f	;volatile
-  1271                           
-  1272                           ;pwm.c: 37: PWM3CLKCONbits.CS = 00;
-  1273  0086  30FC               	movlw	-4
-  1274  0087  05BE               	andwf	62,f	;volatile
-  1275                           
-  1276                           ;pwm.c: 42: PWM1PRH = 0xff;
-  1277  0088  30FF               	movlw	255
-  1278  0089  0096               	movwf	22	;volatile
-  1279                           
-  1280                           ;pwm.c: 43: PWM1PRL = 0xff;
-  1281  008A  30FF               	movlw	255
-  1282  008B  0095               	movwf	21	;volatile
-  1283                           
-  1284                           ;pwm.c: 44: PWM1DCH = 0xff;
-  1285  008C  30FF               	movlw	255
-  1286  008D  0094               	movwf	20	;volatile
-  1287                           
-  1288                           ;pwm.c: 45: PWM1DCL = 0xff;
-  1289  008E  30FF               	movlw	255
-  1290  008F  0093               	movwf	19	;volatile
-  1291                           
-  1292                           ;pwm.c: 47: PWM2PRH = 0xff;
-  1293  0090  30FF               	movlw	255
-  1294  0091  00A6               	movwf	38	;volatile
-  1295                           
-  1296                           ;pwm.c: 48: PWM2PRL = 0xff;
-  1297  0092  30FF               	movlw	255
-  1298  0093  00A5               	movwf	37	;volatile
-  1299                           
-  1300                           ;pwm.c: 49: PWM2DCH = 0xff;
-  1301  0094  30FF               	movlw	255
-  1302  0095  00A4               	movwf	36	;volatile
-  1303                           
-  1304                           ;pwm.c: 50: PWM2DCL = 0xff;
-  1305  0096  30FF               	movlw	255
-  1306  0097  00A3               	movwf	35	;volatile
-  1307                           
-  1308                           ;pwm.c: 52: PWM3PRH = 0xff;
-  1309  0098  30FF               	movlw	255
-  1310  0099  00B6               	movwf	54	;volatile
-  1311                           
-  1312                           ;pwm.c: 53: PWM3PRL = 0xff;
-  1313  009A  30FF               	movlw	255
-  1314  009B  00B5               	movwf	53	;volatile
-  1315                           
-  1316                           ;pwm.c: 54: PWM3DCH = 0xff;
-  1317  009C  30FF               	movlw	255
-  1318  009D  00B4               	movwf	52	;volatile
-  1319                           
-  1320                           ;pwm.c: 55: PWM3DCL = 0xff;
-  1321  009E  30FF               	movlw	255
-  1322  009F  00B3               	movwf	51	;volatile
-  1323  00A0  0008               	return
-  1324  00A1                     __end_of_init_pwm:	
-  1325                           
-  1326                           	psect	text7
-  1327  0134                     __ptext7:	
-  1328 ;; *************** function _init *****************
-  1329 ;; Defined at:
-  1330 ;;		line 156 in file "main.c"
-  1331 ;; Parameters:    Size  Location     Type
-  1332 ;;		None
-  1333 ;; Auto vars:     Size  Location     Type
-  1334 ;;		None
-  1335 ;; Return value:  Size  Location     Type
-  1336 ;;		None               void
-  1337 ;; Registers used:
-  1338 ;;		wreg, status,2
-  1339 ;; Tracked objects:
-  1340 ;;		On entry : 0/0
-  1341 ;;		On exit  : 0/0
-  1342 ;;		Unchanged: 0/0
-  1343 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1344 ;;      Params:         0       0       0       0
-  1345 ;;      Locals:         0       0       0       0
-  1346 ;;      Temps:          0       0       0       0
-  1347 ;;      Totals:         0       0       0       0
-  1348 ;;Total ram usage:        0 bytes
-  1349 ;; Hardware stack levels used:    1
-  1350 ;; Hardware stack levels required when called:    4
-  1351 ;; This function calls:
-  1352 ;;		Nothing
-  1353 ;; This function is called by:
-  1354 ;;		_main
-  1355 ;; This function uses a non-reentrant model
-  1356 ;;
-  1357                           
+  1249                           ;pwm.c: 29: PWM1CLKCONbits.PS = 00;
+  1250  007B  308F               	movlw	-113
+  1251  007C  059E               	andwf	30,f	;volatile
+  1252                           
+  1253                           ;pwm.c: 30: PWM1CLKCONbits.CS = 00;
+  1254  007D  30FC               	movlw	-4
+  1255  007E  059E               	andwf	30,f	;volatile
+  1256                           
+  1257                           ;pwm.c: 33: PWM2CLKCONbits.PS = 00;
+  1258  007F  308F               	movlw	-113
+  1259  0080  05AE               	andwf	46,f	;volatile
+  1260                           
+  1261                           ;pwm.c: 34: PWM2CLKCONbits.CS = 00;
+  1262  0081  30FC               	movlw	-4
+  1263  0082  05AE               	andwf	46,f	;volatile
+  1264                           
+  1265                           ;pwm.c: 36: PWM3CLKCONbits.PS = 00;
+  1266  0083  308F               	movlw	-113
+  1267  0084  05BE               	andwf	62,f	;volatile
+  1268                           
+  1269                           ;pwm.c: 37: PWM3CLKCONbits.CS = 00;
+  1270  0085  30FC               	movlw	-4
+  1271  0086  05BE               	andwf	62,f	;volatile
+  1272                           
+  1273                           ;pwm.c: 42: PWM1PRH = 0xff;
+  1274  0087  30FF               	movlw	255
+  1275  0088  0096               	movwf	22	;volatile
+  1276                           
+  1277                           ;pwm.c: 43: PWM1PRL = 0xff;
+  1278  0089  30FF               	movlw	255
+  1279  008A  0095               	movwf	21	;volatile
+  1280                           
+  1281                           ;pwm.c: 44: PWM1DCH = 0xff;
+  1282  008B  30FF               	movlw	255
+  1283  008C  0094               	movwf	20	;volatile
+  1284                           
+  1285                           ;pwm.c: 45: PWM1DCL = 0xff;
+  1286  008D  30FF               	movlw	255
+  1287  008E  0093               	movwf	19	;volatile
+  1288                           
+  1289                           ;pwm.c: 47: PWM2PRH = 0xff;
+  1290  008F  30FF               	movlw	255
+  1291  0090  00A6               	movwf	38	;volatile
+  1292                           
+  1293                           ;pwm.c: 48: PWM2PRL = 0xff;
+  1294  0091  30FF               	movlw	255
+  1295  0092  00A5               	movwf	37	;volatile
+  1296                           
+  1297                           ;pwm.c: 49: PWM2DCH = 0xff;
+  1298  0093  30FF               	movlw	255
+  1299  0094  00A4               	movwf	36	;volatile
+  1300                           
+  1301                           ;pwm.c: 50: PWM2DCL = 0xff;
+  1302  0095  30FF               	movlw	255
+  1303  0096  00A3               	movwf	35	;volatile
+  1304                           
+  1305                           ;pwm.c: 52: PWM3PRH = 0xff;
+  1306  0097  30FF               	movlw	255
+  1307  0098  00B6               	movwf	54	;volatile
+  1308                           
+  1309                           ;pwm.c: 53: PWM3PRL = 0xff;
+  1310  0099  30FF               	movlw	255
+  1311  009A  00B5               	movwf	53	;volatile
+  1312                           
+  1313                           ;pwm.c: 54: PWM3DCH = 0xff;
+  1314  009B  30FF               	movlw	255
+  1315  009C  00B4               	movwf	52	;volatile
+  1316                           
+  1317                           ;pwm.c: 55: PWM3DCL = 0xff;
+  1318  009D  30FF               	movlw	255
+  1319  009E  00B3               	movwf	51	;volatile
+  1320  009F  0008               	return
+  1321  00A0                     __end_of_init_pwm:	
+  1322                           
+  1323                           	psect	text7
+  1324  0133                     __ptext7:	
+  1325 ;; *************** function _init *****************
+  1326 ;; Defined at:
+  1327 ;;		line 80 in file "main.c"
+  1328 ;; Parameters:    Size  Location     Type
+  1329 ;;		None
+  1330 ;; Auto vars:     Size  Location     Type
+  1331 ;;		None
+  1332 ;; Return value:  Size  Location     Type
+  1333 ;;		None               void
+  1334 ;; Registers used:
+  1335 ;;		wreg, status,2
+  1336 ;; Tracked objects:
+  1337 ;;		On entry : 0/0
+  1338 ;;		On exit  : 0/0
+  1339 ;;		Unchanged: 0/0
+  1340 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1341 ;;      Params:         0       0       0       0
+  1342 ;;      Locals:         0       0       0       0
+  1343 ;;      Temps:          0       0       0       0
+  1344 ;;      Totals:         0       0       0       0
+  1345 ;;Total ram usage:        0 bytes
+  1346 ;; Hardware stack levels used:    1
+  1347 ;; Hardware stack levels required when called:    4
+  1348 ;; This function calls:
+  1349 ;;		Nothing
+  1350 ;; This function is called by:
+  1351 ;;		_main
+  1352 ;; This function uses a non-reentrant model
+  1353 ;;
+  1354                           
+  1355                           
+  1356                           ;psect for function _init
+  1357  0133                     _init:	
   1358                           
-  1359                           ;psect for function _init
-  1360  0134                     _init:	
-  1361                           
-  1362                           ;main.c: 158: OSCCON = 0b01111010;
-  1363                           
-  1364                           ;incstack = 0
-  1365                           ; Regs used in _init: [wreg+status,2]
-  1366  0134  307A               	movlw	122
-  1367  0135  0021               	movlb	1	; select bank1
-  1368  0136  0099               	movwf	25	;volatile
+  1359                           ;main.c: 82: OSCCON = 0b01111010;
+  1360                           
+  1361                           ;incstack = 0
+  1362                           ; Regs used in _init: [wreg+status,2]
+  1363  0133  307A               	movlw	122
+  1364  0134  0021               	movlb	1	; select bank1
+  1365  0135  0099               	movwf	25	;volatile
+  1366                           
+  1367                           ;main.c: 84: TRISA = 0b000000;
+  1368  0136  018C               	clrf	12	;volatile
   1369                           
-  1370                           ;main.c: 160: TRISA = 0b000000;
-  1371  0137  018C               	clrf	12	;volatile
-  1372                           
-  1373                           ;main.c: 161: ANSELA = 0X00;
-  1374  0138  0023               	movlb	3	; select bank3
-  1375  0139  018C               	clrf	12	;volatile
-  1376                           
-  1377                           ;main.c: 162: LATA = 0XFF;
-  1378  013A  30FF               	movlw	255
-  1379  013B  0022               	movlb	2	; select bank2
-  1380  013C  008C               	movwf	12	;volatile
-  1381  013D  0008               	return
-  1382  013E                     __end_of_init:	
-  1383                           
-  1384                           	psect	text8
-  1385  0158                     __ptext8:	
-  1386 ;; *************** function _close_PWM *****************
-  1387 ;; Defined at:
-  1388 ;;		line 60 in file "pwm.c"
-  1389 ;; Parameters:    Size  Location     Type
-  1390 ;;		None
-  1391 ;; Auto vars:     Size  Location     Type
-  1392 ;;		None
-  1393 ;; Return value:  Size  Location     Type
-  1394 ;;		None               void
-  1395 ;; Registers used:
-  1396 ;;		None
-  1397 ;; Tracked objects:
-  1398 ;;		On entry : 0/0
-  1399 ;;		On exit  : 0/0
-  1400 ;;		Unchanged: 0/0
-  1401 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1402 ;;      Params:         0       0       0       0
-  1403 ;;      Locals:         0       0       0       0
-  1404 ;;      Temps:          0       0       0       0
-  1405 ;;      Totals:         0       0       0       0
-  1406 ;;Total ram usage:        0 bytes
-  1407 ;; Hardware stack levels used:    1
-  1408 ;; Hardware stack levels required when called:    4
-  1409 ;; This function calls:
-  1410 ;;		Nothing
-  1411 ;; This function is called by:
-  1412 ;;		_main
-  1413 ;; This function uses a non-reentrant model
-  1414 ;;
-  1415                           
+  1370                           ;main.c: 85: ANSELA = 0X00;
+  1371  0137  0023               	movlb	3	; select bank3
+  1372  0138  018C               	clrf	12	;volatile
+  1373                           
+  1374                           ;main.c: 86: LATA = 0XFF;
+  1375  0139  30FF               	movlw	255
+  1376  013A  0022               	movlb	2	; select bank2
+  1377  013B  008C               	movwf	12	;volatile
+  1378  013C  0008               	return
+  1379  013D                     __end_of_init:	
+  1380                           
+  1381                           	psect	text8
+  1382  0157                     __ptext8:	
+  1383 ;; *************** function _close_PWM *****************
+  1384 ;; Defined at:
+  1385 ;;		line 60 in file "pwm.c"
+  1386 ;; Parameters:    Size  Location     Type
+  1387 ;;		None
+  1388 ;; Auto vars:     Size  Location     Type
+  1389 ;;		None
+  1390 ;; Return value:  Size  Location     Type
+  1391 ;;		None               void
+  1392 ;; Registers used:
+  1393 ;;		None
+  1394 ;; Tracked objects:
+  1395 ;;		On entry : 0/0
+  1396 ;;		On exit  : 0/0
+  1397 ;;		Unchanged: 0/0
+  1398 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1399 ;;      Params:         0       0       0       0
+  1400 ;;      Locals:         0       0       0       0
+  1401 ;;      Temps:          0       0       0       0
+  1402 ;;      Totals:         0       0       0       0
+  1403 ;;Total ram usage:        0 bytes
+  1404 ;; Hardware stack levels used:    1
+  1405 ;; Hardware stack levels required when called:    4
+  1406 ;; This function calls:
+  1407 ;;		Nothing
+  1408 ;; This function is called by:
+  1409 ;;		_main
+  1410 ;; This function uses a non-reentrant model
+  1411 ;;
+  1412                           
+  1413                           
+  1414                           ;psect for function _close_PWM
+  1415  0157                     _close_PWM:	
   1416                           
-  1417                           ;psect for function _close_PWM
-  1418  0158                     _close_PWM:	
-  1419                           
-  1420                           ;pwm.c: 62: PWM1CONbits.OE = 0;
-  1421                           
-  1422                           ;incstack = 0
-  1423                           ; Regs used in _close_PWM: []
-  1424  0158  003B               	movlb	27	; select bank27
-  1425  0159  131B               	bcf	27,6	;volatile
+  1417                           ;pwm.c: 62: PWM1CONbits.OE = 0;
+  1418                           
+  1419                           ;incstack = 0
+  1420                           ; Regs used in _close_PWM: []
+  1421  0157  003B               	movlb	27	; select bank27
+  1422  0158  131B               	bcf	27,6	;volatile
+  1423                           
+  1424                           ;pwm.c: 63: PWM2CONbits.OE = 0;
+  1425  0159  132B               	bcf	43,6	;volatile
   1426                           
-  1427                           ;pwm.c: 63: PWM2CONbits.OE = 0;
-  1428  015A  132B               	bcf	43,6	;volatile
-  1429                           
-  1430                           ;pwm.c: 64: PWM3CONbits.OE = 0;
-  1431  015B  133B               	bcf	59,6	;volatile
-  1432  015C  0008               	return
-  1433  015D                     __end_of_close_PWM:	
-  1434                           
-  1435                           	psect	intentry
-  1436  0004                     __pintentry:	
-  1437 ;; *************** function _InterruptHandlerLow *****************
-  1438 ;; Defined at:
-  1439 ;;		line 165 in file "main.c"
-  1440 ;; Parameters:    Size  Location     Type
-  1441 ;;		None
-  1442 ;; Auto vars:     Size  Location     Type
-  1443 ;;		None
-  1444 ;; Return value:  Size  Location     Type
-  1445 ;;		None               void
-  1446 ;; Registers used:
-  1447 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
-  1448 ;; Tracked objects:
-  1449 ;;		On entry : 0/0
-  1450 ;;		On exit  : 0/0
-  1451 ;;		Unchanged: 0/0
-  1452 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1453 ;;      Params:         0       0       0       0
-  1454 ;;      Locals:         0       0       0       0
-  1455 ;;      Temps:          2       0       0       0
-  1456 ;;      Totals:         2       0       0       0
-  1457 ;;Total ram usage:        2 bytes
-  1458 ;; Hardware stack levels used:    1
-  1459 ;; Hardware stack levels required when called:    3
-  1460 ;; This function calls:
-  1461 ;;		_get_message
-  1462 ;; This function is called by:
-  1463 ;;		Interrupt level 1
-  1464 ;; This function uses a non-reentrant model
-  1465 ;;
-  1466                           
-  1467  0004                     _InterruptHandlerLow:	
-  1468                           
-  1469                           ;incstack = 0
-  1470                           ; Regs used in _InterruptHandlerLow: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
-  1471  0004  3180               	pagesel	$
-  1472  0005  0020               	movlb	0	; select bank0
-  1473  0006  087F               	movf	127,w
-  1474  0007  00F9               	movwf	??_InterruptHandlerLow+1
-  1475                           
-  1476                           ;main.c: 168: if (PIR1bits.RCIF == 1)
-  1477  0008  1E91               	btfss	17,5	;volatile
-  1478  0009  2816               	goto	i1l51
-  1479                           
-  1480                           ;main.c: 169: {
-  1481                           ;main.c: 171: if (RCSTAbits.OERR == 1) {
-  1482  000A  0023               	movlb	3	; select bank3
-  1483  000B  1C9D               	btfss	29,1	;volatile
-  1484  000C  2815               	goto	i1l935
+  1427                           ;pwm.c: 64: PWM3CONbits.OE = 0;
+  1428  015A  133B               	bcf	59,6	;volatile
+  1429  015B  0008               	return
+  1430  015C                     __end_of_close_PWM:	
+  1431                           
+  1432                           	psect	intentry
+  1433  0004                     __pintentry:	
+  1434 ;; *************** function _InterruptHandlerLow *****************
+  1435 ;; Defined at:
+  1436 ;;		line 89 in file "main.c"
+  1437 ;; Parameters:    Size  Location     Type
+  1438 ;;		None
+  1439 ;; Auto vars:     Size  Location     Type
+  1440 ;;		None
+  1441 ;; Return value:  Size  Location     Type
+  1442 ;;		None               void
+  1443 ;; Registers used:
+  1444 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  1445 ;; Tracked objects:
+  1446 ;;		On entry : 0/0
+  1447 ;;		On exit  : 0/0
+  1448 ;;		Unchanged: 0/0
+  1449 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1450 ;;      Params:         0       0       0       0
+  1451 ;;      Locals:         0       0       0       0
+  1452 ;;      Temps:          2       0       0       0
+  1453 ;;      Totals:         2       0       0       0
+  1454 ;;Total ram usage:        2 bytes
+  1455 ;; Hardware stack levels used:    1
+  1456 ;; Hardware stack levels required when called:    3
+  1457 ;; This function calls:
+  1458 ;;		_get_message
+  1459 ;; This function is called by:
+  1460 ;;		Interrupt level 1
+  1461 ;; This function uses a non-reentrant model
+  1462 ;;
+  1463                           
+  1464  0004                     _InterruptHandlerLow:	
+  1465                           
+  1466                           ;incstack = 0
+  1467                           ; Regs used in _InterruptHandlerLow: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+  1468  0004  3180               	pagesel	$
+  1469  0005  0020               	movlb	0	; select bank0
+  1470  0006  087F               	movf	127,w
+  1471  0007  00F9               	movwf	??_InterruptHandlerLow+1
+  1472                           
+  1473                           ;main.c: 92: if (PIR1bits.RCIF == 1)
+  1474  0008  1E91               	btfss	17,5	;volatile
+  1475  0009  2816               	goto	i1l49
+  1476                           
+  1477                           ;main.c: 93: {
+  1478                           ;main.c: 95: if (RCSTAbits.OERR == 1) {
+  1479  000A  0023               	movlb	3	; select bank3
+  1480  000B  1C9D               	btfss	29,1	;volatile
+  1481  000C  2815               	goto	i1l933
+  1482                           
+  1483                           ;main.c: 96: RCSTAbits.CREN = 0;
+  1484  000D  121D               	bcf	29,4	;volatile
   1485                           
-  1486                           ;main.c: 172: RCSTAbits.CREN = 0;
-  1487  000D  121D               	bcf	29,4	;volatile
-  1488                           
-  1489                           ;main.c: 173: cUART_char = RCREGbits.RCREG ;
-  1490  000E  0819               	movf	25,w	;volatile
-  1491  000F  39FF               	andlw	255
-  1492  0010  00F8               	movwf	??_InterruptHandlerLow
-  1493  0011  0878               	movf	??_InterruptHandlerLow,w
-  1494  0012  00FA               	movwf	_cUART_char
+  1486                           ;main.c: 97: cUART_char = RCREGbits.RCREG ;
+  1487  000E  0819               	movf	25,w	;volatile
+  1488  000F  39FF               	andlw	255
+  1489  0010  00F8               	movwf	??_InterruptHandlerLow
+  1490  0011  0878               	movf	??_InterruptHandlerLow,w
+  1491  0012  00FA               	movwf	_cUART_char
+  1492                           
+  1493                           ;main.c: 98: RCSTAbits.CREN = 1;
+  1494  0013  161D               	bsf	29,4	;volatile
   1495                           
-  1496                           ;main.c: 174: RCSTAbits.CREN = 1;
-  1497  0013  161D               	bsf	29,4	;volatile
-  1498                           
-  1499                           ;main.c: 175: }
-  1500  0014  2816               	goto	i1l51
-  1501  0015                     i1l935:	
-  1502                           
-  1503                           ;main.c: 177: else
-  1504                           ;main.c: 178: {
-  1505                           ;main.c: 179: get_message();
-  1506  0015  20A1               	fcall	_get_message
-  1507  0016                     i1l51:	
-  1508  0016  0879               	movf	??_InterruptHandlerLow+1,w
-  1509  0017  0020               	movlb	0	; select bank0
-  1510  0018  00FF               	movwf	127
-  1511  0019  0009               	retfie
-  1512  001A                     __end_of_InterruptHandlerLow:	
-  1513                           
-  1514                           	psect	text10
-  1515  00A1                     __ptext10:	
-  1516 ;; *************** function _get_message *****************
-  1517 ;; Defined at:
-  1518 ;;		line 39 in file "usart.c"
-  1519 ;; Parameters:    Size  Location     Type
-  1520 ;;		None
-  1521 ;; Auto vars:     Size  Location     Type
-  1522 ;;		None
-  1523 ;; Return value:  Size  Location     Type
-  1524 ;;		None               void
-  1525 ;; Registers used:
-  1526 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
-  1527 ;; Tracked objects:
-  1528 ;;		On entry : 0/0
-  1529 ;;		On exit  : 0/0
-  1530 ;;		Unchanged: 0/0
-  1531 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1532 ;;      Params:         0       0       0       0
-  1533 ;;      Locals:         0       0       0       0
-  1534 ;;      Temps:          2       0       0       0
-  1535 ;;      Totals:         2       0       0       0
-  1536 ;;Total ram usage:        2 bytes
-  1537 ;; Hardware stack levels used:    1
-  1538 ;; Hardware stack levels required when called:    2
-  1539 ;; This function calls:
-  1540 ;;		___wmul
-  1541 ;;		_set_color
-  1542 ;; This function is called by:
-  1543 ;;		_InterruptHandlerLow
-  1544 ;; This function uses a non-reentrant model
-  1545 ;;
-  1546                           
+  1496                           ;main.c: 99: }
+  1497  0014  2816               	goto	i1l49
+  1498  0015                     i1l933:	
+  1499                           
+  1500                           ;main.c: 101: else
+  1501                           ;main.c: 102: {
+  1502                           ;main.c: 103: get_message();
+  1503  0015  20A0               	fcall	_get_message
+  1504  0016                     i1l49:	
+  1505  0016  0879               	movf	??_InterruptHandlerLow+1,w
+  1506  0017  0020               	movlb	0	; select bank0
+  1507  0018  00FF               	movwf	127
+  1508  0019  0009               	retfie
+  1509  001A                     __end_of_InterruptHandlerLow:	
+  1510                           
+  1511                           	psect	text10
+  1512  00A0                     __ptext10:	
+  1513 ;; *************** function _get_message *****************
+  1514 ;; Defined at:
+  1515 ;;		line 36 in file "usart.c"
+  1516 ;; Parameters:    Size  Location     Type
+  1517 ;;		None
+  1518 ;; Auto vars:     Size  Location     Type
+  1519 ;;		None
+  1520 ;; Return value:  Size  Location     Type
+  1521 ;;		None               void
+  1522 ;; Registers used:
+  1523 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  1524 ;; Tracked objects:
+  1525 ;;		On entry : 0/0
+  1526 ;;		On exit  : 0/0
+  1527 ;;		Unchanged: 0/0
+  1528 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1529 ;;      Params:         0       0       0       0
+  1530 ;;      Locals:         0       0       0       0
+  1531 ;;      Temps:          2       0       0       0
+  1532 ;;      Totals:         2       0       0       0
+  1533 ;;Total ram usage:        2 bytes
+  1534 ;; Hardware stack levels used:    1
+  1535 ;; Hardware stack levels required when called:    2
+  1536 ;; This function calls:
+  1537 ;;		___wmul
+  1538 ;;		_set_color
+  1539 ;; This function is called by:
+  1540 ;;		_InterruptHandlerLow
+  1541 ;; This function uses a non-reentrant model
+  1542 ;;
+  1543                           
+  1544                           
+  1545                           ;psect for function _get_message
+  1546  00A0                     _get_message:	
   1547                           
-  1548                           ;psect for function _get_message
-  1549  00A1                     _get_message:	
-  1550                           
-  1551                           ;usart.c: 42: cUART_char = RCREGbits.RCREG;
-  1552                           
-  1553                           ;incstack = 0
-  1554                           ; Regs used in _get_message: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
-  1555  00A1  0023               	movlb	3	; select bank3
-  1556  00A2  0819               	movf	25,w	;volatile
-  1557  00A3  39FF               	andlw	255
-  1558  00A4  00F6               	movwf	??_get_message
-  1559  00A5  0876               	movf	??_get_message,w
-  1560  00A6  00FA               	movwf	_cUART_char
-  1561                           
-  1562                           ;usart.c: 44: if(cUART_data_count < 4)
-  1563  00A7  3004               	movlw	4
-  1564  00A8  027B               	subwf	_cUART_data_count,w
-  1565  00A9  1803               	skipnc
-  1566  00AA  28C4               	goto	i1l921
-  1567                           
-  1568                           ;usart.c: 45: {
-  1569                           ;usart.c: 46: cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
-  1570  00AB  087A               	movf	_cUART_char,w
-  1571  00AC  00F6               	movwf	??_get_message
-  1572  00AD  01F7               	clrf	??_get_message+1
-  1573  00AE  0876               	movf	??_get_message,w
-  1574  00AF  00F0               	movwf	___wmul@multiplier
-  1575  00B0  0877               	movf	??_get_message+1,w
-  1576  00B1  00F1               	movwf	___wmul@multiplier+1
-  1577  00B2  3001               	movlw	1
-  1578  00B3  00F2               	movwf	___wmul@multiplicand
-  1579  00B4  3001               	movlw	1
-  1580  00B5  00F3               	movwf	___wmul@multiplicand+1
-  1581  00B6  20E6               	fcall	___wmul
-  1582  00B7  357B               	lslf	_cUART_data_count,w
-  1583  00B8  3E20               	addlw	_cUART_data_message& (0+255)
-  1584  00B9  0086               	movwf	6
-  1585  00BA  0187               	clrf	7
-  1586  00BB  0870               	movf	?___wmul,w
-  1587  00BC  3FC0               	movwi [0]fsr1
-  1588  00BD  0871               	movf	?___wmul+1,w
-  1589  00BE  3FC1               	movwi [1]fsr1
-  1590                           
-  1591                           ;usart.c: 47: cUART_data_count++;
-  1592  00BF  3001               	movlw	1
-  1593  00C0  00F6               	movwf	??_get_message
-  1594  00C1  0876               	movf	??_get_message,w
-  1595  00C2  07FB               	addwf	_cUART_data_count,f
-  1596                           
-  1597                           ;usart.c: 48: }
-  1598  00C3  0008               	return
-  1599  00C4                     i1l921:	
-  1600                           
-  1601                           ;usart.c: 49: else
-  1602                           ;usart.c: 50: {
-  1603                           ;usart.c: 52: set_color(cUART_data_message);
-  1604  00C4  3020               	movlw	_cUART_data_message& (0+255)
-  1605  00C5  202A               	fcall	_set_color
-  1606                           
-  1607                           ;usart.c: 53: cUART_data_count = 0;
-  1608  00C6  01FB               	clrf	_cUART_data_count
-  1609  00C7  0008               	return
-  1610  00C8                     __end_of_get_message:	
-  1611                           
-  1612                           	psect	text11
-  1613  002A                     __ptext11:	
-  1614 ;; *************** function _set_color *****************
-  1615 ;; Defined at:
-  1616 ;;		line 99 in file "pwm.c"
-  1617 ;; Parameters:    Size  Location     Type
-  1618 ;;  color           1    wreg     PTR unsigned int 
+  1548                           ;usart.c: 39: cUART_char = RCREGbits.RCREG;
+  1549                           
+  1550                           ;incstack = 0
+  1551                           ; Regs used in _get_message: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+  1552  00A0  0023               	movlb	3	; select bank3
+  1553  00A1  0819               	movf	25,w	;volatile
+  1554  00A2  39FF               	andlw	255
+  1555  00A3  00F6               	movwf	??_get_message
+  1556  00A4  0876               	movf	??_get_message,w
+  1557  00A5  00FA               	movwf	_cUART_char
+  1558                           
+  1559                           ;usart.c: 41: if(cUART_data_count < 4)
+  1560  00A6  3004               	movlw	4
+  1561  00A7  027B               	subwf	_cUART_data_count,w
+  1562  00A8  1803               	skipnc
+  1563  00A9  28C3               	goto	i1l919
+  1564                           
+  1565                           ;usart.c: 42: {
+  1566                           ;usart.c: 43: cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
+  1567  00AA  087A               	movf	_cUART_char,w
+  1568  00AB  00F6               	movwf	??_get_message
+  1569  00AC  01F7               	clrf	??_get_message+1
+  1570  00AD  0876               	movf	??_get_message,w
+  1571  00AE  00F0               	movwf	___wmul@multiplier
+  1572  00AF  0877               	movf	??_get_message+1,w
+  1573  00B0  00F1               	movwf	___wmul@multiplier+1
+  1574  00B1  3001               	movlw	1
+  1575  00B2  00F2               	movwf	___wmul@multiplicand
+  1576  00B3  3001               	movlw	1
+  1577  00B4  00F3               	movwf	___wmul@multiplicand+1
+  1578  00B5  20E5               	fcall	___wmul
+  1579  00B6  357B               	lslf	_cUART_data_count,w
+  1580  00B7  3E20               	addlw	_cUART_data_message& (0+255)
+  1581  00B8  0086               	movwf	6
+  1582  00B9  0187               	clrf	7
+  1583  00BA  0870               	movf	?___wmul,w
+  1584  00BB  3FC0               	movwi [0]fsr1
+  1585  00BC  0871               	movf	?___wmul+1,w
+  1586  00BD  3FC1               	movwi [1]fsr1
+  1587                           
+  1588                           ;usart.c: 44: cUART_data_count++;
+  1589  00BE  3001               	movlw	1
+  1590  00BF  00F6               	movwf	??_get_message
+  1591  00C0  0876               	movf	??_get_message,w
+  1592  00C1  07FB               	addwf	_cUART_data_count,f
+  1593                           
+  1594                           ;usart.c: 45: }
+  1595  00C2  0008               	return
+  1596  00C3                     i1l919:	
+  1597                           
+  1598                           ;usart.c: 46: else
+  1599                           ;usart.c: 47: {
+  1600                           ;usart.c: 48: set_color(cUART_data_message);
+  1601  00C3  3020               	movlw	_cUART_data_message& (0+255)
+  1602  00C4  2029               	fcall	_set_color
+  1603                           
+  1604                           ;usart.c: 49: cUART_data_count = 0;
+  1605  00C5  01FB               	clrf	_cUART_data_count
+  1606  00C6  0008               	return
+  1607  00C7                     __end_of_get_message:	
+  1608                           
+  1609                           	psect	text11
+  1610  0029                     __ptext11:	
+  1611 ;; *************** function _set_color *****************
+  1612 ;; Defined at:
+  1613 ;;		line 99 in file "pwm.c"
+  1614 ;; Parameters:    Size  Location     Type
+  1615 ;;  color           1    wreg     PTR unsigned int 
+  1616 ;;		 -> cUART_data_message(10), 
+  1617 ;; Auto vars:     Size  Location     Type
+  1618 ;;  color           1    2[COMMON] PTR unsigned int 
   1619 ;;		 -> cUART_data_message(10), 
-  1620 ;; Auto vars:     Size  Location     Type
-  1621 ;;  color           1    2[COMMON] PTR unsigned int 
-  1622 ;;		 -> cUART_data_message(10), 
-  1623 ;; Return value:  Size  Location     Type
-  1624 ;;		None               void
-  1625 ;; Registers used:
-  1626 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
-  1627 ;; Tracked objects:
-  1628 ;;		On entry : 0/0
-  1629 ;;		On exit  : 0/0
-  1630 ;;		Unchanged: 0/0
-  1631 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1632 ;;      Params:         0       0       0       0
-  1633 ;;      Locals:         1       0       0       0
-  1634 ;;      Temps:          0       0       0       0
-  1635 ;;      Totals:         1       0       0       0
-  1636 ;;Total ram usage:        1 bytes
-  1637 ;; Hardware stack levels used:    1
-  1638 ;; Hardware stack levels required when called:    1
-  1639 ;; This function calls:
-  1640 ;;		i1_set_pwmBLUE
-  1641 ;;		i1_set_pwmGREEN
-  1642 ;;		i1_set_pwmRED
-  1643 ;; This function is called by:
-  1644 ;;		_get_message
-  1645 ;; This function uses a non-reentrant model
-  1646 ;;
-  1647                           
+  1620 ;; Return value:  Size  Location     Type
+  1621 ;;		None               void
+  1622 ;; Registers used:
+  1623 ;;		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+  1624 ;; Tracked objects:
+  1625 ;;		On entry : 0/0
+  1626 ;;		On exit  : 0/0
+  1627 ;;		Unchanged: 0/0
+  1628 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1629 ;;      Params:         0       0       0       0
+  1630 ;;      Locals:         1       0       0       0
+  1631 ;;      Temps:          0       0       0       0
+  1632 ;;      Totals:         1       0       0       0
+  1633 ;;Total ram usage:        1 bytes
+  1634 ;; Hardware stack levels used:    1
+  1635 ;; Hardware stack levels required when called:    1
+  1636 ;; This function calls:
+  1637 ;;		i1_set_pwmBLUE
+  1638 ;;		i1_set_pwmGREEN
+  1639 ;;		i1_set_pwmRED
+  1640 ;; This function is called by:
+  1641 ;;		_get_message
+  1642 ;; This function uses a non-reentrant model
+  1643 ;;
+  1644                           
+  1645                           
+  1646                           ;psect for function _set_color
+  1647  0029                     _set_color:	
   1648                           
-  1649                           ;psect for function _set_color
-  1650  002A                     _set_color:	
-  1651                           
-  1652                           ;incstack = 0
-  1653                           ; Regs used in _set_color: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
-  1654                           ;set_color@color stored from wreg
-  1655  002A  00F2               	movwf	set_color@color
-  1656                           
-  1657                           ;pwm.c: 102: set_pwmRED(color[1]);
-  1658  002B  0872               	movf	set_color@color,w
-  1659  002C  3E02               	addlw	2
-  1660  002D  0086               	movwf	6
-  1661  002E  0187               	clrf	7
-  1662  002F  3F40               	moviw [0]fsr1
-  1663  0030  00F0               	movwf	i1set_pwmRED@value
-  1664  0031  3F41               	moviw [1]fsr1
-  1665  0032  00F1               	movwf	i1set_pwmRED@value+1
-  1666  0033  213E               	fcall	i1_set_pwmRED
-  1667                           
-  1668                           ;pwm.c: 103: set_pwmGREEN(color[2]);
-  1669  0034  0872               	movf	set_color@color,w
-  1670  0035  3E04               	addlw	4
-  1671  0036  0086               	movwf	6
-  1672  0037  0187               	clrf	7
-  1673  0038  3F40               	moviw [0]fsr1
-  1674  0039  00F0               	movwf	i1set_pwmGREEN@value
-  1675  003A  3F41               	moviw [1]fsr1
-  1676  003B  00F1               	movwf	i1set_pwmGREEN@value+1
-  1677  003C  2145               	fcall	i1_set_pwmGREEN
-  1678                           
-  1679                           ;pwm.c: 104: set_pwmBLUE(color[3]);
-  1680  003D  0872               	movf	set_color@color,w
-  1681  003E  3E06               	addlw	6
-  1682  003F  0086               	movwf	6
-  1683  0040  0187               	clrf	7
-  1684  0041  3F40               	moviw [0]fsr1
-  1685  0042  00F0               	movwf	i1set_pwmBLUE@value
-  1686  0043  3F41               	moviw [1]fsr1
-  1687  0044  00F1               	movwf	i1set_pwmBLUE@value+1
-  1688  0045  214C               	fcall	i1_set_pwmBLUE
-  1689                           
-  1690                           ;pwm.c: 106: color[0] = 0;
-  1691  0046  0872               	movf	set_color@color,w
-  1692  0047  0086               	movwf	6
-  1693  0048  0187               	clrf	7
-  1694  0049  3000               	movlw	0
-  1695  004A  3FC0               	movwi [0]fsr1
-  1696  004B  3FC1               	movwi [1]fsr1
-  1697                           
-  1698                           ;pwm.c: 107: color[1] = 0;
-  1699  004C  0872               	movf	set_color@color,w
-  1700  004D  3E02               	addlw	2
-  1701  004E  0086               	movwf	6
-  1702  004F  0187               	clrf	7
-  1703  0050  3000               	movlw	0
-  1704  0051  3FC0               	movwi [0]fsr1
-  1705  0052  3FC1               	movwi [1]fsr1
-  1706                           
-  1707                           ;pwm.c: 108: color[2] = 0;
-  1708  0053  0872               	movf	set_color@color,w
-  1709  0054  3E04               	addlw	4
-  1710  0055  0086               	movwf	6
-  1711  0056  0187               	clrf	7
-  1712  0057  3000               	movlw	0
-  1713  0058  3FC0               	movwi [0]fsr1
-  1714  0059  3FC1               	movwi [1]fsr1
-  1715                           
-  1716                           ;pwm.c: 109: color[3] = 0;
-  1717  005A  0872               	movf	set_color@color,w
-  1718  005B  3E06               	addlw	6
-  1719  005C  0086               	movwf	6
-  1720  005D  0187               	clrf	7
-  1721  005E  3000               	movlw	0
-  1722  005F  3FC0               	movwi [0]fsr1
-  1723  0060  3FC1               	movwi [1]fsr1
-  1724                           
-  1725                           ;pwm.c: 110: color[4] = 0;
-  1726  0061  0872               	movf	set_color@color,w
-  1727  0062  3E08               	addlw	8
-  1728  0063  0086               	movwf	6
-  1729  0064  0187               	clrf	7
-  1730  0065  3000               	movlw	0
-  1731  0066  3FC0               	movwi [0]fsr1
-  1732  0067  3FC1               	movwi [1]fsr1
-  1733  0068  0008               	return
-  1734  0069                     __end_of_set_color:	
-  1735                           
-  1736                           	psect	text12
-  1737  013E                     __ptext12:	
-  1738 ;; *************** function i1_set_pwmRED *****************
-  1739 ;; Defined at:
-  1740 ;;		line 73 in file "pwm.c"
-  1741 ;; Parameters:    Size  Location     Type
-  1742 ;;  value           2    0[COMMON] unsigned int 
-  1743 ;; Auto vars:     Size  Location     Type
-  1744 ;;		None
-  1745 ;; Return value:  Size  Location     Type
-  1746 ;;		None               void
-  1747 ;; Registers used:
-  1748 ;;		wreg, status,2
-  1749 ;; Tracked objects:
-  1750 ;;		On entry : 0/0
-  1751 ;;		On exit  : 0/0
-  1752 ;;		Unchanged: 0/0
-  1753 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1754 ;;      Params:         2       0       0       0
-  1755 ;;      Locals:         0       0       0       0
-  1756 ;;      Temps:          0       0       0       0
-  1757 ;;      Totals:         2       0       0       0
-  1758 ;;Total ram usage:        2 bytes
-  1759 ;; Hardware stack levels used:    1
-  1760 ;; This function calls:
-  1761 ;;		Nothing
-  1762 ;; This function is called by:
-  1763 ;;		_set_color
-  1764 ;; This function uses a non-reentrant model
-  1765 ;;
-  1766                           
+  1649                           ;incstack = 0
+  1650                           ; Regs used in _set_color: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
+  1651                           ;set_color@color stored from wreg
+  1652  0029  00F2               	movwf	set_color@color
+  1653                           
+  1654                           ;pwm.c: 102: set_pwmRED(color[1]);
+  1655  002A  0872               	movf	set_color@color,w
+  1656  002B  3E02               	addlw	2
+  1657  002C  0086               	movwf	6
+  1658  002D  0187               	clrf	7
+  1659  002E  3F40               	moviw [0]fsr1
+  1660  002F  00F0               	movwf	i1set_pwmRED@value
+  1661  0030  3F41               	moviw [1]fsr1
+  1662  0031  00F1               	movwf	i1set_pwmRED@value+1
+  1663  0032  213D               	fcall	i1_set_pwmRED
+  1664                           
+  1665                           ;pwm.c: 103: set_pwmGREEN(color[2]);
+  1666  0033  0872               	movf	set_color@color,w
+  1667  0034  3E04               	addlw	4
+  1668  0035  0086               	movwf	6
+  1669  0036  0187               	clrf	7
+  1670  0037  3F40               	moviw [0]fsr1
+  1671  0038  00F0               	movwf	i1set_pwmGREEN@value
+  1672  0039  3F41               	moviw [1]fsr1
+  1673  003A  00F1               	movwf	i1set_pwmGREEN@value+1
+  1674  003B  2144               	fcall	i1_set_pwmGREEN
+  1675                           
+  1676                           ;pwm.c: 104: set_pwmBLUE(color[3]);
+  1677  003C  0872               	movf	set_color@color,w
+  1678  003D  3E06               	addlw	6
+  1679  003E  0086               	movwf	6
+  1680  003F  0187               	clrf	7
+  1681  0040  3F40               	moviw [0]fsr1
+  1682  0041  00F0               	movwf	i1set_pwmBLUE@value
+  1683  0042  3F41               	moviw [1]fsr1
+  1684  0043  00F1               	movwf	i1set_pwmBLUE@value+1
+  1685  0044  214B               	fcall	i1_set_pwmBLUE
+  1686                           
+  1687                           ;pwm.c: 106: color[0] = 0;
+  1688  0045  0872               	movf	set_color@color,w
+  1689  0046  0086               	movwf	6
+  1690  0047  0187               	clrf	7
+  1691  0048  3000               	movlw	0
+  1692  0049  3FC0               	movwi [0]fsr1
+  1693  004A  3FC1               	movwi [1]fsr1
+  1694                           
+  1695                           ;pwm.c: 107: color[1] = 0;
+  1696  004B  0872               	movf	set_color@color,w
+  1697  004C  3E02               	addlw	2
+  1698  004D  0086               	movwf	6
+  1699  004E  0187               	clrf	7
+  1700  004F  3000               	movlw	0
+  1701  0050  3FC0               	movwi [0]fsr1
+  1702  0051  3FC1               	movwi [1]fsr1
+  1703                           
+  1704                           ;pwm.c: 108: color[2] = 0;
+  1705  0052  0872               	movf	set_color@color,w
+  1706  0053  3E04               	addlw	4
+  1707  0054  0086               	movwf	6
+  1708  0055  0187               	clrf	7
+  1709  0056  3000               	movlw	0
+  1710  0057  3FC0               	movwi [0]fsr1
+  1711  0058  3FC1               	movwi [1]fsr1
+  1712                           
+  1713                           ;pwm.c: 109: color[3] = 0;
+  1714  0059  0872               	movf	set_color@color,w
+  1715  005A  3E06               	addlw	6
+  1716  005B  0086               	movwf	6
+  1717  005C  0187               	clrf	7
+  1718  005D  3000               	movlw	0
+  1719  005E  3FC0               	movwi [0]fsr1
+  1720  005F  3FC1               	movwi [1]fsr1
+  1721                           
+  1722                           ;pwm.c: 110: color[4] = 0;
+  1723  0060  0872               	movf	set_color@color,w
+  1724  0061  3E08               	addlw	8
+  1725  0062  0086               	movwf	6
+  1726  0063  0187               	clrf	7
+  1727  0064  3000               	movlw	0
+  1728  0065  3FC0               	movwi [0]fsr1
+  1729  0066  3FC1               	movwi [1]fsr1
+  1730  0067  0008               	return
+  1731  0068                     __end_of_set_color:	
+  1732                           
+  1733                           	psect	text12
+  1734  013D                     __ptext12:	
+  1735 ;; *************** function i1_set_pwmRED *****************
+  1736 ;; Defined at:
+  1737 ;;		line 73 in file "pwm.c"
+  1738 ;; Parameters:    Size  Location     Type
+  1739 ;;  value           2    0[COMMON] unsigned int 
+  1740 ;; Auto vars:     Size  Location     Type
+  1741 ;;		None
+  1742 ;; Return value:  Size  Location     Type
+  1743 ;;		None               void
+  1744 ;; Registers used:
+  1745 ;;		wreg, status,2
+  1746 ;; Tracked objects:
+  1747 ;;		On entry : 0/0
+  1748 ;;		On exit  : 0/0
+  1749 ;;		Unchanged: 0/0
+  1750 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1751 ;;      Params:         2       0       0       0
+  1752 ;;      Locals:         0       0       0       0
+  1753 ;;      Temps:          0       0       0       0
+  1754 ;;      Totals:         2       0       0       0
+  1755 ;;Total ram usage:        2 bytes
+  1756 ;; Hardware stack levels used:    1
+  1757 ;; This function calls:
+  1758 ;;		Nothing
+  1759 ;; This function is called by:
+  1760 ;;		_set_color
+  1761 ;; This function uses a non-reentrant model
+  1762 ;;
+  1763                           
+  1764                           
+  1765                           ;psect for function i1_set_pwmRED
+  1766  013D                     i1_set_pwmRED:	
   1767                           
-  1768                           ;psect for function i1_set_pwmRED
-  1769  013E                     i1_set_pwmRED:	
-  1770                           
-  1771                           ;pwm.c: 75: PWM1PHH = (unsigned char)(value >> 8);
-  1772                           
-  1773                           ;incstack = 0
-  1774                           ; Regs used in i1_set_pwmRED: [wreg+status,2]
-  1775  013E  0871               	movf	i1set_pwmRED@value+1,w
-  1776  013F  003B               	movlb	27	; select bank27
-  1777  0140  0092               	movwf	18	;volatile
-  1778                           
-  1779                           ;pwm.c: 76: PWM1PHL = (unsigned char)(value);
-  1780  0141  0870               	movf	i1set_pwmRED@value,w
-  1781  0142  0091               	movwf	17	;volatile
-  1782                           
-  1783                           ;pwm.c: 78: PWM1LD = 0xFF;
-  1784  0143  179F               	bsf	31,7	;volatile
-  1785  0144  0008               	return
-  1786  0145                     __end_ofi1_set_pwmRED:	
-  1787                           
-  1788                           	psect	text13
-  1789  0145                     __ptext13:	
-  1790 ;; *************** function i1_set_pwmGREEN *****************
-  1791 ;; Defined at:
-  1792 ;;		line 81 in file "pwm.c"
-  1793 ;; Parameters:    Size  Location     Type
-  1794 ;;  value           2    0[COMMON] unsigned int 
-  1795 ;; Auto vars:     Size  Location     Type
-  1796 ;;		None
-  1797 ;; Return value:  Size  Location     Type
-  1798 ;;		None               void
-  1799 ;; Registers used:
-  1800 ;;		wreg, status,2
-  1801 ;; Tracked objects:
-  1802 ;;		On entry : 0/0
-  1803 ;;		On exit  : 0/0
-  1804 ;;		Unchanged: 0/0
-  1805 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1806 ;;      Params:         2       0       0       0
-  1807 ;;      Locals:         0       0       0       0
-  1808 ;;      Temps:          0       0       0       0
-  1809 ;;      Totals:         2       0       0       0
-  1810 ;;Total ram usage:        2 bytes
-  1811 ;; Hardware stack levels used:    1
-  1812 ;; This function calls:
-  1813 ;;		Nothing
-  1814 ;; This function is called by:
-  1815 ;;		_set_color
-  1816 ;; This function uses a non-reentrant model
-  1817 ;;
-  1818                           
+  1768                           ;pwm.c: 75: PWM1PHH = (unsigned char)(value >> 8);
+  1769                           
+  1770                           ;incstack = 0
+  1771                           ; Regs used in i1_set_pwmRED: [wreg+status,2]
+  1772  013D  0871               	movf	i1set_pwmRED@value+1,w
+  1773  013E  003B               	movlb	27	; select bank27
+  1774  013F  0092               	movwf	18	;volatile
+  1775                           
+  1776                           ;pwm.c: 76: PWM1PHL = (unsigned char)(value);
+  1777  0140  0870               	movf	i1set_pwmRED@value,w
+  1778  0141  0091               	movwf	17	;volatile
+  1779                           
+  1780                           ;pwm.c: 78: PWM1LD = 0xFF;
+  1781  0142  179F               	bsf	31,7	;volatile
+  1782  0143  0008               	return
+  1783  0144                     __end_ofi1_set_pwmRED:	
+  1784                           
+  1785                           	psect	text13
+  1786  0144                     __ptext13:	
+  1787 ;; *************** function i1_set_pwmGREEN *****************
+  1788 ;; Defined at:
+  1789 ;;		line 81 in file "pwm.c"
+  1790 ;; Parameters:    Size  Location     Type
+  1791 ;;  value           2    0[COMMON] unsigned int 
+  1792 ;; Auto vars:     Size  Location     Type
+  1793 ;;		None
+  1794 ;; Return value:  Size  Location     Type
+  1795 ;;		None               void
+  1796 ;; Registers used:
+  1797 ;;		wreg, status,2
+  1798 ;; Tracked objects:
+  1799 ;;		On entry : 0/0
+  1800 ;;		On exit  : 0/0
+  1801 ;;		Unchanged: 0/0
+  1802 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1803 ;;      Params:         2       0       0       0
+  1804 ;;      Locals:         0       0       0       0
+  1805 ;;      Temps:          0       0       0       0
+  1806 ;;      Totals:         2       0       0       0
+  1807 ;;Total ram usage:        2 bytes
+  1808 ;; Hardware stack levels used:    1
+  1809 ;; This function calls:
+  1810 ;;		Nothing
+  1811 ;; This function is called by:
+  1812 ;;		_set_color
+  1813 ;; This function uses a non-reentrant model
+  1814 ;;
+  1815                           
+  1816                           
+  1817                           ;psect for function i1_set_pwmGREEN
+  1818  0144                     i1_set_pwmGREEN:	
   1819                           
-  1820                           ;psect for function i1_set_pwmGREEN
-  1821  0145                     i1_set_pwmGREEN:	
-  1822                           
-  1823                           ;pwm.c: 83: PWM2PHH = (unsigned char)(value >> 8);
-  1824                           
-  1825                           ;incstack = 0
-  1826                           ; Regs used in i1_set_pwmGREEN: [wreg+status,2]
-  1827  0145  0871               	movf	i1set_pwmGREEN@value+1,w
-  1828  0146  003B               	movlb	27	; select bank27
-  1829  0147  00A2               	movwf	34	;volatile
-  1830                           
-  1831                           ;pwm.c: 84: PWM2PHL = (unsigned char)(value);
-  1832  0148  0870               	movf	i1set_pwmGREEN@value,w
-  1833  0149  00A1               	movwf	33	;volatile
-  1834                           
-  1835                           ;pwm.c: 86: PWM2LD = 0xFF;
-  1836  014A  17AF               	bsf	47,7	;volatile
-  1837  014B  0008               	return
-  1838  014C                     __end_ofi1_set_pwmGREEN:	
-  1839                           
-  1840                           	psect	text14
-  1841  014C                     __ptext14:	
-  1842 ;; *************** function i1_set_pwmBLUE *****************
-  1843 ;; Defined at:
-  1844 ;;		line 90 in file "pwm.c"
-  1845 ;; Parameters:    Size  Location     Type
-  1846 ;;  value           2    0[COMMON] unsigned int 
-  1847 ;; Auto vars:     Size  Location     Type
-  1848 ;;		None
-  1849 ;; Return value:  Size  Location     Type
-  1850 ;;		None               void
-  1851 ;; Registers used:
-  1852 ;;		wreg, status,2
-  1853 ;; Tracked objects:
-  1854 ;;		On entry : 0/0
-  1855 ;;		On exit  : 0/0
-  1856 ;;		Unchanged: 0/0
-  1857 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1858 ;;      Params:         2       0       0       0
-  1859 ;;      Locals:         0       0       0       0
-  1860 ;;      Temps:          0       0       0       0
-  1861 ;;      Totals:         2       0       0       0
-  1862 ;;Total ram usage:        2 bytes
-  1863 ;; Hardware stack levels used:    1
-  1864 ;; This function calls:
-  1865 ;;		Nothing
-  1866 ;; This function is called by:
-  1867 ;;		_set_color
-  1868 ;; This function uses a non-reentrant model
-  1869 ;;
-  1870                           
+  1820                           ;pwm.c: 83: PWM2PHH = (unsigned char)(value >> 8);
+  1821                           
+  1822                           ;incstack = 0
+  1823                           ; Regs used in i1_set_pwmGREEN: [wreg+status,2]
+  1824  0144  0871               	movf	i1set_pwmGREEN@value+1,w
+  1825  0145  003B               	movlb	27	; select bank27
+  1826  0146  00A2               	movwf	34	;volatile
+  1827                           
+  1828                           ;pwm.c: 84: PWM2PHL = (unsigned char)(value);
+  1829  0147  0870               	movf	i1set_pwmGREEN@value,w
+  1830  0148  00A1               	movwf	33	;volatile
+  1831                           
+  1832                           ;pwm.c: 86: PWM2LD = 0xFF;
+  1833  0149  17AF               	bsf	47,7	;volatile
+  1834  014A  0008               	return
+  1835  014B                     __end_ofi1_set_pwmGREEN:	
+  1836                           
+  1837                           	psect	text14
+  1838  014B                     __ptext14:	
+  1839 ;; *************** function i1_set_pwmBLUE *****************
+  1840 ;; Defined at:
+  1841 ;;		line 90 in file "pwm.c"
+  1842 ;; Parameters:    Size  Location     Type
+  1843 ;;  value           2    0[COMMON] unsigned int 
+  1844 ;; Auto vars:     Size  Location     Type
+  1845 ;;		None
+  1846 ;; Return value:  Size  Location     Type
+  1847 ;;		None               void
+  1848 ;; Registers used:
+  1849 ;;		wreg, status,2
+  1850 ;; Tracked objects:
+  1851 ;;		On entry : 0/0
+  1852 ;;		On exit  : 0/0
+  1853 ;;		Unchanged: 0/0
+  1854 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1855 ;;      Params:         2       0       0       0
+  1856 ;;      Locals:         0       0       0       0
+  1857 ;;      Temps:          0       0       0       0
+  1858 ;;      Totals:         2       0       0       0
+  1859 ;;Total ram usage:        2 bytes
+  1860 ;; Hardware stack levels used:    1
+  1861 ;; This function calls:
+  1862 ;;		Nothing
+  1863 ;; This function is called by:
+  1864 ;;		_set_color
+  1865 ;; This function uses a non-reentrant model
+  1866 ;;
+  1867                           
+  1868                           
+  1869                           ;psect for function i1_set_pwmBLUE
+  1870  014B                     i1_set_pwmBLUE:	
   1871                           
-  1872                           ;psect for function i1_set_pwmBLUE
-  1873  014C                     i1_set_pwmBLUE:	
-  1874                           
-  1875                           ;pwm.c: 93: PWM3PHH = (unsigned char)(value >> 8);
-  1876                           
-  1877                           ;incstack = 0
-  1878                           ; Regs used in i1_set_pwmBLUE: [wreg+status,2]
-  1879  014C  0871               	movf	i1set_pwmBLUE@value+1,w
-  1880  014D  003B               	movlb	27	; select bank27
-  1881  014E  00B2               	movwf	50	;volatile
-  1882                           
-  1883                           ;pwm.c: 94: PWM3PHL = (unsigned char)(value);
-  1884  014F  0870               	movf	i1set_pwmBLUE@value,w
-  1885  0150  00B1               	movwf	49	;volatile
-  1886                           
-  1887                           ;pwm.c: 96: PWM3LD = 0xFF;
-  1888  0151  17BF               	bsf	63,7	;volatile
-  1889  0152  0008               	return
-  1890  0153                     __end_ofi1_set_pwmBLUE:	
-  1891                           
-  1892                           	psect	text15
-  1893  00E6                     __ptext15:	
-  1894 ;; *************** function ___wmul *****************
-  1895 ;; Defined at:
-  1896 ;;		line 4 in file "/Applications/microchip/xc8/v1.30/sources/common/wmul.c"
-  1897 ;; Parameters:    Size  Location     Type
-  1898 ;;  multiplier      2    0[COMMON] unsigned int 
-  1899 ;;  multiplicand    2    2[COMMON] unsigned int 
-  1900 ;; Auto vars:     Size  Location     Type
-  1901 ;;  product         2    4[COMMON] unsigned int 
-  1902 ;; Return value:  Size  Location     Type
-  1903 ;;                  2    0[COMMON] unsigned int 
-  1904 ;; Registers used:
-  1905 ;;		wreg, status,2, status,0
-  1906 ;; Tracked objects:
-  1907 ;;		On entry : 0/0
-  1908 ;;		On exit  : 0/0
-  1909 ;;		Unchanged: 0/0
-  1910 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-  1911 ;;      Params:         4       0       0       0
-  1912 ;;      Locals:         2       0       0       0
-  1913 ;;      Temps:          0       0       0       0
-  1914 ;;      Totals:         6       0       0       0
-  1915 ;;Total ram usage:        6 bytes
-  1916 ;; Hardware stack levels used:    1
-  1917 ;; This function calls:
-  1918 ;;		Nothing
-  1919 ;; This function is called by:
-  1920 ;;		_get_message
-  1921 ;; This function uses a non-reentrant model
-  1922 ;;
-  1923                           
+  1872                           ;pwm.c: 93: PWM3PHH = (unsigned char)(value >> 8);
+  1873                           
+  1874                           ;incstack = 0
+  1875                           ; Regs used in i1_set_pwmBLUE: [wreg+status,2]
+  1876  014B  0871               	movf	i1set_pwmBLUE@value+1,w
+  1877  014C  003B               	movlb	27	; select bank27
+  1878  014D  00B2               	movwf	50	;volatile
+  1879                           
+  1880                           ;pwm.c: 94: PWM3PHL = (unsigned char)(value);
+  1881  014E  0870               	movf	i1set_pwmBLUE@value,w
+  1882  014F  00B1               	movwf	49	;volatile
+  1883                           
+  1884                           ;pwm.c: 96: PWM3LD = 0xFF;
+  1885  0150  17BF               	bsf	63,7	;volatile
+  1886  0151  0008               	return
+  1887  0152                     __end_ofi1_set_pwmBLUE:	
+  1888                           
+  1889                           	psect	text15
+  1890  00E5                     __ptext15:	
+  1891 ;; *************** function ___wmul *****************
+  1892 ;; Defined at:
+  1893 ;;		line 4 in file "/Applications/microchip/xc8/v1.30/sources/common/wmul.c"
+  1894 ;; Parameters:    Size  Location     Type
+  1895 ;;  multiplier      2    0[COMMON] unsigned int 
+  1896 ;;  multiplicand    2    2[COMMON] unsigned int 
+  1897 ;; Auto vars:     Size  Location     Type
+  1898 ;;  product         2    4[COMMON] unsigned int 
+  1899 ;; Return value:  Size  Location     Type
+  1900 ;;                  2    0[COMMON] unsigned int 
+  1901 ;; Registers used:
+  1902 ;;		wreg, status,2, status,0
+  1903 ;; Tracked objects:
+  1904 ;;		On entry : 0/0
+  1905 ;;		On exit  : 0/0
+  1906 ;;		Unchanged: 0/0
+  1907 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1908 ;;      Params:         4       0       0       0
+  1909 ;;      Locals:         2       0       0       0
+  1910 ;;      Temps:          0       0       0       0
+  1911 ;;      Totals:         6       0       0       0
+  1912 ;;Total ram usage:        6 bytes
+  1913 ;; Hardware stack levels used:    1
+  1914 ;; This function calls:
+  1915 ;;		Nothing
+  1916 ;; This function is called by:
+  1917 ;;		_get_message
+  1918 ;; This function uses a non-reentrant model
+  1919 ;;
+  1920                           
+  1921                           
+  1922                           ;psect for function ___wmul
+  1923  00E5                     ___wmul:	
   1924                           
-  1925                           ;psect for function ___wmul
-  1926  00E6                     ___wmul:	
-  1927                           
-  1928                           ;incstack = 0
-  1929                           ; Regs used in ___wmul: [wreg+status,2+status,0]
-  1930  00E6  01F4               	clrf	___wmul@product
-  1931  00E7  01F5               	clrf	___wmul@product+1
-  1932  00E8                     i1l873:	
-  1933  00E8  1C70               	btfss	___wmul@multiplier,0
-  1934  00E9  28EE               	goto	i1l525
-  1935  00EA  0872               	movf	___wmul@multiplicand,w
-  1936  00EB  07F4               	addwf	___wmul@product,f
-  1937  00EC  0873               	movf	___wmul@multiplicand+1,w
-  1938  00ED  3DF5               	addwfc	___wmul@product+1,f
-  1939  00EE                     i1l525:	
-  1940  00EE  3001               	movlw	1
-  1941  00EF                     u10_25:	
-  1942  00EF  35F2               	lslf	___wmul@multiplicand,f
-  1943  00F0  0DF3               	rlf	___wmul@multiplicand+1,f
-  1944  00F1  0B89               	decfsz	9,f
-  1945  00F2  28EF               	goto	u10_25
-  1946  00F3  3001               	movlw	1
-  1947  00F4                     u11_25:	
-  1948  00F4  36F1               	lsrf	___wmul@multiplier+1,f
-  1949  00F5  0CF0               	rrf	___wmul@multiplier,f
-  1950  00F6  0B89               	decfsz	9,f
-  1951  00F7  28F4               	goto	u11_25
-  1952  00F8  0871               	movf	___wmul@multiplier+1,w
-  1953  00F9  0470               	iorwf	___wmul@multiplier,w
-  1954  00FA  1D03               	skipz
-  1955  00FB  28E8               	goto	i1l873
-  1956  00FC  0875               	movf	___wmul@product+1,w
-  1957  00FD  01F1               	clrf	?___wmul+1
-  1958  00FE  07F1               	addwf	?___wmul+1,f
-  1959  00FF  0874               	movf	___wmul@product,w
-  1960  0100  01F0               	clrf	?___wmul
-  1961  0101  07F0               	addwf	?___wmul,f
-  1962  0102  0008               	return
-  1963  0103                     __end_of___wmul:	
-  1964  007E                     btemp	set	126	;btemp
-  1965  007E                     wtemp	set	126
-  1966  007E                     wtemp0	set	126
-  1967  0080                     wtemp1	set	128
-  1968  0082                     wtemp2	set	130
-  1969  0084                     wtemp3	set	132
-  1970  0086                     wtemp4	set	134
-  1971  0088                     wtemp5	set	136
-  1972  007F                     wtemp6	set	127
-  1973  007E                     ttemp	set	126
-  1974  007E                     ttemp0	set	126
-  1975  0081                     ttemp1	set	129
-  1976  0084                     ttemp2	set	132
-  1977  0087                     ttemp3	set	135
-  1978  007F                     ttemp4	set	127
-  1979  007E                     ltemp	set	126
-  1980  007E                     ltemp0	set	126
-  1981  0082                     ltemp1	set	130
-  1982  0086                     ltemp2	set	134
-  1983  0080                     ltemp3	set	128
+  1925                           ;incstack = 0
+  1926                           ; Regs used in ___wmul: [wreg+status,2+status,0]
+  1927  00E5  01F4               	clrf	___wmul@product
+  1928  00E6  01F5               	clrf	___wmul@product+1
+  1929  00E7                     i1l871:	
+  1930  00E7  1C70               	btfss	___wmul@multiplier,0
+  1931  00E8  28ED               	goto	i1l523
+  1932  00E9  0872               	movf	___wmul@multiplicand,w
+  1933  00EA  07F4               	addwf	___wmul@product,f
+  1934  00EB  0873               	movf	___wmul@multiplicand+1,w
+  1935  00EC  3DF5               	addwfc	___wmul@product+1,f
+  1936  00ED                     i1l523:	
+  1937  00ED  3001               	movlw	1
+  1938  00EE                     u10_25:	
+  1939  00EE  35F2               	lslf	___wmul@multiplicand,f
+  1940  00EF  0DF3               	rlf	___wmul@multiplicand+1,f
+  1941  00F0  0B89               	decfsz	9,f
+  1942  00F1  28EE               	goto	u10_25
+  1943  00F2  3001               	movlw	1
+  1944  00F3                     u11_25:	
+  1945  00F3  36F1               	lsrf	___wmul@multiplier+1,f
+  1946  00F4  0CF0               	rrf	___wmul@multiplier,f
+  1947  00F5  0B89               	decfsz	9,f
+  1948  00F6  28F3               	goto	u11_25
+  1949  00F7  0871               	movf	___wmul@multiplier+1,w
+  1950  00F8  0470               	iorwf	___wmul@multiplier,w
+  1951  00F9  1D03               	skipz
+  1952  00FA  28E7               	goto	i1l871
+  1953  00FB  0875               	movf	___wmul@product+1,w
+  1954  00FC  01F1               	clrf	?___wmul+1
+  1955  00FD  07F1               	addwf	?___wmul+1,f
+  1956  00FE  0874               	movf	___wmul@product,w
+  1957  00FF  01F0               	clrf	?___wmul
+  1958  0100  07F0               	addwf	?___wmul,f
+  1959  0101  0008               	return
+  1960  0102                     __end_of___wmul:	
+  1961  007E                     btemp	set	126	;btemp
+  1962  007E                     wtemp	set	126
+  1963  007E                     wtemp0	set	126
+  1964  0080                     wtemp1	set	128
+  1965  0082                     wtemp2	set	130
+  1966  0084                     wtemp3	set	132
+  1967  0086                     wtemp4	set	134
+  1968  0088                     wtemp5	set	136
+  1969  007F                     wtemp6	set	127
+  1970  007E                     ttemp	set	126
+  1971  007E                     ttemp0	set	126
+  1972  0081                     ttemp1	set	129
+  1973  0084                     ttemp2	set	132
+  1974  0087                     ttemp3	set	135
+  1975  007F                     ttemp4	set	127
+  1976  007E                     ltemp	set	126
+  1977  007E                     ltemp0	set	126
+  1978  0082                     ltemp1	set	130
+  1979  0086                     ltemp2	set	134
+  1980  0080                     ltemp3	set	128
 
 
 Data Sizes:
     Strings     0
     Constant    0
     Data        0
-    BSS         13
+    BSS         12
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14     10      13
+    COMMON           14     10      12
     BANK0            80      2      12
     BANK1            80      0       0
     BANK2            80      0       0
@@ -2144,7 +2141,7 @@ CODE                 0      0       0       0        0.0%
 BITCOMMON            E      0       0       1        0.0%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
-COMMON               E      A       D       2       92.9%
+COMMON               E      A       C       2       85.7%
 BITSFR1              0      0       0       2        0.0%
 SFR1                 0      0       0       2        0.0%
 BITSFR2              0      0       0       3        0.0%
@@ -2152,7 +2149,7 @@ SFR2                 0      0       0       3        0.0%
 STACK                0      0       0       3        0.0%
 BITSFR3              0      0       0       4        0.0%
 SFR3                 0      0       0       4        0.0%
-ABS                  0      0      19       4        0.0%
+ABS                  0      0      18       4        0.0%
 BITBANK0            50      0       0       5        0.0%
 BITSFR4              0      0       0       5        0.0%
 SFR4                 0      0       0       5        0.0%
@@ -2173,7 +2170,7 @@ BITSFR9              0      0       0      10        0.0%
 SFR9                 0      0       0      10        0.0%
 BITSFR10             0      0       0      11        0.0%
 SFR10                0      0       0      11        0.0%
-DATA                 0      0      19      11        0.0%
+DATA                 0      0      18      11        0.0%
 BITSFR11             0      0       0      12        0.0%
 SFR11                0      0       0      12        0.0%
 BITSFR12             0      0       0      13        0.0%
@@ -2219,75 +2216,75 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.30 build 55553 
-Symbol Table                                                                                   Sun Aug  3 19:28:57 2014
+Symbol Table                                                                                   Sun Aug  3 22:58:20 2014
 
-        __end_ofi1_set_pwmRED 0145         __end_ofi1_set_pwmBLUE 0153                   __CFG_CP$OFF 0000  
-                          l39 00E5        __end_ofi1_set_pwmGREEN 014C           ___wmul@multiplicand 0072  
-                 __CFG_LVP$ON 0000                _cUART_data_flg 007C                  __CFG_BORV$LO 0000  
-                         wreg 0009                          _LATA 010C                          i1l51 0016  
-                        _TXIF 008C                  __CFG_WRT$OFF 0000                          _main 00C8  
-                        _init 0134                          fsr1h 0007                          fsr1l 0006  
-                        btemp 007E                          ltemp 007E                          start 001A  
-                        ttemp 007E                          wtemp 007E               ?i1_set_pwmGREEN 0070  
-            _cUART_data_count 007B                         ?_main 0070                         ?_init 0070  
-               __CFG_WDTE$OFF 0000                         i1l525 00EE                         i1l921 00C4  
-                       i1l935 0015                         i1l873 00E8                         u10_25 00EF  
-                       u11_25 00F4                         _TRISA 008C                         _TXREG 019A  
-              _PWM1CLKCONbits 0D9E                __CFG_BOREN$OFF 0000                         ltemp0 007E  
-                       ltemp1 0082                         ltemp2 0086                         ltemp3 0080  
-              _PWM2CLKCONbits 0DAE                         ttemp0 007E                         ttemp1 0081  
-                       ttemp2 0084                         ttemp3 0087                         ttemp4 007F  
-                       wtemp0 007E                         wtemp1 0080                         wtemp2 0082  
-                       wtemp3 0084                         wtemp4 0086                         wtemp5 0088  
-                       wtemp6 007F                    _cUART_char 007A                __CFG_MCLRE$OFF 0000  
-              _PWM3CLKCONbits 0DBE               __initialization 001B                  __end_of_main 00E6  
-                __end_of_init 013E                        ??_main 002C                        ??_init 002A  
-              __CFG_PLLEN$OFF 0000               set_pwmRED@value 002A                        _ANSELA 018C  
-                      _OSCCON 0099                        _PWM1LD 6CFF                        _PWM2LD 6D7F  
-                      _PWM3LD 6DFF                        _SPBRGH 019C                        _SPBRGL 019B  
-       __size_ofi1_set_pwmRED 0007                __CFG_PWRTE$OFF 0000                  ?_set_pwmBLUE 002A  
-                      ___wmul 00E6                __CFG_STVREN$ON 0000          __size_of_get_message 0027  
-            __end_of_init_pwm 00A1              __end_of_open_PWM 0158                  i1_set_pwmRED 013E  
-     __end_of__initialization 0028              set_pwmBLUE@value 002A                __pcstackCOMMON 0070  
- __end_of_InterruptHandlerLow 001A            __size_of_close_PWM 0005                    __pbssBANK0 0020  
-          __size_of_init_uart 0013              ??i1_set_pwmGREEN 0072                    __pmaintext 00C8  
-                     ?___wmul 0070                    __pintentry 0004            _cUART_data_message 0020  
-          __size_of_set_color 003F                       _PWM1DCH 0D94                       _PWM1DCL 0D93  
-                     _PWM2DCH 0DA4                       _PWM2DCL 0DA3                       _PWM3DCH 0DB4  
-                     _PWM3DCL 0DB3                       _PWM1PHH 0D92                       _PWM1PHL 0D91  
-                     _PWM2PHH 0DA2                       _PWM2PHL 0DA1                       _PWM3PHH 0DB2  
-                     _PWM3PHL 0DB1                       _PWM1PRH 0D96                       _PWM1PRL 0D95  
-                     _PWM2PRH 0DA6                       _PWM2PRL 0DA5                       _PWM3PRH 0DB6  
-                     _PWM3PRL 0DB5        __size_ofi1_set_pwmBLUE 0007                     ?_init_pwm 0070  
-                   ?_open_PWM 0070             __end_of_close_PWM 015D               __size_of___wmul 001D  
-               ?_set_pwmGREEN 002A                set_color@color 0072          __size_of_set_pwmBLUE 000A  
-                     __ptext0 0000                       __ptext1 0116                       __ptext2 0120  
-                     __ptext3 012A                       __ptext4 0153                       __ptext5 0103  
-                     __ptext6 0069                       __ptext7 0134                       __ptext8 0158  
-           __end_of_init_uart 0116          end_of_initialization 0028            i1set_pwmBLUE@value 0070  
-           __end_of_set_color 0069                    ??_init_pwm 002A                    ??_open_PWM 002A  
-                   _RCREGbits 0199                     _RCSTAbits 019D                    _set_pwmRED 0116  
-              ??_set_pwmGREEN 002C                 i1_set_pwmBLUE 014C              __CFG_FOSC$INTOSC 0000  
-                   _TRISAbits 008C                     _TXSTAbits 019E                 ??_get_message 0076  
-              ?i1_set_pwmBLUE 0070                __end_of___wmul 0103                   _BAUDCONbits 019F  
-         start_initialization 001B             set_pwmGREEN@value 002A              __CFG_LPBOREN$OFF 0000  
-                 ?_set_pwmRED 002A                      ??___wmul 0074           __end_of_get_message 00C8  
-                 __pbssCOMMON 007A                     ___latbits 0000                 __pcstackBANK0 002A  
-        __end_of_set_pwmGREEN 012A  __size_of_InterruptHandlerLow 0016             __size_of_init_pwm 0038  
-             ??i1_set_pwmBLUE 0072             __size_of_open_PWM 0005                     _close_PWM 0158  
-                   _init_uart 0103           __size_of_set_pwmRED 000A                ___wmul@product 0074  
-                    _PIE1bits 0091                      _PIR1bits 0011                     _set_color 002A  
-                 _get_message 00A1                 ??_set_pwmBLUE 002C                    ?_close_PWM 0070  
-           ___wmul@multiplier 0070       __size_ofi1_set_pwmGREEN 0007             i1set_pwmRED@value 0070  
-               ?i1_set_pwmRED 0070                    ?_init_uart 0070                    ?_set_color 0070  
-                  _APFCONbits 011D           __end_of_set_pwmBLUE 0134         __size_of_set_pwmGREEN 000A  
-              ??i1_set_pwmRED 0072                      __ptext10 00A1                      __ptext11 002A  
-                    __ptext12 013E                      __ptext13 0145                      __ptext14 014C  
-                    __ptext15 00E6                 __size_of_main 001E                 __size_of_init 000A  
-                    _init_pwm 0069                      _open_PWM 0153                  ??_set_pwmRED 002C  
-                _set_pwmGREEN 0120                   ??_close_PWM 002A           _InterruptHandlerLow 0004  
-                  _INTCONbits 000B                   _PWM1CONbits 0D9B                   _PWM2CONbits 0DAB  
-                 _PWM3CONbits 0DBB                   ??_init_uart 002A            __end_of_set_pwmRED 0120  
-                    intlevel1 0000          ?_InterruptHandlerLow 0070             __CFG_CLKOUTEN$OFF 0000  
-                 ??_set_color 0072                   _set_pwmBLUE 012A           i1set_pwmGREEN@value 0070  
-              i1_set_pwmGREEN 0145         ??_InterruptHandlerLow 0078                  ?_get_message 0070  
+        __end_ofi1_set_pwmRED 0144         __end_ofi1_set_pwmBLUE 0152                   __CFG_CP$OFF 0000  
+                          l37 00E4        __end_ofi1_set_pwmGREEN 014B           ___wmul@multiplicand 0072  
+                 __CFG_LVP$ON 0000                  __CFG_BORV$LO 0000                           wreg 0009  
+                        _LATA 010C                          i1l49 0016                          _TXIF 008C  
+                __CFG_WRT$OFF 0000                          _main 00C7                          _init 0133  
+                        fsr1h 0007                          fsr1l 0006                          btemp 007E  
+                        ltemp 007E                          start 001A                          ttemp 007E  
+                        wtemp 007E               ?i1_set_pwmGREEN 0070              _cUART_data_count 007B  
+                       ?_main 0070                         ?_init 0070                 __CFG_WDTE$OFF 0000  
+                       i1l523 00ED                         i1l933 0015                         i1l871 00E7  
+                       i1l919 00C3                         u10_25 00EE                         u11_25 00F3  
+                       _TRISA 008C                         _TXREG 019A                _PWM1CLKCONbits 0D9E  
+              __CFG_BOREN$OFF 0000                         ltemp0 007E                         ltemp1 0082  
+                       ltemp2 0086                         ltemp3 0080                _PWM2CLKCONbits 0DAE  
+                       ttemp0 007E                         ttemp1 0081                         ttemp2 0084  
+                       ttemp3 0087                         ttemp4 007F                         wtemp0 007E  
+                       wtemp1 0080                         wtemp2 0082                         wtemp3 0084  
+                       wtemp4 0086                         wtemp5 0088                         wtemp6 007F  
+                  _cUART_char 007A                __CFG_MCLRE$OFF 0000                _PWM3CLKCONbits 0DBE  
+             __initialization 001B                  __end_of_main 00E5                  __end_of_init 013D  
+                      ??_main 002C                        ??_init 002A                __CFG_PLLEN$OFF 0000  
+             set_pwmRED@value 002A                        _ANSELA 018C                        _OSCCON 0099  
+                      _PWM1LD 6CFF                        _PWM2LD 6D7F                        _PWM3LD 6DFF  
+                      _SPBRGH 019C                        _SPBRGL 019B         __size_ofi1_set_pwmRED 0007  
+              __CFG_PWRTE$OFF 0000                  ?_set_pwmBLUE 002A                        ___wmul 00E5  
+              __CFG_STVREN$ON 0000          __size_of_get_message 0027              __end_of_init_pwm 00A0  
+            __end_of_open_PWM 0157                  i1_set_pwmRED 013D       __end_of__initialization 0027  
+            set_pwmBLUE@value 002A                __pcstackCOMMON 0070   __end_of_InterruptHandlerLow 001A  
+          __size_of_close_PWM 0005                    __pbssBANK0 0020            __size_of_init_uart 0013  
+            ??i1_set_pwmGREEN 0072                    __pmaintext 00C7                       ?___wmul 0070  
+                  __pintentry 0004            _cUART_data_message 0020            __size_of_set_color 003F  
+                     _PWM1DCH 0D94                       _PWM1DCL 0D93                       _PWM2DCH 0DA4  
+                     _PWM2DCL 0DA3                       _PWM3DCH 0DB4                       _PWM3DCL 0DB3  
+                     _PWM1PHH 0D92                       _PWM1PHL 0D91                       _PWM2PHH 0DA2  
+                     _PWM2PHL 0DA1                       _PWM3PHH 0DB2                       _PWM3PHL 0DB1  
+                     _PWM1PRH 0D96                       _PWM1PRL 0D95                       _PWM2PRH 0DA6  
+                     _PWM2PRL 0DA5                       _PWM3PRH 0DB6                       _PWM3PRL 0DB5  
+      __size_ofi1_set_pwmBLUE 0007                     ?_init_pwm 0070                     ?_open_PWM 0070  
+           __end_of_close_PWM 015C               __size_of___wmul 001D                 ?_set_pwmGREEN 002A  
+              set_color@color 0072          __size_of_set_pwmBLUE 000A                       __ptext0 0000  
+                     __ptext1 0115                       __ptext2 011F                       __ptext3 0129  
+                     __ptext4 0152                       __ptext5 0102                       __ptext6 0068  
+                     __ptext7 0133                       __ptext8 0157             __end_of_init_uart 0115  
+        end_of_initialization 0027            i1set_pwmBLUE@value 0070             __end_of_set_color 0068  
+                  ??_init_pwm 002A                    ??_open_PWM 002A                     _RCREGbits 0199  
+                   _RCSTAbits 019D                    _set_pwmRED 0115                ??_set_pwmGREEN 002C  
+               i1_set_pwmBLUE 014B              __CFG_FOSC$INTOSC 0000                     _TRISAbits 008C  
+                   _TXSTAbits 019E                 ??_get_message 0076                ?i1_set_pwmBLUE 0070  
+              __end_of___wmul 0102                   _BAUDCONbits 019F           start_initialization 001B  
+           set_pwmGREEN@value 002A              __CFG_LPBOREN$OFF 0000                   ?_set_pwmRED 002A  
+                    ??___wmul 0074           __end_of_get_message 00C7                   __pbssCOMMON 007A  
+                   ___latbits 0000                 __pcstackBANK0 002A          __end_of_set_pwmGREEN 0129  
+__size_of_InterruptHandlerLow 0016             __size_of_init_pwm 0038               ??i1_set_pwmBLUE 0072  
+           __size_of_open_PWM 0005                     _close_PWM 0157                     _init_uart 0102  
+         __size_of_set_pwmRED 000A                ___wmul@product 0074                      _PIE1bits 0091  
+                    _PIR1bits 0011                     _set_color 0029                   _get_message 00A0  
+               ??_set_pwmBLUE 002C                    ?_close_PWM 0070             ___wmul@multiplier 0070  
+     __size_ofi1_set_pwmGREEN 0007             i1set_pwmRED@value 0070                 ?i1_set_pwmRED 0070  
+                  ?_init_uart 0070                    ?_set_color 0070                    _APFCONbits 011D  
+         __end_of_set_pwmBLUE 0133         __size_of_set_pwmGREEN 000A                ??i1_set_pwmRED 0072  
+                    __ptext10 00A0                      __ptext11 0029                      __ptext12 013D  
+                    __ptext13 0144                      __ptext14 014B                      __ptext15 00E5  
+               __size_of_main 001E                 __size_of_init 000A                      _init_pwm 0068  
+                    _open_PWM 0152                  ??_set_pwmRED 002C                  _set_pwmGREEN 011F  
+                 ??_close_PWM 002A           _InterruptHandlerLow 0004                    _INTCONbits 000B  
+                 _PWM1CONbits 0D9B                   _PWM2CONbits 0DAB                   _PWM3CONbits 0DBB  
+                 ??_init_uart 002A            __end_of_set_pwmRED 011F                      intlevel1 0000  
+        ?_InterruptHandlerLow 0070             __CFG_CLKOUTEN$OFF 0000                   ??_set_color 0072  
+                 _set_pwmBLUE 0129           i1set_pwmGREEN@value 0070                i1_set_pwmGREEN 0144  
+       ??_InterruptHandlerLow 0078                  ?_get_message 0070  

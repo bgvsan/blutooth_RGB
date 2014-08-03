@@ -5,7 +5,7 @@ Linker command line:
 --edf=/Applications/microchip/xc8/v1.30/dat/en_msgs.txt -cs \
   -h+dist/default/production/wp8_rgb.X.production.sym \
   --cmf=dist/default/production/wp8_rgb.X.production.cmf -z -Q12F1572 \
-  -o/tmp/cgtQyUWpR -Mdist/default/production/wp8_rgb.X.production.map -E1 \
+  -o/tmp/cgtm8JuHA -Mdist/default/production/wp8_rgb.X.production.map -E1 \
   -ver=XC8 -ASTACK=0200Ch-020efh -pstack=STACK -ACONST=00h-0FFhx8 \
   -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -AENTRY=00h-0FFhx8 \
   -ASTRING=00h-0FFhx8 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh \
@@ -25,7 +25,7 @@ Linker command line:
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=CODE -ACONFIG=08007h-08008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 -DCODE=2 -DSTRCODE=2 \
-  -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/cgtoA4Ph7.obj \
+  -DSTRING=2 -DCONST=2 -DENTRY=2 -k /tmp/cgtg60w2j.obj \
   dist/default/production/wp8_rgb.X.production.obj 
 
 Object code version is 3.11
@@ -35,32 +35,32 @@ Machine type is 12F1572
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/cgtoA4Ph7.obj
+/tmp/cgtg60w2j.obj
                 end_init                             1A       1A        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        2    1000E       0
 dist/default/production/wp8_rgb.X.production.obj
-                cinit                                1B       1B        F        8       0
+                cinit                                1B       1B        E        8       0
                 intentry                              4        4       16        8       0
-                text15                               E6       E6       1D        8       0
-                text14                              14C      14C        7        8       0
-                text13                              145      145        7        8       0
-                text12                              13E      13E        7        8       0
-                text11                               2A       2A       3F        8       0
-                text10                               A1       A1       27        8       0
-                text8                               158      158        5        8       0
-                text7                               134      134        A        8       0
-                text6                                69       69       38        8       0
-                text5                               103      103       13        8       0
-                text4                               153      153        5        8       0
-                text3                               12A      12A        A        8       0
-                text2                               120      120        A        8       0
-                text1                               116      116        A        8       0
-                maintext                             C8       C8       1E        8       0
+                text15                               E5       E5       1D        8       0
+                text14                              14B      14B        7        8       0
+                text13                              144      144        7        8       0
+                text12                              13D      13D        7        8       0
+                text11                               29       29       3F        8       0
+                text10                               A0       A0       27        8       0
+                text8                               157      157        5        8       0
+                text7                               133      133        A        8       0
+                text6                                68       68       38        8       0
+                text5                               102      102       13        8       0
+                text4                               152      152        5        8       0
+                text3                               129      129        A        8       0
+                text2                               11F      11F        A        8       0
+                text1                               115      115        A        8       0
+                maintext                             C7       C7       1E        8       0
                 cstackBANK0                          2A       2A        2       20       1
                 cstackCOMMON                         70       70        A       70       1
                 bssBANK0                             20       20        A       20       1
-                bssCOMMON                            7A       7A        3       70       1
+                bssCOMMON                            7A       7A        2       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -69,24 +69,24 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   CODE           
                 end_init                             1A       1A        1         0
-                cinit                                1B       1B        F         0
+                cinit                                1B       1B        E         0
                 intentry                              4        4       16         0
                 reset_vec                             0        0        1         0
-                text15                               E6       E6       1D         0
-                text14                              14C      14C        7         0
-                text13                              145      145        7         0
-                text12                              13E      13E        7         0
-                text11                               2A       2A       3F         0
-                text10                               A1       A1       27         0
-                text8                               158      158        5         0
-                text7                               134      134        A         0
-                text6                                69       69       38         0
-                text5                               103      103       13         0
-                text4                               153      153        5         0
-                text3                               12A      12A        A         0
-                text2                               120      120        A         0
-                text1                               116      116        A         0
-                maintext                             C8       C8       1E         0
+                text15                               E5       E5       1D         0
+                text14                              14B      14B        7         0
+                text13                              144      144        7         0
+                text12                              13D      13D        7         0
+                text11                               29       29       3F         0
+                text10                               A0       A0       27         0
+                text8                               157      157        5         0
+                text7                               133      133        A         0
+                text6                                68       68       38         0
+                text5                               102      102       13         0
+                text4                               152      152        5         0
+                text3                               129      129        A         0
+                text2                               11F      11F        A         0
+                text1                               115      115        A         0
+                maintext                             C7       C7       1E         0
 
         CLASS   STRCODE        
 
@@ -96,7 +96,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 
         CLASS   COMMON         
                 cstackCOMMON                         70       70        A         1
-                bssCOMMON                            7A       7A        3         1
+                bssCOMMON                            7A       7A        2         1
 
         CLASS   BANK0          
                 cstackBANK0                          2A       2A        2         1
@@ -247,9 +247,9 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000001  000001         0       0  CODE        2
-                intentry                       000004  000159  00015D         8       0  CODE        2
+                intentry                       000004  000158  00015C         8       0  CODE        2
                 bssBANK0                       000020  00000C  00002C        20       1  BANK0       1
-                cstackCOMMON                   000070  00000D  00007D        70       1  COMMON      1
+                cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
                 config                         008007  000002  008009     1000E       0  CONFIG      2
 
 
@@ -261,12 +261,12 @@ UNUSED ADDRESS RANGES
         BANK2            00120-0016F              50           1
         BIGRAM           02000-020EF              F0           1
         CODE             00001-00003               3           2
-                         0015D-007FF             6A3
-        COMMON           0007D-0007D               1           1
+                         0015C-007FF             6A4
+        COMMON           0007C-0007D               2           1
         CONST            00001-00003               3           2
-                         0015D-007FF             100
+                         0015C-007FF             100
         ENTRY            00001-00003               3           2
-                         0015D-007FF             100
+                         0015C-007FF             100
         IDLOC            08000-08003               4           2
         RAM              0002C-0006F              44           1
                          000A0-000EF              50
@@ -305,9 +305,9 @@ UNUSED ADDRESS RANGES
         SFR9             00480-004EF              70           1
         STACK            0200C-020EF              E4           1
         STRCODE          00001-00003               3           2
-                         0015D-007FF             6A3
+                         0015C-007FF             6A4
         STRING           00001-00003               3           2
-                         0015D-007FF             100
+                         0015C-007FF             100
 
                                   Symbol Table
 
@@ -406,7 +406,7 @@ __Hbank9                      bank9        00000
 __Hbigram                     bigram       00000
 __HbssBANK0                   bssBANK0     00000
 __HbssCOMMON                  bssCOMMON    00000
-__Hcinit                      cinit        0002A
+__Hcinit                      cinit        00029
 __Hclrtext                    clrtext      00000
 __Hcode                       code         00000
 __Hcommon                     common       00000
@@ -547,54 +547,54 @@ __Lstack                      stack        00000
 __Lstrings                    strings      00000
 __Ltext                       text         00000
 __S0                          (abs)        08009
-__S1                          (abs)        0007D
+__S1                          (abs)        0007C
 __S2                          (abs)        00000
 ___int_sp                     stack        00000
 ___latbits                    (abs)        00000
 ___sp                         stack        00000
-___wmul                       text15       000E6
+___wmul                       text15       000E5
 ___wmul@multiplicand          cstackCOMMON 00072
 ___wmul@multiplier            cstackCOMMON 00070
 ___wmul@product               cstackCOMMON 00074
 __end_of_InterruptHandlerLow  intentry     0001A
-__end_of___wmul               text15       00103
-__end_of__initialization      cinit        00028
-__end_of_close_PWM            text8        0015D
-__end_of_get_message          text10       000C8
-__end_of_init                 text7        0013E
-__end_of_init_pwm             text6        000A1
-__end_of_init_uart            text5        00116
-__end_of_main                 maintext     000E6
-__end_of_open_PWM             text4        00158
-__end_of_set_color            text11       00069
-__end_of_set_pwmBLUE          text3        00134
-__end_of_set_pwmGREEN         text2        0012A
-__end_of_set_pwmRED           text1        00120
-__end_ofi1_set_pwmBLUE        text14       00153
-__end_ofi1_set_pwmGREEN       text13       0014C
-__end_ofi1_set_pwmRED         text12       00145
+__end_of___wmul               text15       00102
+__end_of__initialization      cinit        00027
+__end_of_close_PWM            text8        0015C
+__end_of_get_message          text10       000C7
+__end_of_init                 text7        0013D
+__end_of_init_pwm             text6        000A0
+__end_of_init_uart            text5        00115
+__end_of_main                 maintext     000E5
+__end_of_open_PWM             text4        00157
+__end_of_set_color            text11       00068
+__end_of_set_pwmBLUE          text3        00133
+__end_of_set_pwmGREEN         text2        00129
+__end_of_set_pwmRED           text1        0011F
+__end_ofi1_set_pwmBLUE        text14       00152
+__end_ofi1_set_pwmGREEN       text13       0014B
+__end_ofi1_set_pwmRED         text12       00144
 __initialization              cinit        0001B
 __pbssBANK0                   bssBANK0     00020
 __pbssCOMMON                  bssCOMMON    0007A
 __pcstackBANK0                cstackBANK0  0002A
 __pcstackCOMMON               cstackCOMMON 00070
 __pintentry                   intentry     00004
-__pmaintext                   maintext     000C8
+__pmaintext                   maintext     000C7
 __ptext0                      text0        00000
-__ptext1                      text1        00116
-__ptext10                     text10       000A1
-__ptext11                     text11       0002A
-__ptext12                     text12       0013E
-__ptext13                     text13       00145
-__ptext14                     text14       0014C
-__ptext15                     text15       000E6
-__ptext2                      text2        00120
-__ptext3                      text3        0012A
-__ptext4                      text4        00153
-__ptext5                      text5        00103
-__ptext6                      text6        00069
-__ptext7                      text7        00134
-__ptext8                      text8        00158
+__ptext1                      text1        00115
+__ptext10                     text10       000A0
+__ptext11                     text11       00029
+__ptext12                     text12       0013D
+__ptext13                     text13       00144
+__ptext14                     text14       0014B
+__ptext15                     text15       000E5
+__ptext2                      text2        0011F
+__ptext3                      text3        00129
+__ptext4                      text4        00152
+__ptext5                      text5        00102
+__ptext6                      text6        00068
+__ptext7                      text7        00133
+__ptext8                      text8        00157
 __size_of_InterruptHandlerLow (abs)        00000
 __size_of___wmul              (abs)        00000
 __size_of_close_PWM           (abs)        00000
@@ -613,24 +613,23 @@ __size_ofi1_set_pwmGREEN      (abs)        00000
 __size_ofi1_set_pwmRED        (abs)        00000
 _cUART_char                   bssCOMMON    0007A
 _cUART_data_count             bssCOMMON    0007B
-_cUART_data_flg               bssCOMMON    0007C
 _cUART_data_message           bssBANK0     00020
-_close_PWM                    text8        00158
-_get_message                  text10       000A1
-_init                         text7        00134
-_init_pwm                     text6        00069
-_init_uart                    text5        00103
-_main                         maintext     000C8
-_open_PWM                     text4        00153
-_set_color                    text11       0002A
-_set_pwmBLUE                  text3        0012A
-_set_pwmGREEN                 text2        00120
-_set_pwmRED                   text1        00116
+_close_PWM                    text8        00157
+_get_message                  text10       000A0
+_init                         text7        00133
+_init_pwm                     text6        00068
+_init_uart                    text5        00102
+_main                         maintext     000C7
+_open_PWM                     text4        00152
+_set_color                    text11       00029
+_set_pwmBLUE                  text3        00129
+_set_pwmGREEN                 text2        0011F
+_set_pwmRED                   text1        00115
 btemp                         (abs)        0007E
-end_of_initialization         cinit        00028
-i1_set_pwmBLUE                text14       0014C
-i1_set_pwmGREEN               text13       00145
-i1_set_pwmRED                 text12       0013E
+end_of_initialization         cinit        00027
+i1_set_pwmBLUE                text14       0014B
+i1_set_pwmGREEN               text13       00144
+i1_set_pwmRED                 text12       0013D
 i1set_pwmBLUE@value           cstackCOMMON 00070
 i1set_pwmGREEN@value          cstackCOMMON 00070
 i1set_pwmRED@value            cstackCOMMON 00070
@@ -674,7 +673,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 62 in file "main.c"
+		line 58 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -890,7 +889,7 @@ Total ram usage:        0 bytes
 
  *************** function _init *****************
  Defined at:
-		line 156 in file "main.c"
+		line 80 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -950,7 +949,7 @@ Total ram usage:        0 bytes
 
  *************** function _InterruptHandlerLow *****************
  Defined at:
-		line 165 in file "main.c"
+		line 89 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -980,7 +979,7 @@ Total ram usage:        2 bytes
 
  *************** function _get_message *****************
  Defined at:
-		line 39 in file "usart.c"
+		line 36 in file "usart.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1165,39 +1164,39 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 pwm.c
-		_set_color     		CODE           	002A	0000	63
-		_open_PWM      		CODE           	0153	0000	5
-		_close_PWM     		CODE           	0158	0000	5
-		_init_pwm      		CODE           	0069	0000	56
-		_set_pwmRED    		CODE           	0116	0000	10
-		_set_pwmBLUE   		CODE           	012A	0000	10
-		_set_pwmGREEN  		CODE           	0120	0000	10
+		_set_color     		CODE           	0029	0000	63
+		_open_PWM      		CODE           	0152	0000	5
+		_close_PWM     		CODE           	0157	0000	5
+		_init_pwm      		CODE           	0068	0000	56
+		_set_pwmRED    		CODE           	0115	0000	10
+		_set_pwmBLUE   		CODE           	0129	0000	10
+		_set_pwmGREEN  		CODE           	011F	0000	10
 
 pwm.c estimated size: 159
 
 shared
-		i1_set_pwmRED  		CODE           	013E	0000	7
-		i1_set_pwmBLUE 		CODE           	014C	0000	7
-		i1_set_pwmGREEN		CODE           	0145	0000	7
-		__initializatio		CODE           	001B	0000	13
+		i1_set_pwmRED  		CODE           	013D	0000	7
+		i1_set_pwmBLUE 		CODE           	014B	0000	7
+		i1_set_pwmGREEN		CODE           	0144	0000	7
+		__initializatio		CODE           	001B	0000	12
 
-shared estimated size: 34
+shared estimated size: 33
 
 main.c
-		_init          		CODE           	0134	0000	10
-		_main          		CODE           	00C8	0000	30
+		_init          		CODE           	0133	0000	10
+		_main          		CODE           	00C7	0000	30
 		_InterruptHandl		CODE           	0004	0000	22
 
 main.c estimated size: 62
 
 /Applications/microchip/xc8/v1.30/sources/common/wmul.c
-		___wmul        		CODE           	00E6	0000	29
+		___wmul        		CODE           	00E5	0000	29
 
 /Applications/microchip/xc8/v1.30/sources/common/wmul.c estimated size: 29
 
 usart.c
-		_get_message   		CODE           	00A1	0000	39
-		_init_uart     		CODE           	0103	0000	19
+		_get_message   		CODE           	00A0	0000	39
+		_init_uart     		CODE           	0102	0000	19
 
 usart.c estimated size: 58
 

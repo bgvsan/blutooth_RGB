@@ -4779,8 +4779,6 @@ void init_uart(void);
 
 void get_message(void);
 
-void putch(unsigned char byte);
-
 # 2 "pwm.h"
 void init_pwm(void);
 
@@ -4813,24 +4811,18 @@ void open_PWM(void);
 #pragma config LPBOREN = OFF
 #pragma config LVP = ON
 
-# 53
-unsigned char cUART_char;
-unsigned char cUART_data_flg;
-
+# 52
 void init_uart(void);
 void init(void);
 void interrupt InterruptHandlerLow(void);
 
-
+unsigned char cUART_char;
 
 void main() {
-
-
 
 init();
 init_uart();
 LATA = 0xff;
-
 
 init_pwm();
 close_PWM();
@@ -4844,10 +4836,8 @@ set_pwmRED(0);
 while (1)
 {
 
-# 151
 }
 }
-
 
 
 void init() {

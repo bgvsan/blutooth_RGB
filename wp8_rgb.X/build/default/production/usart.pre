@@ -4821,9 +4821,6 @@ continue;
 TXREG = byte;
 }
 
-
-
-
 void get_message()
 {
 
@@ -4836,7 +4833,6 @@ cUART_data_count++;
 }
 else
 {
-
 set_color(cUART_data_message);
 cUART_data_count = 0;
 }

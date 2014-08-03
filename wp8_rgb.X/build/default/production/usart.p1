@@ -3798,50 +3798,50 @@ Version 3.2 HI-TECH Software Intermediate Code
 "34
 [e :UE 467 ]
 }
-"39
+"36
 [v _get_message `(v ~T0 @X0 1 ef ]
-"40
+"37
 {
-[; ;usart.c: 39: void get_message()
-[; ;usart.c: 40: {
+[; ;usart.c: 36: void get_message()
+[; ;usart.c: 37: {
 [e :U _get_message ]
 [f ]
-[; ;usart.c: 42: cUART_char = RCREGbits.RCREG;
-"42
+[; ;usart.c: 39: cUART_char = RCREGbits.RCREG;
+"39
 [e = _cUART_char . . _RCREGbits 0 0 ]
-[; ;usart.c: 44: if(cUART_data_count < 4)
-"44
+[; ;usart.c: 41: if(cUART_data_count < 4)
+"41
 [e $ ! < -> _cUART_data_count `i -> 4 `i 472  ]
-[; ;usart.c: 45: {
-"45
+[; ;usart.c: 42: {
+"42
 {
-[; ;usart.c: 46: cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
-"46
+[; ;usart.c: 43: cUART_data_message[cUART_data_count] = (int)((cUART_char)*257);
+"43
 [e = *U + &U _cUART_data_message * -> _cUART_data_count `ux -> -> # *U &U _cUART_data_message `ui `ux -> * -> _cUART_char `i -> 257 `i `ui ]
-[; ;usart.c: 47: cUART_data_count++;
-"47
+[; ;usart.c: 44: cUART_data_count++;
+"44
 [e ++ _cUART_data_count -> -> 1 `i `uc ]
-"48
+"45
 }
-[; ;usart.c: 48: }
+[; ;usart.c: 45: }
 [e $U 473  ]
-"49
+"46
 [e :U 472 ]
-[; ;usart.c: 49: else
-[; ;usart.c: 50: {
-"50
+[; ;usart.c: 46: else
+[; ;usart.c: 47: {
+"47
 {
-[; ;usart.c: 52: set_color(cUART_data_message);
-"52
+[; ;usart.c: 48: set_color(cUART_data_message);
+"48
 [e ( _set_color (1 &U _cUART_data_message ]
-[; ;usart.c: 53: cUART_data_count = 0;
-"53
+[; ;usart.c: 49: cUART_data_count = 0;
+"49
 [e = _cUART_data_count -> -> 0 `i `uc ]
-"54
+"50
 }
 [e :U 473 ]
-[; ;usart.c: 54: }
-[; ;usart.c: 56: }
-"56
+[; ;usart.c: 50: }
+[; ;usart.c: 52: }
+"52
 [e :UE 471 ]
 }
