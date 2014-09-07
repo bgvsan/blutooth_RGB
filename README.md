@@ -22,4 +22,6 @@ Still to implement
 - Response / re-Transmit ACK
 
 
-YT("Vz8ssNsL01g", print = TRUE)
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Vz8ssNsL01g
+" target="_blank"><img src="https://img.youtube.com/vi/Vz8ssNsL01g/0.jpg" 
+alt="WP8 Bluetooth RGB" width="320" height="240" border="10" /></a>
