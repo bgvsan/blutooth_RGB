@@ -19,8 +19,8 @@ Implemented
 Module Pic12f1572
 ============
 
-![Hardware module Front](//images/WP_20140907_005.jpg)
-![Hardware module Back](//images/WP_20140907_006.jpg)
+![Hardware module Front](/images/WP_20140907_005.jpg?raw=true)
+![Hardware module Back](/images/WP_20140907_006.jpg?raw=true)
 Video
 ============
 
