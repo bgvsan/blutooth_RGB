@@ -25,34 +25,43 @@ namespace RGB_Mood
             InitializeComponent();
             //connect event change to send data to bluetooth
             this.colorPicker.ColorChanged += colorPicker_ColorChanged;
+
         }
 
-        async void  colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
+        private async void init()
+        {
+            Code.File file = new Code.File();
+            Code.Stuff._MACADDRESS = await file.loadMacAddress();
+            if (Code.Stuff._MACADDRESS == "")
+            {
+                MessageBox.Show("No MacAddress set Please go to Option");
+            }
+        }
+
+        async void colorPicker_ColorChanged(object sender, System.Windows.Media.Color color)
         {
             try
             {
-          
+                if (!connected)
+                {
+                    Connection();
+                }
+                var commandColor = Code.BT_Protocol.getCMDColor(color);
+                string tempstring = "";
+                foreach (byte s in commandColor)
+                {
+                    tempstring += s.ToString() + " ";
+                }
+                Debug.WriteLine(tempstring);
+                //Send data to BT module 
 
-            if (!connected)
+                await btpd.Send_Data(commandColor, 0, Code.Stuff._MACADDRESS);
+            }
+            catch (Exception ex)
             {
-                Connection();
-            }
-            var commandColor = Code.BT_Protocol.getCMDColor(color);
-            string tempstring = "";
-            foreach (byte s in commandColor)
-            {
-                tempstring += s.ToString() + " ";
-            }
-            Debug.WriteLine(tempstring);
-            //Send data to BT module 
 
-                await btpd.Send_Data(commandColor,0, Code.Stuff._MACADDRESS);
+                Debug.WriteLine(ex.ToString());
             }
-            catch(Exception ex)
-             {
-
-                 Debug.WriteLine(ex.ToString());
-             }
 
         }
 
@@ -60,17 +69,26 @@ namespace RGB_Mood
 
         private async void Connection()
         {
-            try
-            {
-                btpd = new BTConnection();
-                await btpd.ConnectToDevice(Code.Stuff._MACADDRESS);
-            }
-            catch (Bluetooth.BluetoothDeviceException ex)
-            {
-                Debug.WriteLine(ex.ToString());
-                connected = false;
-            }
-            connected = true;
+                try
+                {
+                    btpd = new BTConnection();
+                    await btpd.ConnectToDevice(Code.Stuff._MACADDRESS);
+                }
+                   
+                catch (Bluetooth.BluetoothDeviceException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Debug.WriteLine(ex.ToString());
+                    connected = false;
+                }
+                catch (Exception exxx)
+                {
+
+                    Debug.WriteLine(exxx.ToString());
+                }
+                connected = true;
+            
+            
         }
 
 
@@ -81,7 +99,11 @@ namespace RGB_Mood
 
         private void App_bar_connect_Click(object sender, EventArgs e)
         {
-            Connection();
+            init();
+            if (Code.Stuff._MACADDRESS != "")
+            {
+                Connection();
+            }
         }
 
         // Codice di esempio per la realizzazione di una ApplicationBar localizzata

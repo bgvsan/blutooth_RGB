@@ -8,11 +8,14 @@
     <CurrentDeployCmdId>256</CurrentDeployCmdId>
     <CurrentDeployID>30F105C9-681E-420b-A277-7C086EAD8A4E</CurrentDeployID>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>Z:\Dropbox\GitHub\wp8_bluetooth_library\Bluetooth\Bin\Debug\</ReferencePath>
+  </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{C089C8C0-30E0-4E22-80C0-CE093F111A43}">
         <SilverlightMobileCSProjectFlavor>
-          <FullDeploy>False</FullDeploy>
+          <FullDeploy>True</FullDeploy>
           <DebuggerType>Managed</DebuggerType>
           <DebuggerAgentType>Managed</DebuggerAgentType>
           <Tombstone>False</Tombstone>

@@ -163,9 +163,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="BluetoothManager">
-      <HintPath>..\..\..\..\wp8_bluetooth_library\Bluetooth\Bin\Debug\BluetoothManager.dll</HintPath>
-    </Reference>
+    <Reference Include="BluetoothManager, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Coding4Fun.Toolkit.Controls">
       <HintPath>..\packages\Coding4Fun.Toolkit.Controls.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll</HintPath>
     </Reference>

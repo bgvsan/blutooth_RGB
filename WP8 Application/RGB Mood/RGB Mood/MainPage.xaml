@@ -31,28 +31,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="400"/>
-            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-
-        <!-- NOTA SULLA LOCALIZZAZIONE:
-            Per localizzare le stringhe visualizzate copiarne i valori in chiavi denominate in modo appropriato
-            nel file di risorse della lingua neutra dell'applicazione (AppResources.resx) quindi
-            sostituire il valore del testo hard-coded tra le virgolette degli attributi
-            con la clausola di binding il cui percorso punta a quel nome di stringa.
-
-            Ad esempio:
-
-                Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
-
-            Questa associazione punta alla risorsa della stringa del modello denominata "ApplicationTitle".
-
-            L'aggiunta delle lingue supportate nella scheda Proprietà progetto crea un
-            nuovo file RESX per lingua che può trasportare i valori tradotti delle
-            stringhe IU. L'associazione in questi esempi farà in modo che il valore degli
-            attributi venga disegnato dal file RESX che corrisponde a
-            CurrentUICulture dell'applicazione al momento del runtime.
-         -->
 
         <!--TitlePanel contiene il nome dell'applicazione e il titolo della pagina-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
@@ -61,20 +40,9 @@
         </StackPanel>
 
         <!--ContentPanel - inserire ulteriore contenuto qui-->
-        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
-        </Grid>
-        
-        <coding:ColorPicker x:Name="colorPicker" VerticalAlignment="Top" Grid.Row="2" Height="400">
-            
-        </coding:ColorPicker>
-        <!--Rimuovere il commento per vedere la griglia di allineamento che consenta di verificare che i controlli siano
-            allineati ai limiti comuni.  L'immagine ha un margine superiore di -32px tenendo
-            conto della barra delle applicazioni. Impostarlo su 0 (o eliminare tutti i margini)
-            se la barra delle applicazioni è nascosta.
-
-            Prima della spedizioni, eliminare questo XAML e l'immagine stessa.-->
-        <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
+        <coding:ColorPicker   Grid.Row="1" x:Name="colorPicker" VerticalAlignment="Top" Height="500" Margin="30,30,30,30" />
+                            
     </Grid>
 
 </phone:PhoneApplicationPage>

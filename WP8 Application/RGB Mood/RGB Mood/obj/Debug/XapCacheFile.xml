@@ -1,5 +1,5 @@
-﻿<xapCache source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\RGB_Mood_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="02/08/2014 02:39:17">
-  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.dll" archivePath="RGB Mood.dll" lastWriteTime="02/08/2014 02:39:14" />
+﻿<xapCache source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\RGB_Mood_Debug_AnyCPU.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="07/09/2014 20:56:43">
+  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\obj\Debug\RGB Mood.dll" archivePath="RGB Mood.dll" lastWriteTime="07/09/2014 20:56:41" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="06/06/2014 16:47:35" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="06/06/2014 16:47:35" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="06/06/2014 16:47:35" />
@@ -10,10 +10,11 @@
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Images\sync.png" archivePath="Images\sync.png" lastWriteTime="06/06/2014 18:42:14" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Toolkit.Content\ApplicationBar.Cancel.png" archivePath="Toolkit.Content\ApplicationBar.Cancel.png" lastWriteTime="06/06/2014 17:20:36" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Toolkit.Content\ApplicationBar.Check.png" archivePath="Toolkit.Content\ApplicationBar.Check.png" lastWriteTime="06/06/2014 17:20:36" />
-  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="02/08/2014 02:38:46" />
+  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="07/09/2014 20:56:37" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="06/06/2014 16:47:35" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="06/06/2014 16:47:35" />
-  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\wp8_bluetooth_library\Bluetooth\Bin\Debug\BluetoothManager.dll" archivePath="BluetoothManager.dll" lastWriteTime="02/08/2014 02:38:23" />
+  <file source="Z:\Dropbox\GitHub\wp8_bluetooth_library\Bluetooth\Bin\Debug\BluetoothManager.dll" archivePath="BluetoothManager.dll" lastWriteTime="07/09/2014 20:31:14" />
   <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\packages\Coding4Fun.Toolkit.Controls.2.0.7\lib\windowsphone8\Coding4Fun.Toolkit.Controls.dll" archivePath="Coding4Fun.Toolkit.Controls.dll" lastWriteTime="06/06/2014 17:20:35" />
-  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="02/08/2014 02:38:46" />
+  <file source="Z:\Dropbox\GitHub\wp8_bluetooth_library\Bluetooth\Bin\Debug\BluetoothManager.xml" archivePath="BluetoothManager.xml" lastWriteTime="07/09/2014 20:31:14" />
+  <file source="\\vmware-host\Shared Folders\Dropbox\GitHub\blutooth_RGB\WP8 Application\RGB Mood\RGB Mood\Bin\Debug\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="07/09/2014 20:56:37" />
 </xapCache>

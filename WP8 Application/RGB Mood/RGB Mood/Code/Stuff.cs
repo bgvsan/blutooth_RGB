@@ -19,6 +19,14 @@ namespace RGB_Mood.Code
 
     class File
     {
+        public async Task<string> loadMacAddress()
+        {
+            string ret = "";
+            Code.File file = new Code.File();
+            ret  = await file.ReadFile();
+            return ret;
+        }
+
         public async Task WriteToFile(string value)
         {
             // Get the text data from the textbox. 

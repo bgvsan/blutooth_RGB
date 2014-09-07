@@ -7,12 +7,13 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Threading.Tasks;
 
 namespace RGB_Mood
 {
     public partial class Option : PhoneApplicationPage
     {
-        
+
 
         public Option()
         {
@@ -35,13 +36,17 @@ namespace RGB_Mood
             {
                 Code.File file = new Code.File();
                 await file.WriteToFile(this.txtMacAddress.Text);
-               Code.Stuff._MACADDRESS = this.txtMacAddress.Text;
+                Code.Stuff._MACADDRESS = this.txtMacAddress.Text;
+                MessageBox.Show("Mac Address Saved");
             }
-            catch(Exception ex)
+
+
+            catch (Exception ex)
             {
+                MessageBox.Show("Error save Mac Address");
                 System.Diagnostics.Debug.WriteLine("Error Save File : " + ex.ToString());
             }
-           
+
         }
     }
 }

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BluetoothManager</name>
+    </assembly>
+    <members>
+        <member name="M:Bluetooth.BluetoothManager.ShowBluetoothControlPanel">
+            <summary>
+            Show to window the bluethooth control to switch on bluetooth
+            </summary>
+        </member>
+        <member name="M:Bluetooth.PairedDevice.Add(Bluetooth.PairedDeviceInfo)">
+            <summary>
+            Add device to list of paired Devides
+            </summary>
+            <param name="device"></param>
+        </member>
+        <member name="M:Bluetooth.PairedDevice.Clear">
+            <summary>
+            Clean Paired Device List
+            </summary>
+        </member>
+        <member name="M:Bluetooth.PairedDevice.RefreshList">
+            <summary>
+            Update paired device list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Bluetooth.BTConnection.Send_Data(System.Byte[],System.UInt32,System.String)">
+            <summary>
+            Send data to the connected device and wait for response
+            </summary>
+            <param name="package">Data to send to connected device</param>
+            <param name="packet_lenght">Response lenght to await</param>
+            <returns></returns>
+        </member>
+        <member name="M:Bluetooth.BTConnection.GetBufferFromByteArray(System.Byte[])">
+            <summary>
+            Transform data from Array to buffer
+            </summary>
+            <param name="package"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bluetooth.BTConnection.ConnectToDevice(System.String)">
+            <summary>
+            Connect a Peer with specific macAddress
+            </summary>
+            <param name="macaddress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Bluetooth.BTConnection.close">
+            <summary>
+            Attempt to close connection with socket
+            </summary>
+        </member>
+    </members>
+</doc>
